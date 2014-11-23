@@ -26,6 +26,7 @@
 		else if(body.get(0).className.indexOf('node-add') > -1) admin_class_set = Apply_Admin_Class(body);
 		else if(body.get(0).className.indexOf('-webform-') > -1) admin_class_set = Apply_Admin_Class(body);
 		else if(body.get(0).className.indexOf('node-edit') > -1) admin_class_set = Apply_Admin_Class(body);
+		else if(body.get(0).className.indexOf('user-edit') > -1) admin_class_set = Apply_Admin_Class(body);
 		
 		if(admin_class_set) return true;
 		return false;
