@@ -50,8 +50,8 @@ div.vertical-tabs{
 					
 					strong,
 					span{
+						@include font_style($open_sans, 14, 400, 18);
 						text-decoration:none;
-						font-weight:400;
 					}
 				}
 				
