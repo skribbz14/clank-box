@@ -6,6 +6,14 @@ html{
 	font-size:62.5%;	
 }
 
+body{
+	float:left;
+	@include fallback(width, 100vw, 100%);
+	@include fallback(max-width, 100vw, 100%);
+	position:relative;
+	height:auto;	
+}
+
 h3{
 	margin:30px auto 10px;
 }

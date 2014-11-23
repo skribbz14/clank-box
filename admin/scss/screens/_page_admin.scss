@@ -7,6 +7,11 @@
 .admin-screen{
 	font-size:120%;	
 	
+	.l-app,
+	.l-page{
+		@extend %page_wrapper;
+	}
+	
 	.l-main{
 		@extend %admin_container;	
 	}

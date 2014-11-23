@@ -1,3 +1,12 @@
 .l-admin_tabs{
 	@extend %admin_container;
+	
+	.tabs{
+		float:left;
+		clear:both;
+		width:100%;
+		padding:0;
+		list-style:none;
+		border:1px solid red;
+	}
 }
