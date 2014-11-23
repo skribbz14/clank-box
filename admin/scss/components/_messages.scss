@@ -12,8 +12,7 @@
 		display:none !important;
 	}
 	
-	.messages,
-	.alert-box{
+	.messages{
 		text-shadow: 1px 1px 1px rgba(116, 114, 114, 0.23);
 		@include font_style($open_sans, 13, 600, 19);		
 		@include rem(margin-top, 10);
@@ -25,6 +24,10 @@
 		
 		&:first-of-type{
 			margin-top:0;
+		}
+		
+		&.status{
+			@include fallback(background-color, rgba(119, 227, 138, 0.7), #bada55);
 		}
 		
 		&.success{			
