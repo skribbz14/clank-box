@@ -4,16 +4,11 @@
 /// General styles for the admin screens. For best practice these styles should
 /// be moved out of this group, if possible. Body calls are poor on performance. */
 
-.admin-screen,
-/*.page-node-add,
-.page-admin*/{
+.admin-screen{
 	font-size:120%;	
 	
 	.l-main{
-		max-width:980px;
-		width:90%;
-		margin:auto;
-		float:none;	
+		@extend %admin_container;	
 	}
 	
 	th,table,tbody{

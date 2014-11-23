@@ -53,6 +53,18 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 	}
 }
 
+%admin_container{
+	max-width:1200px;
+	width:100%;
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+	
+	@include breakat(1263){
+		max-width:95%;
+	}
+}
+
 
 
 /*
@@ -71,7 +83,7 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 @import "components/wysiwyg";
 
 //@import "components/button_groups";
-@import "components/new_button_groups";
+@import "components/admin_tabs";
 
 @import "components/admin_menu";
 @import "components/contextual_filters";
