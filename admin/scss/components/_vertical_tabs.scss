@@ -35,7 +35,7 @@ div.vertical-tabs{
 			}
 		
 			a{
-				color: rgb(118, 178, 255);
+				color:$theme_black;
 				@include font_style($open_sans, 14, 400, 18);
 				@include rem(padding, 12, 10);
 				@include transition(background-color 0.3s ease-out);
@@ -62,6 +62,7 @@ div.vertical-tabs{
 				strong,
 				span{
 					font-weight:400;
+					color:$theme_black;
 					
 					&:hover{
 						text-decoration:none;
