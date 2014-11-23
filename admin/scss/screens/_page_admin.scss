@@ -26,7 +26,7 @@
 	}	
 	
 	.l-help{
-		@extend %page_wrapper;
+		@extend %admin_container;
 		background-color: #ccc;
 		@include rem(margin, 40, auto);
 		@include rem(margin-top, 40);
