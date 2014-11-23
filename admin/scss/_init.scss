@@ -76,6 +76,7 @@ $admin_border_color:1px solid rgba(51, 51, 51, 0.5);
 $admin_border_color_fallback:#ccc;
 %admin_border_style{
 	@include fallback(border, $admin_border_color, $admin_border_color_fallback);	
+	background-clip:padding-box;
 }
 
 

@@ -109,37 +109,6 @@
 	    clear: none;
 	    margin-right: 10px;
 	}
-
-	tr {    
-	    -webkit-backface-visibility: hidden;
-	    
-	    &.selected{
-		    td{
-				background-color: rgb(127, 226, 127);    
-		    }
-	    }
-	    
-	    &.odd{
-			background-color: transparent;
-	    }
-	    
-	    &.even{
-		    background-color: transparent;		    
-	    }
-	    
-	    .links{
-		    
-		    li{
-			    list-style:none;
-		    }
-		    
-		    a{
-			    padding:3px;
-			    float:left;
-		    }		    
-	    }
-	    
-	}
 	
 	fieldset {
 	    background-color: transparent;
