@@ -22,7 +22,11 @@
 		input[type="submit"].form-submit{
 			@extend %button_colors;
 			@extend %button_colors.orange;			
-			margin:0;			
+			@include rem(margin, 0, 0, 0, 10);		
+			
+			&:first-of-type{
+				@include rem(margin-left, 10);
+			}	
 		}
 	}
 	
