@@ -9,10 +9,11 @@
 .page-admin*/{
 	font-size:120%;	
 	
-	.page{
-		@include rem(padding-bottom, 40);
-		-webkit-backface-visibility:visible;
-		@include transform(none);
+	.l-main{
+		max-width:980px;
+		width:90%;
+		margin:auto;
+		float:none;	
 	}
 	
 	th,table,tbody{
