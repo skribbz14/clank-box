@@ -6,6 +6,7 @@
 
 .admin-screen{
 	font-size:120%;	
+	font-family:$open_sans;
 	
 	.l-admin,
 	.l-app,
@@ -42,7 +43,12 @@
 		border:none;
 		-webkit-backface-visibility: hidden;
 	}
-
+	
+	label{
+		font-weight:400;
+		@include rem(font-size, 15);
+	}
+	
 	input[type="radio"],
 	input[type="checkbox"]{
 		margin:0;
