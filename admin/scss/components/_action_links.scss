@@ -11,10 +11,10 @@
 		text-align:center;
 		position:relative;
 		@include rem(margin, 0, 5);
-		@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), #ccc);
-		@include fallback(background-color, rgba($theme_yellow, 0.7), yellow);
+		//@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), #ccc);
+		//@include fallback(background-color, rgba($theme_yellow, 0.7), yellow);
 		@include border-radius(15px);
-		@include transition(background-color 0.3s ease-out);
+		//@include transition(background-color 0.3s ease-out);
 		@include rem(padding, 0, 10);
 		
 		&:first-of-type{
@@ -22,17 +22,19 @@
 		}
 		
 		&:hover{
-			@include transition(background-color 0.15s ease-out);
-			@include fallback(background-color, rgba($theme_yellow, 0.8), yellow);
+			//@include transition(background-color 0.15s ease-out);
+			//@include fallback(background-color, rgba($theme_yellow, 0.8), yellow);
 		}
 		
 		&:active{
-			@include transition(background-color 0.1s ease-out);
-			@include fallback(background-color, rgba($theme_yellow, 0.9), yellow);
+			//@include transition(background-color 0.1s ease-out);
+			//@include fallback(background-color, rgba($theme_yellow, 0.9), yellow);
 		}
 	}
 	
 	a{
+		@extend %button_colors;
+		@extend %button_colors.orange;
 		@include font_style($open_sans, 13, 700, 30);
 		@include transition(background-color .275s);
 		@include text-shadow(1px 1px 1px rgba(51, 51, 51, 0.3));
