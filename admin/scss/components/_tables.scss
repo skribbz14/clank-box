@@ -46,8 +46,7 @@
 		}
 	}	
 	
-	tr{
-			@extend %admin_border_style;
+	tr{			
     	background:transparent;	
     	border-bottom:none;			  
 			display:table-row;
@@ -112,6 +111,7 @@
 		display:table-cell;
 		padding-top:10px;
 		padding-bottom:10px;
+		
 	
 		&.active{
 			background-color:transparent;
