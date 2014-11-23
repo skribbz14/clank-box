@@ -95,7 +95,7 @@ input.form-file{
 	.form-submit{
 		@include font_style($open_sans, 14, 500, 14);
 		@include border-radius(30px);
-		@include rem(margin, 40, 15, 80, 0);
+		@include rem(margin, 30, 15, 40, 0);
 		@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), 1px solid #333);
 		@include rem(padding, 7, 13);
 		@include transition(background-color 0.3s ease-out);
@@ -126,13 +126,17 @@ input.form-file{
 			display:none;									
 		}
 		
-		&#edit-delete{			
+		&#edit-delete{	
+			color:white;
+					
 			&:hover{
 				@include fallback(background-color, $theme_red, #f00);
+				color:white;
 			}
 			
 			&:active{
-				@include fallback(background-color, darken($theme_red, 20%), #f00);
+				@include fallback(background-color, lighten($theme_red, 20%), #f00);
+				color:white;
 			}			
 		}
 		

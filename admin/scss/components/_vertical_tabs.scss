@@ -4,7 +4,7 @@
 
 div.vertical-tabs{
 	@extend %admin_border_style;
-	@include rem(margin-top, 75);
+	@include rem(margin-top, 45);
 	background-color: white;
 
 	
