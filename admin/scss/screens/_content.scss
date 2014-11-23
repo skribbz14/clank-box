@@ -21,6 +21,7 @@
 	
 	#edit-filters{
 		.form-submit{
+			@extend %button_colors;
 			@extend %button_colors.orange;
 			margin:0;			
 			color:white;
