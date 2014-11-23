@@ -12,7 +12,8 @@
 //
 /// Primary Button Group */
 
-.button-group{
+/*.button-group*/
+.primary_tabs .primary{
 	border-bottom:1px solid black;
 	@include rem(height, 40);	
 	display:table;
@@ -61,7 +62,8 @@
 //
 /// Secondary Button Group */
 
-.button-group:nth-of-type(2){
+/*.button-group:nth-of-type(2)*/
+.secondary_tabs .secondary{
 	@include justify-content(flex-start);
 	@include flex-wrap(wrap);
 	@include display-flex();
