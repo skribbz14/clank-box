@@ -1,5 +1,6 @@
 .l-admin_tabs{
 	@extend %admin_container;
+	overflow:hidden;
 	
 	.tabs{
 		float:left;
@@ -8,5 +9,14 @@
 		padding:0;
 		list-style:none;
 		border:1px solid red;
+		
+		li{
+			float:left;
+			margin:0 5px;			
+		}
+		
+		a{
+			@include font_style($open_sans, 14, 400, 15);
+		}
 	}
 }
