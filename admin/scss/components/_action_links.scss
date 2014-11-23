@@ -2,17 +2,15 @@
 	margin:0;
 	padding-left:0;
 	display:table;
-	width:calc(100% - 3px);
-	border:1px solid $theme_black;
-	border-bottom: 2px solid $theme_black;
-	border-right: 2px solid $theme_black;
+	width:auto;
+	@include border-radius(100%);
 	
 	li{
 		list-style:none outside none;
-		margin:0;
+		margin:0 5px;
 		padding:0;
 		@include rem(height, 35);
-		display:table-cell;
+		float:left;
 		background-color:$theme_yellow;
 		text-align:center;
 		position:relative;
