@@ -5,13 +5,14 @@
 	width:100%;	
 	padding:0;
 	border-bottom:1px solid $theme_black;
-
+	
 	.close{
 		text-decoration:none !important;
 		border:none !important;		
 		display:none !important;
 	}
 	
+	.messages,
 	.alert-box{
 		text-shadow: 1px 1px 1px rgba(116, 114, 114, 0.23);
 		@include font_style($open_sans, 13, 600, 19);		
