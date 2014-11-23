@@ -1,0 +1,56 @@
+/*
+//
+/// Adjusting the Rules Tables */
+
+#rules-form-wrapper{
+	
+	td{
+		padding:0;
+		@include rem(text-indent, 8);
+		@include rem(line-height, 20);
+		
+		&.rules-operations{
+			width:40%;
+		}
+	}
+	
+	.action-links{
+		border:none;
+		display:table;
+	
+		li{
+			background-color: transparent;
+			display:table-cell;
+			float:none;
+			padding:0;
+			vertical-align:middle;
+		}
+	
+		a{
+			left:0;
+			top:0;
+			color:white;
+			width:100%;
+			height:100%;
+			background-color:$theme_yellow;
+			@include rem(line-height, 34);
+			text-decoration:none;			
+			box-shadow:0 0 0 0 inset transparent;
+			@include transition(background-color .275, box-shadow .15s);
+			border:none;
+			
+			&:hover{
+				background-color:$theme_red;
+			}
+			
+			&:active{
+				box-shadow:$button_active_box_shadow;
+			}
+		}
+	}
+	
+	.tabledrag-toggle-weight-wrapper{
+		display:none;
+	}
+	
+}

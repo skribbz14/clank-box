@@ -1,0 +1,62 @@
+/*
+//
+/// WYSIWYG */
+
+.ckeditor_links {
+    margin: 10px 0;
+    float: left;
+}
+
+.text-format-wrapper{
+	.form-type-select{
+		padding:0;
+		margin:0;
+	}
+	
+	.tips{
+		font-size:.7em;
+	}
+	
+	.filter-list{
+		margin:0 0 5px 0;
+	}
+	
+	.filter-wrapper{
+		border:none;
+	}
+	
+	span.cke_skin_kama{
+		border:1px solid black;
+		padding:4px;
+		
+		&:focus{
+			outline:none;
+		}
+		
+		.cke_wrapper{
+			border-radius:3px;
+			background-color: rgb(205, 206, 207);
+			background-image:none;
+		}
+		
+		.cke_toolgroup{
+			background-image:none;
+			padding-bottom:6px;
+			background-color: rgb(238, 240, 243);
+		}
+		
+		.cke_toolbox_collapser{
+			display:none;
+		}
+		
+		.cke_contents{
+			background-color:white;
+			padding:10px;
+		}
+		
+		table, td, tr, th{
+			border:none !important;
+		}
+		
+	}
+}

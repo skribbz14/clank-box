@@ -1,0 +1,22 @@
+/*
+//
+/// Content screen */
+
+#node-admin-content{
+	
+	a{
+		border:none;
+		
+		&:hover{
+			border:none;
+		}
+	}
+	
+	#edit-options{
+		.form-submit{
+			margin-top:1em;
+			margin-bottom:0;
+		}
+	}
+
+}

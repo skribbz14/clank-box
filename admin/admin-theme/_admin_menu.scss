@@ -1,0 +1,65 @@
+/*
+//
+/// Admin Menu */
+
+#admin-menu {
+	@include box-shadow(none);
+	
+	a{
+		@include disable_user_select();
+	}
+	
+	.dropdown {
+		
+		.admin-menu-toolbar-category {
+			
+			&:last-of-type{
+				a{
+					border-right:none;
+				}
+			}
+		
+			> a{
+				margin:0;
+				padding:5px 8px;
+				border-right:1px solid #343434;
+				border-left:1px solid black;
+				border-radius:0;		
+				
+				&.active-trail{
+					background-image:none;
+				}
+				
+				&:hover{
+					border-radius:0;
+					border-left:1px solid #000;
+					border-right:1px solid #444;
+				}
+				
+			}
+		}
+			
+		.admin-menu-icon{
+			a{
+				border:none !important;
+			}
+		}
+
+		.admin-menu-action a{
+			padding:5px 8px;
+			margin:0;
+		}		
+	}	
+	
+	li.admin-menu-account > a{
+		background:transparent;	
+	}	
+	
+	#admin-menu-wrapper{
+		padding-top:0;
+	}
+}
+
+html body.admin-menu{
+	margin-top:25px !important;
+}

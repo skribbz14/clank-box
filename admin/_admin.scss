@@ -1,0 +1,83 @@
+// Custom Drupal 7 Admin Theme
+// By Kyle Lamble @ Loosey Goosey Art
+// Version 2.0
+
+
+
+/*
+//
+/// Admin Theme Variables */
+
+$admin_theme_orange: rgb(221, 155, 35);
+$admin_theme_blue: #067a8f;
+
+$theme_red: #d2443e;
+$theme_blue: #067a8f;
+$theme_black: #333;
+$theme_green: #207954;
+$theme_purple: #6e467a;
+$theme_yellow: #f5bb4a;
+
+$admin_content_bgcolor: rgba(255, 255, 255, 0.75);
+$node_background_color: rgba(255, 255, 255, 0.7);
+
+$menu_padding: .1em 0;
+
+$arial:'Arial', sans-serif;
+$open_sans:'Open Sans', sans-serif;
+
+$button_active_box_shadow:0px 0px 10px -2px #333 inset;
+
+%button_colors{
+	@include transition(background-color .3s, color .15s, box-shadow .3s);
+	background-color:#353535;
+	color:white;
+	
+	&:hover{
+		background-color:rgba(59, 59, 59, 0.73);
+		text-decoration:none;
+		color:white;
+	}
+	
+	&:active{
+		@include transition(background-color 0s, color 0s, box-shadow 0s);
+		box-shadow:0px 0px 28px 5px #333333 inset;	
+		background-color:white;
+		color:#3B3B3B;
+	}
+}
+
+
+/*
+//
+/// Imports */
+
+@import "admin-theme/page_admin";
+@import "admin-theme/messages";
+@import "admin-theme/buttons";
+@import "admin-theme/wysiwyg";
+@import "admin-theme/module_filter";
+@import "admin-theme/vertical_tabs";
+@import "admin-theme/button_groups";
+@import "admin-theme/manage_display";
+@import "admin-theme/views";
+@import "admin-theme/tables";
+@import "admin-theme/content";
+@import "admin-theme/image_styles";
+@import "admin-theme/admin_menu";
+@import "admin-theme/webform";
+@import "admin-theme/status_screen";
+@import "admin-theme/contextual_filters";
+@import "admin-theme/update_screen";
+@import "admin-theme/database_logs";
+@import "admin-theme/throbber";
+@import "admin-theme/misc";
+@import "admin-theme/action_links";
+@import "admin-theme/commerce";
+@import "admin-theme/forms";
+@import "admin-theme/dpm";
+
+
+
+
+

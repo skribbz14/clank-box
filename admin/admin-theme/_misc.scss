@@ -1,0 +1,230 @@
+/*
+//
+// Admin Screens */
+
+.krumo-name{
+	color:#292902 !important;	
+}
+
+:focus {
+    outline: none !important;
+}
+
+.breadcrumbs{
+	margin:1em 0 0 0;
+	background-color:transparent;
+	border:none;
+	padding-left:0;
+}
+
+#edit-tokens{
+	margin:1em 0;
+}
+
+.l-admin-section{
+	overflow:hidden;
+	
+	&:first-of-type{
+		margin-top:0;
+	}
+}
+
+
+
+
+/*
+//
+/// Misc. */
+
+
+#mediaBrowser {
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+
+
+#edit-display-settings-top button {
+    color: black;
+    background-color: transparent;
+    border: none;
+    padding: 0 11px;
+}
+
+#edit-display-settings .label {
+    background-color: transparent;
+    color: black;
+}
+
+
+
+#arrange .form-type-checkbox {
+    float: left;
+}
+#arrange .views-remove-link {
+    float: left;
+    padding-left: 6px;
+    padding-top: 1px;
+}
+
+
+
+.image-style-new {
+    float: left;
+}
+
+.image-widget-data .form-submit {
+    margin: 10px 0;
+    padding: 5px 20px;
+    font-size: .9em;
+}
+
+div.image-widget-data {
+    clear: both;
+}
+
+
+
+html.js fieldset.collapsible div.fieldset-wrapper {
+    padding-left: 2px;
+}
+
+
+
+#modalContent {
+    top: 5% !important;
+    left: 8% !important;
+    position: fixed !important;
+}
+
+
+
+
+
+
+
+.node-form{
+	.field-type-text-with-summary, 
+	.field-type-list-text,
+	.field-type-node-reference,
+	.field-type-viewfield,
+	.field-type-image,
+	.form-type-textfield{
+		margin-bottom:45px;
+	}
+}
+
+
+
+#edit-page-path {
+    margin-top: 7px;
+}
+
+
+.form-item .description {
+    line-height: 1.3em;
+    font-style: italic;
+    max-width: 580px;
+    clear: both;
+}
+
+
+
+#user-roles #edit-name {
+    font-size: 1.1em;
+    margin-top: 1px;
+    margin-left: 6px;
+}
+#user-roles #edit-add {
+    margin-top: 10px;
+}
+
+
+
+.field-prefix {
+    padding: .5em 0;
+    display: block;
+}
+
+
+
+.compact-link {
+    margin: 1.5em 0 .5em;
+}
+.compact-link a {
+    font-size: .8em;
+}
+
+
+.password-suggestions ul {
+    padding-left: 15px;
+}
+
+
+
+.form-item-display-options .ui-buttonset label.ui-button {
+    color: white;
+    background-image: none;
+    border-radius: 0;        
+    border: 1px solid black;
+    border-left:1px solid black !important;
+    background-color: black;
+    transition: background-color .25s, color .15s;
+    -webkit-transition: background-color .25s, color .15s;
+    -moz-transition: background-color .25s, color .15s;
+    -o-transition: background-color .25s, color .15s;
+    -ms-transition: background-color .25s, color .15s;
+    
+    &:hover{
+	    background-color:white;
+	    color:black;
+    }
+}
+.ui-buttonset .form-item-display-options {
+    float: left;
+    clear: none;
+    margin-right: 15px;
+}
+
+.form-type-radios.form-item-display-options {
+    background-color: transparent;
+}
+.form-item-display-options .ui-buttonset label.ui-state-active {
+    background-color: rgb(156, 142, 142) !important;
+    color: #333;
+}
+.tabledrag-toggle-weight-wrapper {
+    text-align: left;
+    margin: 1em 0 .4em;
+}
+.ui-widget-overlay {
+    background: #333;
+    opacity: .5;
+}
+html.js input.form-autocomplete {
+    background-image: none;
+}
+
+#taxonomy,
+#menu-overview{
+	border:none;
+	outline:1px solid black;
+}
+
+#user-admin-account{
+	.form-submit{
+		margin-top:1em;
+	}
+}
+
+.redirect-list {
+	margin-top:20px;
+	
+	.action-links{
+		list-style:none outside none;
+	}	
+}
+
+.tabledrag-toggle-weight-wrapper{
+	display:none;
+}

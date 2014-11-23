@@ -1,0 +1,110 @@
+/*
+//
+/// Admin Tabs Layout */
+
+.l-admin_tabs{
+	background-color:white;	
+}
+
+
+
+/*
+//
+/// Primary Button Group */
+
+.button-group{
+	border-bottom:1px solid black;
+	@include rem(height, 40);	
+	display:table;
+	width:100%;
+	padding:0;
+	margin:0;
+	
+	.button{		
+		@include font_style($open_sans, 16, 600, 39);
+		box-shadow:0 0 0 0 transparent inset;
+		@include disable_user_select();		
+		@extend %button_colors;
+		letter-spacing:1px;
+		position:absolute;
+		border-radius:0;		
+		height:100%;		
+		border:none;
+		width:100%;
+		padding:0;
+		margin:0;				
+		left:0;
+		top:0;				
+	}	
+	
+	li{
+		vertical-align:middle;
+		display:table-cell;
+		text-align:center;		
+		position:relative;
+		
+		&.active{
+			.button:active,
+			.button{
+				background-color:#c2c2be;;
+				color: #947777;
+				box-shadow:none !important;
+				cursor:default;								
+			}
+		}
+	}
+}
+
+
+
+/*
+//
+/// Secondary Button Group */
+
+.button-group:nth-of-type(2){
+	@include justify-content(flex-start);
+	@include flex-wrap(wrap);
+	@include display-flex();
+	margin-top:-1px;
+	height:auto;
+	
+	li{
+		@include rem(height, 26);
+		@include flex-grow(1);
+		list-style:none;
+		display:block;
+		width:20%;		
+		
+		&.active{
+			.button{
+				background-color: #C1C1C1;
+				color:#947777;			
+			}
+		}
+	}
+
+	.button{				
+		background-color: $theme_yellow;		
+		@include rem(line-height, 21);
+		@include rem(font-size, 13);
+		border:3px solid #c1c1c1;
+		border-bottom-width:2px;
+		border-top-width:2px;		
+		color:white;
+		
+		&:hover{
+			background-color: $theme_red;				
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+.action-links{
+	margin:0;
+	padding-left:0;
+	display:table;
+	width:100%;
+	border:1px solid $theme_black;
+	border-bottom: 2px solid $theme_black;
+	border-right: 2px solid $theme_black;
+	
+	li{
+		list-style:none outside none;
+		margin:0;
+		padding:0;
+		@include rem(height, 35);
+		display:table-cell;
+		background-color:$theme_yellow;
+		text-align:center;
+		position:relative;
+	}
+	
+	a{
+		@include font_style($open_sans, 16, 400, 35);
+		@include transition(background-color .275s, box-shadow .15s);
+		color:white;
+		text-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3);
+		position:absolute;
+		left:0;
+		width:100%;
+		box-shadow:0 0 0 0 transparent inset;
+		
+		&:hover{
+			background-color:$theme_red;			
+		}
+		
+		&:active{
+			box-shadow:$button_active_box_shadow;
+		}
+	}
+	
+}

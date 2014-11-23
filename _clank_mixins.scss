@@ -1,0 +1,530 @@
+// Custom SASS Mixins
+// By Kyle Lamble
+// Version 9.6
+
+
+/*
+//
+/// Notable updates */
+
+// V9.0 - Respond-to() and all Breakat() mixins now use the rem_calc() to output rems instead of pixels.
+// V9.0 - Removed vendor(). Look at the compass library for replacement mixins.
+// V9.0 - Removed the zurb emCalc() in favor of rem().
+// V9.0 - Removed transparency() in favor of compass' opacity().
+// V9.0 - Updated rem() to support the 'auto' value.
+
+// V8.1 - Updated font_style() to use rem().
+// V8.1 - Removed the font_size() and line_height() functions. Use rem() instead.
+
+
+
+
+
+/*
+//
+/// Mixin definitions */
+
+// fallback($property, $value, $fallback_value)
+// 		- Allows you to write a property, that requires a fall back, in a single-line.
+
+// square($size)
+//	  - Applies height and width of the specified size in pixels and rem units, unless a percentage is passed 
+
+// strip-units($number)
+//		- Removes units from any value
+
+// display_flex()
+//	  - Outputs the correct syntax for Display:flex; across all browsers.
+
+// flex-grow($value)
+//	  - Outputs the correct syntax for the property flex-grow
+
+// flex-wrap($value)
+//	  - Outputs the correct syntax for the property flex-wrap
+
+// flex-direction($value)
+//	  - Outputs the correct syntax for the property flex-direction
+
+// justify-content($value)
+// 		- Outpus the correct syntax for the property justify-content
+
+// flex-order($value)
+//	  - Sets the position of the flexbox child element
+
+// image_render($rendering_type)
+// 	  - Accepts values 'speed', 'quality' or 'sharpen'
+
+// rem($property, $values...)
+//	  - outputs the given property and it's values in rems with a pixel fallback
+//	  - you may pass in shorthand along with single values 
+//	  - @include rem(margin-left, 10)		= 10px & 1rem
+//	  - @include rem(margin, 10, 20, 30, 40)	= 10px 20px 30px 40px & 1rem 2rem 3rem 4rem
+//		- you may also use the 'auto' variable
+//	  - !! This assumes the root is set to 62.5% font size
+
+// rem_calc($value)
+//		- this is a function that returns a value in rems
+
+// enable_3d()
+//    - enables 3d acceleration for browsers that support it
+//    - sets transform: translate3d(0,0,0); -webkit-transform-style:preserve-3d;
+
+// disable_user_select()
+//    - disables user selection on the element
+
+// font_smoothing()
+//    - enables font smoothing for web fonts
+
+// font_style($font_family, $font_size, $font_weight, $line_height)
+// 	  - shorthand to output font styles in a single line. font-size() and line-height() mixins are used to output rems with pixel fallbacks
+//    - font_smoothing() is also used to improve the output of web fonts
+
+// respond-to($media)   											 
+//    - creates a media query for said device. currently supports mobile (cell phones) and tablet.
+//    - also includes a response to orientation ( portrait or landscape )
+//    - also includes a response to touch devices and mouse device ( coarse or fine )
+//		- added support for ipad-portrait & ipad-landscape
+
+// breakat($value)
+//	  - allows you to quickly write a media query that breaks at the given value
+
+// greater_than($value){
+//	  - allows you to quickly write a media query for a screen wider than the given value
+
+// breakat_landscape($value)
+//	  - allows you to quickly write a media query for a landscape orientated device smaller than than the given value
+
+// breakat_height($value)
+//	  - allows you to quickly write a media query for when the screen height is less than the given value
+
+// keyframes($name)
+//    - quickly outputs both keyframes{} and -web-kit-keyframes{} styles
+
+// animate($keyframe_name, $duration, $timing_function, $delay, $iteration_count, $direction)
+//    - quickly outputs both animate and -webkit-animate styles
+
+
+
+/*
+//
+/// Allows you to use a single line for a property that needs a fallback */
+@mixin fallback($property, $value, $fallback_value){
+	#{$property}:$fallback_value;
+	#{$property}:$value;
+}
+
+
+
+/*
+//
+/// Outputs square dimensions on a unit */
+
+@mixin square($size){
+	@include rem(height, $size);
+	@include rem(width, $size);
+}
+
+
+
+/*
+//
+/// Removes any unit from a number */
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+
+
+/*
+//
+/// Outputs all prefixes for the flex properties */
+
+@mixin display-flex(){
+	display: -webkit-box;      
+	display: -moz-box;         
+	display: -ms-flexbox;      
+	display: -webkit-flex;     
+	display: flex;          
+}
+
+@mixin flex-grow($value){
+	flex-grow:$value;
+	-webkit-flex-grow:$value;
+}
+
+@mixin flex-wrap($value){
+	flex-wrap:$value;
+	-webkit-flex-wrap:$value;
+	-ms-flex-wrap:$value;
+}
+
+@mixin flex-direction($value){
+	flex-direction:$value;
+	-ms-flex-direction:$value;
+	-webkit-flex-direction:$value;
+}
+
+@mixin justify-content($value){
+	justify-content:$value;
+	-webkit-justify-content:$value;
+}
+
+@mixin align-self($value){
+	align-self:$value;
+	-webkit-align-self:$value;
+}
+
+@mixin flex-order($value){
+	order:$value;
+	-webkit-order:$value;
+	-moz-order:$value;
+	-ms-order:$value;
+	-o-order:$value;
+}
+
+
+
+/*
+//
+/// Allows you to control how an image or video is rendered */
+
+@mixin image_render($rendering_type){
+	
+	// Optimizes the rendering on images so they
+  // appear faster, but at a lower quality. Useful for <video>
+	@if $rendering_type == speed{
+		image-rendering:optimizeSpeed;
+	}
+	
+  // When photos are upscaled or downscaled, they often get blurry. Don't use
+  // this on flat color images, they will still appear blurry.
+	@else if $rendering_type == quality{
+		image-rendering:optimizeQuality;
+		-ms-interpolation-mode:bicubic; /* IE 7+ */
+	}
+	
+	
+	// Sharpen an image if it has become blurry due to upscaling or downscaling
+	@else if $rendering_type == sharpen{
+		image-rendering:-moz-crisp-edges;
+		-ms-interpolation-mode:nearest-neighbor; /* IE 7+ */
+	}
+}
+
+
+
+/*
+//
+/// Outputs given property and value in rem with a pixel fallback. 
+/// This mixin assumes that root is set to 62.5% */
+
+
+@mixin rem($property, $pixel_values...){
+	$max: length($pixel_values);
+
+	// If only one value was passed
+	@if $max == 1 { 		
+		#{$property}: nth($pixel_values, 1) + px;
+		#{$property}: (nth($pixel_values, 1) * .1) + rem;
+	}
+
+	// If multiple values were passed
+	@else{		
+		$pixel_array: ();
+		$rem_array: ();
+		
+		@for $i from 1 through $max {		
+			
+			// Check for the auto value			
+			@if nth($pixel_values, $i) == "auto"{
+				$pixel_array: append( $pixel_array, nth($pixel_values, $i) );				
+				$rem_array: append( $rem_array, nth($pixel_values, $i) );	
+			}
+			
+			// Deal with every other value
+			@else{
+				$pixel_array: append( $pixel_array, (nth($pixel_values, $i) + px) );				
+				$rem_array: append( $rem_array, ((nth($pixel_values, $i) * .1) + rem) );	
+			}						
+		}
+		
+		#{$property}: $pixel_array;
+		#{$property}: $rem_array;				
+	}
+}
+
+
+
+/*
+//
+/// Used to get the rem value of a single number */
+
+@function rem_calc($value){
+	@return ($value * .1) + rem;
+}
+
+
+
+/*
+//
+/// Enables 3d rendering for browsers that support it */
+
+@mixin enable_3d(){
+	@include transform(translate3d(0,0,0));
+	@include transform-style(preserve-3d);
+}
+
+
+
+/*
+//
+/// Turns off the ability for highlighting items */
+
+@mixin disable_user_select(){
+	user-select:none;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-o-user-select:none;
+	-ms-user-select:none;	
+	-webkit-tap-highlight-color:transparent;
+}
+
+
+
+/*
+//
+/// Enables font smoothing for web fonts */
+
+@mixin font_smoothing(){
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+
+
+/*
+//
+/// Quickly output basic font styling properties */
+
+@mixin font_style($font_family, $font_size, $font_weight, $line_height){
+	font-family:$font_family;	
+	font-weight:$font_weight;
+	@include rem(font-size, $font_size);
+	@include rem(line-height, $line_height);
+	@include font_smoothing();
+}
+
+
+
+/*
+//
+/// Allows to quickly call media queries for mobile, tablet, small desktop, portrait orientation & landscape orientation */
+
+@mixin respond-to($media) {
+
+  @if $media == mobile {
+      @media only screen and (max-width : "568px") { 
+          @content; 
+      }
+  }
+	
+	@else if $media == iphone5 {
+		@include breakat(321, 'portrait'){
+			@content;
+		}
+	} 
+	
+	@else if $media == ipad-portrait {
+		@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+			@content;
+		}
+	} 
+	
+	@else if $media == ipad-landscape{
+		@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+			@content;
+		}
+	}
+
+  @else if $media == tablet {
+      @media only screen and (max-width : "768px") { 
+          @content; 
+      } 
+   }
+
+	@else if $media == ltdesktop {
+	    @media only screen and (max-width: "959px") { 
+	        @content; 
+	    }
+	 }
+
+	@else if $media == ltmax {
+	    @media only screen and (max-width: "1100px") { 
+	        @content; 
+	    }
+	 }
+ 
+	@else if $media == portrait{
+		@media screen and (orientation:portrait) {
+			@content;
+		}
+	}  
+	
+	@else if $media == landscape{
+		@media screen and (orientation:landscape) {
+			@content;
+		}
+	}
+	
+	@else if $media == coarse{
+		@media (pointer:coarse){
+			@content;
+		}
+	}
+	
+	@else if $media == fine{
+		@media (pointer:fine){
+			@content;
+		}
+	}
+}
+
+
+
+
+/*
+//
+/// Allows you to quickly write a custom media querys */
+
+$default_orientation: 0;
+
+@mixin breakat($value, $orientation : $default_orientation){
+	
+	//$new_value: rem_calc($value);
+	$new_value:$value + "px";
+	
+	@if( $orientation != $default_orientation ){	
+		@media only screen and (max-width : ($new_value)) and (orientation:$orientation){
+			@content;
+		}
+	}
+	
+	@else{		
+		@media only screen and (max-width : ($new_value)){
+			@content;
+		}		
+	}
+}
+
+@mixin greater_than($value, $orientation : $default_orientation){
+
+	//$new_value: rem_calc($value);
+	$new_value:$value + "px";
+
+	@if( $orientation != $default_orientation ){	
+		@media only screen and (min-width : ($new_value)) and (orientation:$orientation){
+			@content;
+		}				
+	}
+
+	@else{		
+		@media only screen and (min-width : ($new_value)){
+			@content;
+		}				
+	}
+}
+
+@mixin breakat_height($value, $orientation : $default_orientation){
+
+	//$new_value: rem_calc($value);
+	$new_value:$value + "px";
+
+	@if( $orientation != $default_orientation ){		
+		@media only screen and (max-height : ($new_value)) and (orientation:$orientation){
+			@content;
+		}		
+	}
+
+	@else{		
+		@media only screen and (max-height : ($new_value)){
+			@content;
+		}				
+	}
+}
+
+@mixin breakat_dim($width, $height, $orientation : $default_orientation){
+
+	@if( $orientation != $default_orientation ){		
+		@media only screen and (max-width : ($width + "px")) and (max-height : ($height + "px")) and (orientation:$orientation){
+			@content;
+		}				
+	}
+	
+	@else{					
+		@media only screen and (max-width : ($width + "px")) and (max-height : ($height + "px")){
+			@content;
+		}		
+	}
+}
+
+
+
+/*
+//
+/// Allows for quick use of keyframes */
+
+@mixin keyframes($name){
+	@keyframes $name{
+		@content;
+	}
+	
+	@-webkit-keyframes $name{
+		@content;
+	}
+}
+
+
+
+/*
+//
+/// Allows for quick use of the animation style */
+
+@mixin animation-fill-mode($value : forwards){
+	animation-fill-mode:$value;
+	-webkit-animation-fill-mode:$value;
+}
+
+@mixin animate($keyframe_name, $duration, $timing_function, $delay, $iteration_count, $direction, $fill_mode){
+	
+	// fill mode values: 								forwards, backwards, both, none
+	
+	// timing function values: 					linear, ease, ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n,n)
+	
+	// iteration count values: 					n, infinite
+	
+	// direction values: 								normal, reverse, alternate, alternate-reverse
+	
+	
+	@if( $keyframe_name != null ){	
+		@if( $duration == null) {
+			$duration:0s;
+		}
+		@if( $timing_function == null ){
+			$timing_function:ease;
+		}
+		@if( $delay == null ){
+			$delay:0s;
+		}
+		@if( $iteration_count == null ){
+			$iteration_count:1;
+		}
+		@if( $direction == null ){
+			$direction:normal;
+		}
+			
+		animation: $keyframe_name $duration $timing_function $delay $iteration_count $direction;
+		-webkit-animation: $keyframe_name $duration $timing_function $delay $iteration_count $direction;
+		@include animation-fill-mode($fill_mode);
+	}
+}

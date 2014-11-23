@@ -1,0 +1,106 @@
+.admin-screen{
+	.form-submit{
+		@include rem(margin-top, 40);
+	}
+}
+
+/*
+//
+/// Default Form Styling */
+
+$form_max_width: 700px;
+
+$form_text_border_radius: 4px;
+$form_text_color: rgb(162, 162, 162);
+$form_text_color_focus: #333;
+$form_text_box_shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+$form_text_box_shadow_focus: inset 0px 1px 16px rgba(44, 44, 44, 0.29);
+$form_textarea_height: 130px;
+$form_text_margin: 5px 0;
+$form_text_border:1px solid #cccccc;
+
+$form_description_padding:6px 3px;
+$form_description_font_size:13px;
+$form_description_font_style:italic;
+
+$form_file_width:320px;
+$form_file_padding:5px 0;
+$form_file_widget_padding:5px;
+
+$form_button_font_size:14px;
+$form_button_border_radius:20px;
+
+
+.form-textarea{
+	border:$form_text_border;
+	margin:$form_text_margin;
+	box-shadow:$form_text_box_shadow;
+	border-radius:$form_text_border_radius;
+	max-width:$form_max_width;
+	min-height:$form_textarea_height;
+	color:$form_text_color;
+	@include transition(box-shadow .25s, color .5s);
+	@include rem(padding, 10);
+	
+	&:focus{
+		box-shadow:$form_text_box_shadow_focus;
+		color:$form_text_color_focus;
+	}
+}
+
+input.form-text{
+	@include transition(box-shadow .25s, color .5s);
+	border-radius:$form_text_border_radius;
+	box-shadow:$form_text_box_shadow;
+	@include rem(text-indent, 5);
+	@include rem(padding, 7);
+	border:$form_text_border;
+	margin:$form_text_margin;		
+	max-width:$form_max_width;
+	color:$form_text_color;			
+	
+	&:focus{
+		box-shadow:$form_text_box_shadow_focus;
+		color:$form_text_color_focus;
+	}
+}
+
+.grippie{
+	display:none;
+}
+
+.text-format-wrapper,
+.form-item {
+	.description{
+		max-width:$form_max_width;
+		padding:$form_description_padding;
+		font-size:$form_description_font_size;
+		font-style:$form_description_font_style;
+		white-space:normal;
+	}
+}
+
+input.form-file{
+	float:left;
+	overflow:hidden;
+	width:$form_file_width;
+	padding:$form_file_padding;
+}
+
+button.secondary.form-submit,
+.form-submit{
+	font-size:$form_button_font_size;
+	border-radius:$form_button_border_radius;
+	@include rem(margin-top, 10);
+}
+
+.file-widget{
+	border:$form_text_border;
+	max-width:$form_max_width;
+	border-radius:$form_text_border_radius;
+	padding:$form_file_widget_padding;
+	
+	.form-submit{
+		float:right;	
+	}	
+}

@@ -1,0 +1,23 @@
+/*
+//
+/// Status Screen */
+
+.system-status-report{
+	border:none !important;
+	outline:1px solid black;
+
+	tr{
+		border-top:none !important;
+		//outline:1px solid black;
+		
+		&.merge-up{
+			outline:none;
+			
+			td{
+				&:first-of-type{
+					//border-left:1px solid black;
+				}
+			}
+		}
+	}
+}

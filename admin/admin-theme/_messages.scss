@@ -1,0 +1,76 @@
+.l-messages{
+	@include rem(line-height, 13);
+	max-width:100%;
+	@include rem(margin, 0, auto, 0);
+	width:100%;	
+	padding:0;
+	border-bottom:1px solid $theme_black;
+
+	.columns{
+		padding:0;
+	}
+	
+	.close{
+		text-decoration:none !important;
+		border:none !important;		
+		display:none !important;
+	}
+	
+	.alert-box{
+		text-shadow: 1px 1px 1px rgba(116, 114, 114, 0.23);
+		@include font_style($open_sans, 13, 600, 19);		
+		@include rem(margin-top, 10);
+		@include rem(padding, 10);		
+		text-align:center;
+		color:$theme_black;
+		border:none;
+		margin:0;						
+		
+		&:first-of-type{
+			margin-top:0;
+		}
+		
+		&.success{			
+			background-color:rgba(80, 204, 80, 1);
+			line-height: 1.5em;
+			color:white;
+	    
+	    a{
+		    color:white;
+	    }
+		}
+		
+		&.alert{
+			background-color:rgba(198, 15, 19, 1);
+			color:white;
+		}
+		
+		.close{
+			background-color:rgba(51, 51, 51, 0.4);
+			@include rem(line-height, 12);
+			@include rem(height, 13);
+			@include rem(width, 14);
+			@include rem(right, 4);
+			@include rem(top, 3);												
+			border-radius:4px;			
+			text-indent:1px;
+			padding:0;						
+		}
+		
+		a{
+			text-decoration:underline;
+			color:white;			
+		}
+		
+		ul{
+			margin-bottom:0;
+		}
+	}
+	
+	.secondary{
+		a{
+			color:#505050;
+			text-decoration:underline;
+		}
+	}		
+}

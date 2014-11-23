@@ -1,0 +1,177 @@
+/*
+//
+/// Page Admin screens
+/// General styles for the admin screens. For best practice these styles should
+/// be moved out of this group, if possible. Body calls are poor on performance. */
+
+.section-admin,
+.admin-screen,
+.page-node-add,
+.page-admin{
+	
+	form{
+		@include rem(max-width, 1200);
+		width:95%;
+		float:none;
+		display:block;
+		margin:auto;
+	}
+	
+	.page{
+		@include rem(padding-bottom, 40);
+		-webkit-backface-visibility:visible;
+		@include transform(none);
+	}
+	
+	.l-main{
+		width:90%;
+		margin:auto;
+	}
+	
+	th,table,tbody{
+		border:none;
+		-webkit-backface-visibility: hidden;
+	}
+	
+	button,a,label,p,span,input, li{
+		-webkit-font-smoothing:antialiased;
+	}
+
+	input[type="radio"],
+	input[type="checkbox"]{
+		margin:0;
+	}
+		
+	.text-format-wrapper .filter-wrapper{
+		padding-left:20px;
+		clear:both;
+	}
+	
+	.field-group-fieldset{
+		@include rem(margin-bottom, 40);
+	}
+
+	.vertical-tabs.clearfix{
+		@include rem(margin-top, 100);
+		background-color: white;
+		border:1px solid black;
+		border-bottom-width: 2px;
+    border-right-width: 2px;	    
+	}
+
+	.text-format-wrapper .description{
+		font-style:italic;
+		font-size:.85em;
+		max-width:580px;
+	}
+	
+	.version-links .links li {
+	    list-style: none outside none;
+	}
+	
+	.project a {
+	    color: rgb(112, 102, 226);
+	}	
+
+	.active .button:hover,
+	.button.active:hover,
+	.button.active {
+	    background-color: rgb(194, 194, 190);
+	    color: rgb(148, 119, 119);
+	    cursor: default;
+	}
+		
+	.button:hover {
+	    opacity:1;
+	}	
+		
+	.tabledrag-processed .form-type-textfield {
+	    float: left !important;
+	    clear: none;
+	}
+	
+	.form-item {
+	    clear: both;
+	}
+
+	.form-item-module-filter-name {
+	    clear: none !important;
+	}		
+
+	.form-type-date-select .form-item {
+	    clear: none;
+	    margin-right: 10px;
+	}
+
+	tr {    
+	    -webkit-backface-visibility: hidden;
+	    
+	    &.selected{
+		    td{
+				background-color: rgb(127, 226, 127);    
+		    }
+	    }
+	    
+	    &.odd{
+			background-color: transparent;
+	    }
+	    
+	    &.even{
+		    background-color: transparent;		    
+	    }
+	    
+	    .links{
+		    
+		    li{
+			    list-style:none;
+		    }
+		    
+		    a{
+			    padding:3px;
+			    float:left;
+		    }		    
+	    }
+	    
+	}
+	
+	fieldset {
+	    background-color: transparent;
+	    border: 1px solid #666;	 
+	    border-right-width:2px;
+	    border-bottom-width:2px;
+	    @include rem(margin-bottom, 30);  
+	}
+
+	
+	.l-admin_tabs{
+		width:100%;
+		margin:auto;		
+		@include rem(line-height, 13);
+		@include rem(max-width, 1400);
+	}
+	
+	.l-action_links{
+		width:90%;
+		overflow:hidden;		
+		@include rem(margin, 10, auto);	
+		@include rem(line-height, 13);
+		@include rem(max-width, 1400);
+	}
+
+	.l-main {
+	    background-color: transparent;
+	    @include rem(padding, 40, 0);   	    	    
+	}				
+}//page-admin
+
+
+
+.l-help{
+	width:90%;
+	@include rem(margin, 40, auto);
+	@include rem(max-width, 1400);
+	@include rem(line-height, 18);
+	background-color: rgba(51, 51, 51, 0.1);
+	@include rem(padding, 10);
+	outline:1px solid $theme_black;
+}

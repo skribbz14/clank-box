@@ -1,0 +1,56 @@
+/*
+//
+/// Vertical Tabs */
+
+div.vertical-tabs{
+	border:1px solid black;
+	
+	.vertical-tabs-pane{
+		outline:1px solid black;
+	}
+	
+	ul.vertical-tabs-list{
+		border-top: 1px solid black;
+		border-bottom:1px solid black;
+
+		.vertical-tab-button{
+			border:1px solid black;	
+			border-top:none;
+			@include disable_user_select();
+			
+			&.selected{
+				border-right:none;
+			
+				strong{
+					color: rgb(41, 58, 80);		
+				}
+			}
+			
+			.summary{
+				font-size:.8em;
+			}			
+			
+			button{
+				font-size:1.1em;
+			}
+		
+			a{
+				color: rgb(118, 178, 255);
+				
+				&:hover{
+					outline:none;
+				}
+			}
+		}		
+	
+	}
+
+	.fieldset-wrapper{
+		padding:1.5em 0;
+	}
+	
+	input[type="checkbox"]{
+		margin-bottom:0;
+	}
+		
+}
