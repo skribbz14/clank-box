@@ -20,12 +20,7 @@
 	a{
 		@extend %button_colors;
 		@extend %button_colors.orange;
-		@extend %admin_border_style;
-		@include font_style($open_sans, 12, 700, 26);
-		@include transition(background-color .275s);
-		@include text-shadow(1px 1px 1px rgba(51, 51, 51, 0.3));
-		@include rem(padding, 0, 10);			
-		text-decoration:none;
+		@extend %admin_border_style;											
 		display:block;
 	}
 	

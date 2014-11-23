@@ -48,13 +48,14 @@ $admin_border_color_fallback:#ccc;
 }
 
 %button_colors{
-	@include font_style($open_sans, 13, 700, 30);
+	@include font_style($open_sans, 12, 700, 26);
 	@include transition(background-color 0.3s ease-out);
 	@include fallback(background-color, rgba(53, 53, 53, 0.23), #ccc);
-	@include text-shadow(1px 1px 0 rgba(51, 51, 51, 0.2));
+	@include text-shadow(1px 1px 1px rgba(51, 51, 51, 0.3));
 	@include border-radius(15px);
-	@include rem(padding, 1, 10);
+	@include rem(padding, 0, 10);
 	@extend %admin_border_style;
+	text-decoration:none;	
 	color:white;
 			
 	&:hover{
