@@ -52,30 +52,30 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 //
 /// Imports */
 
-@import "admin-theme/page_admin";
-@import "admin-theme/messages";
-@import "admin-theme/buttons";
-@import "admin-theme/wysiwyg";
-@import "admin-theme/module_filter";
-@import "admin-theme/vertical_tabs";
-@import "admin-theme/button_groups";
-@import "admin-theme/manage_display";
-@import "admin-theme/views";
-@import "admin-theme/tables";
-@import "admin-theme/content";
-@import "admin-theme/image_styles";
-@import "admin-theme/admin_menu";
-@import "admin-theme/webform";
-@import "admin-theme/status_screen";
-@import "admin-theme/contextual_filters";
-@import "admin-theme/update_screen";
-@import "admin-theme/database_logs";
-@import "admin-theme/throbber";
-@import "admin-theme/misc";
-@import "admin-theme/action_links";
-@import "admin-theme/commerce";
-@import "admin-theme/forms";
-@import "admin-theme/dpm";
+@import "scss/page_admin";
+@import "scss/messages";
+@import "scss/buttons";
+@import "scss/wysiwyg";
+@import "scss/module_filter";
+@import "scss/vertical_tabs";
+@import "scss/button_groups";
+@import "scss/manage_display";
+@import "scss/views";
+@import "scss/tables";
+@import "scss/content";
+@import "scss/image_styles";
+@import "scss/admin_menu";
+@import "scss/webform";
+@import "scss/status_screen";
+@import "scss/contextual_filters";
+@import "scss/update_screen";
+@import "scss/database_logs";
+@import "scss/throbber";
+@import "scss/misc";
+@import "scss/action_links";
+@import "scss/commerce";
+@import "scss/forms";
+@import "scss/dpm";
 
 
 
