@@ -40,11 +40,19 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 //
 /// Classes */
 
+$admin_border_color:1px solid rgba(51, 51, 51, 0.5);
+$admin_border_color_fallback:#ccc;
+%admin_border_style{
+	@include fallback(border, $admin_border_color, $admin_border_color_fallback);	
+	background-clip:padding-box;
+}
+
 %button_colors{
 	@include font_style($open_sans, 13, 700, 30);
 	@include transition(background-color 0.3s ease-out);
 	@include fallback(background-color, rgba(53, 53, 53, 0.23), #ccc);
 	@include text-shadow(1px 1px 0 rgba(51, 51, 51, 0.2));
+	@extend %admin_border_style;
 	color:white;
 			
 	&:hover{
@@ -85,14 +93,6 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 		max-width:95%;
 	}
 }
-
-$admin_border_color:1px solid rgba(51, 51, 51, 0.5);
-$admin_border_color_fallback:#ccc;
-%admin_border_style{
-	@include fallback(border, $admin_border_color, $admin_border_color_fallback);	
-	background-clip:padding-box;
-}
-
 
 
 
