@@ -20,7 +20,7 @@
 	}
 	
 	#edit-filters{
-		.form-submit{
+		#edit-submit.form-submit{
 			@extend %button_colors;
 			@extend %button_colors.orange;
 			@include rem(padding, 1, 10);
