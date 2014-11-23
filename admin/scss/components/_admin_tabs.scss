@@ -34,13 +34,13 @@
 			}
 			
 			&:hover{
-				@include fallback(background-color, rgba(45, 143, 227, 0.5), #b2b2b2);
+				@include fallback(background-color, rgba(227, 34, 43, 0.5), #b2b2b2);
 				@include transition(background-color 0.15s ease-out);
 			}
 			
 			&:active{
 				@include transition(background-color 0.1s ease-out);
-				@include fallback(background-color, rgba(45, 143, 227, 0.7), #828282);
+				@include fallback(background-color, rgba(227, 34, 43, 0.7), #828282);
 			}
 		}
 	}
