@@ -11,13 +11,18 @@
 		@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), #ccc);	
 		@include border-radius(1px);
 		
+		&.primary{
+			@include rem(margin-top, 25);
+			@include rem(margin-bottom, 15);
+		}
+		
 		li{
 			float:left;	
 		}
 		
 		a{
 			@include font_style($open_sans, 14, 600, 15);			
-			@include rem(padding, 15, 20);			
+			@include rem(padding, 10, 20);			
 			@include fallback(background-color, rgba(51, 51, 51, 0.3), #ccc);
 			@include disable_user_select();
 			@include transition(background-color 0.3s ease-out);
@@ -42,20 +47,22 @@
 	
 	.secondary{
 		clear:both;
+		margin-top:0;
+		@include rem(margin-bottom, 30);
 		
 		li{
 			float:left;
 		}
 		
 		a{
-			background-color:#ace;
+			@include rem(padding, 7, 27);
 			
 			&:hover{
-				background-color:#ace;
+				@include fallback(background-color, rgba(238, 190, 28, 0.5), #b2b2b2);
 			}
 			
 			&:active{
-				background-color:#ace;
+				@include fallback(background-color, rgba(238, 190, 28, 0.7), #b2b2b2);
 			}
 		}
 	}
