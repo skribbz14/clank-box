@@ -7,13 +7,15 @@
 .admin-screen{
 	font-size:120%;	
 	
+	.l-admin,
 	.l-app,
 	.l-page{
 		@extend %page_wrapper;
 	}
 	
 	.l-main{
-		@extend %admin_container;	
+		@extend %admin_container;
+		clear:both;	
 	}
 	
 	.l-action_links{
