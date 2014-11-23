@@ -1,0 +1,30 @@
+{
+  "name": "clank-box",
+  "version": "0.0.0",
+  "authors": [
+    "Kyle Lamble"
+  ],
+  "description": "A collection of front-end development tools designed by Loosey Goosey Art.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Front-end",
+    "Developement",
+    "sass",
+    "scss",
+    "javascript",
+    "js",
+    "Drupal",
+    "Drupal",
+    "Theme"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

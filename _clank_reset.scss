@@ -1,0 +1,40 @@
+/*
+//
+/// Elements */
+
+html{
+	font-size:62.5%;	
+}
+
+h3{
+	margin:30px auto 10px;
+}
+
+p{
+	margin:0 0 15px;
+	
+	&:last-child{
+		margin-bottom:0;
+	}
+}
+
+a{
+	text-decoration:none;
+}
+
+video,img{
+	max-width:100%;
+}
+
+
+
+/*
+//
+/// Classes */
+
+.menu{
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	list-style:none outside none;
+}
