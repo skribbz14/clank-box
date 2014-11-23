@@ -65,10 +65,10 @@
 		&:last-of-type{
 			td{
 				&:first-of-type{
-					@include border-radius-bottomleft(10px);		
+
 				}
 				&:last-of-type{
-					@include border-radius-bottomright(10px);
+
 				}
 			}			
 			
