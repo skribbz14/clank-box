@@ -25,6 +25,17 @@
 		@include rem(line-height, 13);
 	}	
 	
+	.l-help{
+		@extend %page_wrapper;
+		background-color: #ccc;
+		@include rem(margin, 40, auto);
+		@include rem(margin-top, 40);
+		@include rem(margin-bottom, 40);
+		@include rem(line-height, 18);				
+		@include rem(padding, 10);
+		@extend %admin_border_style;
+	}	
+	
 	th,table,tbody{
 		border:none;
 		-webkit-backface-visibility: hidden;
@@ -141,12 +152,3 @@
 
 
 
-.l-help{
-	width:90%;
-	@include rem(margin, 40, auto);
-	@include rem(max-width, 1400);
-	@include rem(line-height, 18);
-	background-color: rgba(51, 51, 51, 0.1);
-	@include rem(padding, 10);
-	outline:1px solid $theme_black;
-}
