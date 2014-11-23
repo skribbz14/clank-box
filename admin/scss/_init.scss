@@ -23,6 +23,7 @@ $theme_black: #333;
 $theme_green: rgba(37, 174, 80, 0.7);
 $theme_purple: #6e467a;
 $theme_yellow: #f5bb4a;
+$theme_orange: rgba(245, 187, 74, 0.7);
 
 $admin_content_bgcolor: rgba(255, 255, 255, 0.75);
 $node_background_color: rgba(255, 255, 255, 0.7);
@@ -44,7 +45,7 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 	@include fallback(background-color, rgba(53, 53, 53, 0.23), #ccc);
 	@include text-shadow(1px 1px 0 rgba(51, 51, 51, 0.2));
 	color:white;
-	
+			
 	&:hover{
 		@include transition(background-color 0.15s ease-out);
 		background-color:rgba(59, 59, 59, 0.73);
@@ -57,6 +58,18 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 		box-shadow:0px 0px 28px 5px #333333 inset;	
 		background-color:white;
 		color:white;
+	}
+	
+	&.orange{
+		@include fallback(background-color, $theme_orange, orange);
+		
+		&:hover{
+			@include fallback(background-color, rgba(245, 187, 74, 0.8), orange);	
+		}
+		
+		&:active{
+			@include fallback(background-color, rgba(245, 187, 74, 0.95), orange);
+		}
 	}
 }
 
