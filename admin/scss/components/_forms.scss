@@ -114,14 +114,8 @@ input.form-file{
 		&#edit-submit{						
 			@extend %button_colors;
 			@extend %button_colors.orange;
-			
-			&:hover{
-				//@include fallback(background-color, $theme_green, #bada55);
-			}
-			
-			&:active{
-				//@include fallback(background-color, darken($theme_green, 20%), #bada55);
-			}									
+			@include rem(font-size, 16);
+			font-weight:600;				
 		}
 		
 		&#edit-preview{
