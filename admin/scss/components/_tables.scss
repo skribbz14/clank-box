@@ -5,6 +5,7 @@
 .admin-screen table{
 	border-top:1px solid black;
 	background:transparent;
+	width:100%;
 	
 	&.sticky-header{
 		display:none !important;
@@ -30,18 +31,20 @@
 	}	
 	
 	th{
-		padding-top:10px;
-		padding-bottom:10px;
-		font-size:1.3em;
+		@include rem(padding-top, 10);
+		@include rem(padding-bottom, 10);
+		@include font_style($open_sans, 18, 400, 20);
 		line-height:1em;		
 		text-align:left;
 		
 		&:first-of-type{
-			padding-left:10px;		
+			@include rem(padding-left, 10);	
+			@include fallback(border-left, $admin_border_color, $admin_border_color);	
 		}
 		
 		&:last-of-type{
-			padding-right:10px;
+			@include rem(padding-right, 10);
+			@include fallback(border-right, $admin_border_color, $admin_border_color);
 		}
 	}	
 	
