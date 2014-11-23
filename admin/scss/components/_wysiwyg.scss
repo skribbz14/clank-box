@@ -55,7 +55,7 @@
 		border-top:none;
 		margin-top:0;
 		@include rem(padding, 5);
-		@include fallback(width, calc(100% - 12px), 90%);		
+		@include fallback(width, calc(100% - 13px), 90%);		
 	}
 }
 
