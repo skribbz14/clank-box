@@ -40,21 +40,23 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 /// Classes */
 
 %button_colors{
-	@include transition(background-color .3s, color .15s, box-shadow .3s);
-	background-color:#353535;
+	@include transition(background-color 0.3s ease-out);
+	@include fallback(background-color, rgba(53, 53, 53, 0.23), #ccc);
+	@include text-shadow(1px 1px 0 rgba(51, 51, 51, 0.2));
 	color:white;
 	
 	&:hover{
+		@include transition(background-color 0.15s ease-out);
 		background-color:rgba(59, 59, 59, 0.73);
 		text-decoration:none;
 		color:white;
 	}
 	
 	&:active{
-		@include transition(background-color 0s, color 0s, box-shadow 0s);
+		@include transition(background-color 0 ease-out);
 		box-shadow:0px 0px 28px 5px #333333 inset;	
 		background-color:white;
-		color:#3B3B3B;
+		color:white;
 	}
 }
 
