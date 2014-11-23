@@ -4,6 +4,9 @@
 
 div.vertical-tabs{
 	@extend %admin_border_style;
+	@include rem(margin-top, 75);
+	background-color: white;
+
 	
 	ul.vertical-tabs-list{
 		border-top: 1px solid black;
