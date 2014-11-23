@@ -5,8 +5,9 @@
 /// be moved out of this group, if possible. Body calls are poor on performance. */
 
 .admin-screen,
-.page-node-add,
-.page-admin{
+/*.page-node-add,
+.page-admin*/{
+	font-size:120%;	
 	
 	.page{
 		@include rem(padding-bottom, 40);
