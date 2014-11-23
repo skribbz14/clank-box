@@ -53,6 +53,7 @@ $admin_border_color_fallback:#ccc;
 	@include fallback(background-color, rgba(53, 53, 53, 0.23), #ccc);
 	@include text-shadow(1px 1px 0 rgba(51, 51, 51, 0.2));
 	@include border-radius(15px);
+	@include rem(padding, 1, 10);
 	@extend %admin_border_style;
 	color:white;
 			
