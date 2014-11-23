@@ -6,7 +6,6 @@
 	@include box-shadow(none);
 	background-image:none;
 	background-color:#45454A;
-	//@include fallback(border-bottom, $admin_border_color, $admin_border_color_fallback);	
 	
 	a{
 		@include disable_user_select();
