@@ -53,6 +53,10 @@ div.vertical-tabs{
 						@include font_style($open_sans, 14, 400, 18);
 						text-decoration:none;
 					}
+					
+					.summary{
+						font-size:0.8em;
+					}
 				}
 				
 				strong,
