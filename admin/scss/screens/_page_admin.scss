@@ -27,10 +27,9 @@
 	
 	.l-help{
 		@extend %admin_container;
-		background-color: #ccc;
-		@include rem(margin, 40, auto);
-		@include rem(margin-top, 40);
-		@include rem(margin-bottom, 40);
+		background-color: #ebebeb;
+		@include rem(margin-top, 30);
+		@include rem(margin-bottom, 30);
 		@include rem(line-height, 18);				
 		@extend %admin_border_style;
 		
