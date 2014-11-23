@@ -46,6 +46,12 @@ div.vertical-tabs{
 					background-color:white;
 					@include transition(background-color 0.15s ease-out);
 					border-bottom:none;
+					font-weight:400;
+				}
+				
+				*:hover{
+					text-decoration:none;
+					font-weight:400;
 				}
 			}
 		}		
