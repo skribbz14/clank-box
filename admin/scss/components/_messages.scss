@@ -1,8 +1,10 @@
 .l-messages{
-	@extend %admin_container;
 	@include rem(line-height, 13);
+	max-width:100%;
+	@include rem(margin, 0, auto, 0);
+	width:100%;	
 	padding:0;
-	border-bottom:1px solid $theme_black;	
+	border-bottom:1px solid $theme_black;
 
 	.close{
 		text-decoration:none !important;
