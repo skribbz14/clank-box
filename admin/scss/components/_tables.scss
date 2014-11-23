@@ -102,6 +102,10 @@
 			td {
 			    background-color: $theme_green;
 			    color:white;
+			}
+			
+			a{
+				color:white;
 			}	
 			
 			tr td{
@@ -114,6 +118,10 @@
 				background-color: $theme_yellow;
 				color:white;
 			}
+			
+			a{
+				color:white;
+			}
 		}
 							  	 
 		&.error{
@@ -121,6 +129,10 @@
 				background-color: $theme_red;	
 				color:white;	
 			}
+			
+			a{
+				color:white;
+			}			
 		}
 		
 		&.info{
