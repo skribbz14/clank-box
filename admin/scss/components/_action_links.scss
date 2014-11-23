@@ -15,7 +15,7 @@
 		@include fallback(background-color, rgba($theme_yellow, 0.7), yellow);
 		@include border-radius(15px);
 		@include transition(background-color 0.3s ease-out);
-		@include rem(padding, 0 10);
+		@include rem(padding, 0, 10);
 		
 		&:first-of-type{
 			margin-left:0;
