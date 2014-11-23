@@ -72,19 +72,7 @@
     
     &.even{
 	    background-color: transparent;		    
-    }		
-
-    .links{
-	    
-	    li{
-		    list-style:none;
-	    }
-	    
-	    a{
-		    padding:3px;
-		    float:left;
-	    }		    
-    }		
+    }					
 		
 		/// Status States */		
 		&.region-title{												
@@ -154,7 +142,23 @@
 			a{
 				color:white;
 			}	    
-    }        									  	    
+    }       
+    
+    
+   	// Modifier links
+    .links{
+	    
+	    li{
+		    list-style:none;
+	    }
+	    
+	    a{
+		    @extend %button_colors;
+		    @extend %button_colors.orange;
+		    float:left;
+	    }		    
+    }	
+     									  	    
 	}//tr
 	
 	td{
