@@ -5,7 +5,7 @@
 #admin-menu {
 	@include box-shadow(none);
 	background-image:none;
-	background-color:#ebebeb;
+	background-color:#45454A;
 	@include fallback(border-bottom, $admin_border_color, $admin_border_color_fallback);	
 	
 	a{
@@ -13,6 +13,15 @@
 	}
 	
 	.dropdown{
+		
+		li{
+			@include transition(background-color 0.3s ease-out);
+			
+			&:hover{
+				@include transition(background-color 0.15s ease-out);
+				background-color:#63636b;
+			}
+		}
 		
 		.admin-menu-toolbar-category{
 			
@@ -31,6 +40,10 @@
 				&.active-trail{
 					background-image:none;
 				}						
+				
+				&:hover{
+					background-color:rgb(139, 139, 139);
+				}
 			}
 		}
 			
