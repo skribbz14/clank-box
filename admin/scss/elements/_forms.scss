@@ -95,19 +95,31 @@ input.form-file{
 .admin-screen #edit-actions{
 	.form-submit{
 		@include font_style($open_sans, 14, 500, 14);
-		@include border-radius(30);
+		@include border-radius(30px);
 		@include rem(margin, 40, 15, 80, 0);
 		@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), 1px solid #333);
 		@include rem(padding, 7, 13);
 		background-clip:padding-box;
 		box-shadow:none;		
 				
-		&#edit-submit{
-			@include fallback(background-color, $theme_green, #bada55);						
+		&#edit-submit{						
+			&:hover{
+				@include fallback(background-color, $theme_green, #bada55);
+			}
+			
+			&:active{
+				@include fallback(background-color, darken($theme_green, 20%), #bada55);
+			}									
 		}
 		
-		&#edit-delete{
-			@include fallback(background-color, $theme_red, #f00);
+		&#edit-delete{			
+			&:hover{
+				@include fallback(background-color, $theme_red, #f00);
+			}
+			
+			&:active{
+				@include fallback(background-color, darken($theme_red, 20%), #f00);
+			}			
 		}
 		
 	}
