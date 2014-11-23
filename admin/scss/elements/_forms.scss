@@ -121,6 +121,10 @@ input.form-file{
 			}									
 		}
 		
+		&#edit-preview{
+			display:none;									
+		}
+		
 		&#edit-delete{			
 			&:hover{
 				@include fallback(background-color, $theme_red, #f00);
