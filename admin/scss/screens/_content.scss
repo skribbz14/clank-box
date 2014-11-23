@@ -3,15 +3,6 @@
 /// Content screen */
 
 #node-admin-content{
-	
-	/*a{
-		border:none;
-		
-		&:hover{
-			border:none;
-		}
-	}*/
-	
 	#edit-options{
 		#edit-submit--2.form-submit{
 			@extend %button_colors;
@@ -19,9 +10,16 @@
 			@include rem(margin, 0, 0, 0, 10);
 		}
 	}
-	
+}
+
+
+/*
+//
+/// Filters */
+
+#node-admin-content{
 	#edit-filters{
-		#edit-submit.form-submit{
+		input[type="submit"].form-submit{
 			@extend %button_colors;
 			@extend %button_colors.orange;			
 			margin:0;			
@@ -55,4 +53,7 @@
 		}
 	}
 	
+	.additional-filters{
+		display:none;
+	}	
 }
