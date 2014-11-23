@@ -161,12 +161,13 @@
 	td{
 		font-weight:400;
 		display:table-cell;
+		background-clip:padding-box;
 		@include rem(padding-top, 10);
 		@include rem(padding-bottom, 10);
 		@include fallback(border-top, $admin_border_color, $admin_border_color);
 		@include fallback(border-bottom, $admin_border_color, $admin_border_color);
 		@include font_style($open_sans, 16, 400, 17);
-		background-clip:padding-box;
+		@include transition(background-color 0.2s ease-out);
 	
 		&.active{
 			background-color:transparent;
