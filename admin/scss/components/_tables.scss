@@ -155,6 +155,7 @@
 	    a{
 		    @extend %button_colors;
 		    @extend %button_colors.orange;
+		    @include rem(margin-right, 5);
 		    float:left;
 	    }		    
     }	
