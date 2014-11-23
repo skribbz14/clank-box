@@ -36,6 +36,8 @@ div.vertical-tabs{
 		
 			a{
 				color: rgb(118, 178, 255);
+				@include font_style($open_sans, 16, 400, 20);
+				@include rem(padding, 12, 10);
 				
 				&:hover{
 					outline:none;
