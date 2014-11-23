@@ -3,12 +3,12 @@
 /// Vertical Tabs */
 
 div.vertical-tabs{
-	border:1px solid black;
 	@extend %admin_border_style;
 	
 	ul.vertical-tabs-list{
 		border-top: 1px solid black;
-		border-bottom:1px solid black;
+		@include fallback(border-top, $admin_border_color, $admin_border_color);
+		@include fallback(border-bottom, $admin_border_color, $admin_border_color); 
 
 		.vertical-tab-button{
 			border:1px solid black;	
