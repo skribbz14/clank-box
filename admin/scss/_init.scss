@@ -69,7 +69,10 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 @import "components/messages";
 @import "components/vertical_tabs";
 @import "components/wysiwyg";
-@import "components/button_groups";
+
+//@import "components/button_groups";
+@import "components/new_button_groups";
+
 @import "components/admin_menu";
 @import "components/contextual_filters";
 @import "components/throbber";
