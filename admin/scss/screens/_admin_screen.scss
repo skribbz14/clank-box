@@ -79,18 +79,6 @@
 	.project a {
 	    color: rgb(112, 102, 226);
 	}	
-
-	.active .button:hover,
-	.button.active:hover,
-	.button.active {
-	    background-color: rgb(194, 194, 190);
-	    color: rgb(148, 119, 119);
-	    cursor: default;
-	}
-		
-	.button:hover {
-	    opacity:1;
-	}	
 		
 	.tabledrag-processed .form-type-textfield {
 	    float: left !important;
