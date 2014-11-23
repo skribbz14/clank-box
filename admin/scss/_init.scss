@@ -1,7 +1,13 @@
 // Custom Drupal 7 Admin Theme
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 2.0
+// Version 2.1
 
+/*
+//
+/// New this version
+/// I updated the file structure 
+
+/// @todo Need to style the media widget
 
 
 /*
@@ -48,35 +54,50 @@ $button_active_box_shadow:0px 0px 10px -2px #333 inset;
 }
 
 
+
 /*
 //
 /// Imports */
 
-@import "scss/page_admin";
-@import "scss/messages";
-@import "scss/buttons";
-@import "scss/wysiwyg";
-@import "scss/module_filter";
-@import "scss/vertical_tabs";
-@import "scss/button_groups";
-@import "scss/manage_display";
-@import "scss/views";
-@import "scss/tables";
-@import "scss/content";
-@import "scss/image_styles";
-@import "scss/admin_menu";
-@import "scss/webform";
-@import "scss/status_screen";
-@import "scss/contextual_filters";
-@import "scss/update_screen";
-@import "scss/database_logs";
-@import "scss/throbber";
-@import "scss/misc";
-@import "scss/action_links";
-@import "scss/commerce";
-@import "scss/forms";
-@import "scss/dpm";
-@import "scss/help";
+/// Elements
+@import "elements/buttons";
+@import "elements/tables";
+@import "elements/forms";
+
+
+/// Components
+@import "components/messages";
+@import "components/vertical_tabs";
+@import "components/wysiwyg";
+@import "components/button_groups";
+@import "components/admin_menu";
+@import "components/contextual_filters";
+@import "components/throbber";
+@import "components/action_links";
+@import "components/dpm";
+@import "components/media_widget";
+
+
+/// Screens
+@import "screens/page_admin";
+@import "screens/module_filter";
+@import "screens/manage_display";
+@import "screens/views";
+@import "screens/content";
+@import "screens/image_styles";
+@import "screens/webform";
+@import "screens/status_screen";
+@import "screens/update_screen";
+@import "screens/database_logs";
+@import "screens/commerce";
+
+
+/// Misc
+@import "misc";
+
+
+
+
 
 
 

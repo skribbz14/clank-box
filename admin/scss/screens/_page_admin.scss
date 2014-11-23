@@ -4,28 +4,14 @@
 /// General styles for the admin screens. For best practice these styles should
 /// be moved out of this group, if possible. Body calls are poor on performance. */
 
-.section-admin,
 .admin-screen,
 .page-node-add,
 .page-admin{
-	
-	form{
-		@include rem(max-width, 1200);
-		width:95%;
-		float:none;
-		display:block;
-		margin:auto;
-	}
 	
 	.page{
 		@include rem(padding-bottom, 40);
 		-webkit-backface-visibility:visible;
 		@include transform(none);
-	}
-	
-	.l-main{
-		width:90%;
-		margin:auto;
 	}
 	
 	th,table,tbody{

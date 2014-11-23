@@ -257,11 +257,8 @@
 
 .field-formatter-settings-edit-form{
 	@include rem(text-indent, 10);
-	@include rem(margin-top, 40);
 	position:relative;
-	margin-left:-47vw;
 	display:block;
-	width:88vw;
 	
 	// This is so we can get the text outside of divs to align with the rest of the content
 	*{
