@@ -71,6 +71,10 @@ div.vertical-tabs{
 			}
 		}			
 	}
+	
+	.vertical-tabs-pane{
+		@include rem(padding, 0, 35);
+	}
 
 	.fieldset-wrapper{
 		padding:1.5em 0;
