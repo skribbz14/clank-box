@@ -35,7 +35,6 @@
 	}
 	
 	.filter-wrapper{
-		border:none;
 		@include rem(padding-left, 5);
 		@include rem(padding-top, 5);
 		@include rem(padding-bottom, 1);
@@ -45,6 +44,7 @@
 		@extend %admin_border_style;
 		border-top:none;
 		border-bottom:none;
+		@include backface-visibility(hidden);
 	}
 	
 	.filter-guidelines{
