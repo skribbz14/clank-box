@@ -52,7 +52,10 @@
 		font-style:italic;
 		font-size:.85em;
 		@extend %admin_border_style;
-		border-top:none;		
+		border-top:none;
+		margin-top:0;
+		@include rem(padding, 5);
+		@include fallback(width, calc(100% - 12px), 90%);		
 	}
 }
 
