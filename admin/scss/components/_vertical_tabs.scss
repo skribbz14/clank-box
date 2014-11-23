@@ -45,6 +45,7 @@ div.vertical-tabs{
 					text-decoration:none;
 					background-color:white;
 					@include transition(background-color 0.15s ease-out);
+					border-bottom:none;
 				}
 			}
 		}		
