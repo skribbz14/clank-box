@@ -50,11 +50,11 @@
 	
 	.description{
 		font-style:italic;
-		font-size:.85em;
+		@include rem(font-size, 14);
 		@extend %admin_border_style;
 		border-top:none;
 		margin-top:0;
-		@include rem(padding, 5);
+		@include rem(padding, 10, 5);
 		@include fallback(width, calc(100% - 13px), 90%);		
 	}
 }
