@@ -11,6 +11,12 @@
 		@extend %admin_container;	
 	}
 	
+	.l-action_links{
+		@extend %admin_container;	
+		overflow:hidden;		
+		@include rem(line-height, 13);
+	}	
+	
 	th,table,tbody{
 		border:none;
 		-webkit-backface-visibility: hidden;
@@ -124,27 +130,9 @@
 	    border-bottom-width:2px;
 	    @include rem(margin-bottom, 30);  
 	}
-
 	
-	.l-admin_tabs{
-		width:100%;
-		margin:auto;		
-		@include rem(line-height, 13);
-		@include rem(max-width, 1400);
-	}
-	
-	.l-action_links{
-		width:90%;
-		overflow:hidden;		
-		@include rem(margin, 10, auto);	
-		@include rem(line-height, 13);
-		@include rem(max-width, 1400);
-	}
 
-	.l-main {
-	    background-color: transparent;
-	    @include rem(padding, 40, 0);   	    	    
-	}				
+			
 }//page-admin
 
 
