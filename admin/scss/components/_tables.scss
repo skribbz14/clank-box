@@ -14,6 +14,7 @@
 	thead{
 		background-color:transparent;
 		border-top: 1px solid black;
+		@include fallback(border-top, $admin_border_color, $admin_border_color_fallback);
 		
 		tr{
 			background: transparent;
@@ -32,18 +33,19 @@
 	}	
 	
 	tr{
-    	border:1px solid black;
+			@extend %admin_border_style;
     	background:transparent;	
     	border-bottom:none;			  
 			display:table-row;
 			width:100%;
 		
-		&:last-of-type{
-			border-bottom:1px solid black;
+		&:first-of-type{
+			td{
+				border-top:none;
+			}
 		}
 		
-		&.region-title{		
-										
+		&.region-title{												
 	    td{
 	    	padding-top:5em;   	
 	    	

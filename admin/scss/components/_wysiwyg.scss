@@ -9,6 +9,8 @@
 
 // Wrapper for the entire field
 .text-format-wrapper{
+	@include rem(margin-top, 5);
+	
 	.form-type-select{
 		padding:0;
 		margin:0;
@@ -40,15 +42,21 @@
 		}
 		
 		.cke_wrapper{
-			border-radius:3px;
-			background-color: rgb(205, 206, 207);
+			@include border-radius(3px);
+			@include fallback(background-color, rgba(205, 206, 207, 0.6), #ccc);
 			background-image:none;
+			@include rem(padding, 0, 3);
+		}
+		
+		.cke_top{
+			@include rem(padding, 5, 3, 0);
 		}
 		
 		.cke_toolgroup{
 			background-image:none;
-			padding-bottom:6px;
+			@include rem(padding-bottom, 6);
 			background-color: rgb(238, 240, 243);
+			@include border-radius(3px);
 		}
 		
 		.cke_toolbox_collapser{
