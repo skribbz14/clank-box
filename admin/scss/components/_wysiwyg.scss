@@ -55,7 +55,11 @@
 		border-top:none;
 		margin-top:0;
 		@include rem(padding, 10, 5);
-		@include fallback(width, calc(100% - 13px), 90%);		
+		@include fallback(width, calc(100% - 12px), 90%);		
+		border-bottom-left-radius:2px;
+		border-bottom-right-radius:2px;
+		
+		@include backface-visibility(hidden);
 	}
 }
 
@@ -79,6 +83,8 @@
 		@include fallback(background-color, rgba(205, 206, 207, 0.6), #ccc);
 		background-image:none;
 		@include rem(padding, 0, 3);
+		border-top-left-radius:2px;
+		border-top-right-radius:2px;
 	}
 	
 	.cke_top{
