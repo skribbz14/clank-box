@@ -170,7 +170,7 @@
 		@include rem(padding-bottom, 10);
 		@include fallback(border-top, $admin_border_color, $admin_border_color);
 		@include fallback(border-bottom, $admin_border_color, $admin_border_color);
-		@include font_style($open_sans, 16, 400, 17);
+		@include font_style($open_sans, 16, 400, 21);
 		@include transition(background-color 0.2s ease-out);
 	
 		&.active{
