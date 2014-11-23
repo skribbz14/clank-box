@@ -35,13 +35,13 @@
 			}
 			
 			&:hover{
-				@include fallback(background-color, rgba(227, 34, 43, 0.5), #b2b2b2);
+				@include fallback(background-color, rgba(238, 190, 28, 0.5), #b2b2b2);
 				@include transition(background-color 0.15s ease-out);
 			}
 			
 			&:active{
 				@include transition(background-color 0.1s ease-out);
-				@include fallback(background-color, rgba(227, 34, 43, 0.7), #828282);
+				@include fallback(background-color, rgba(238, 190, 28, 0.7), #b2b2b2);
 			}
 			
 			&.active{
@@ -63,14 +63,6 @@
 		a{
 			@include rem(padding, 4, 27);
 			@include rem(font-size, 12);
-			
-			&:hover{
-				@include fallback(background-color, rgba(238, 190, 28, 0.5), #b2b2b2);
-			}
-			
-			&:active{
-				@include fallback(background-color, rgba(238, 190, 28, 0.7), #b2b2b2);
-			}
 		}
 	}
 }
