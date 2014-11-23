@@ -40,6 +40,10 @@
 	    }
 		}
 		
+		&.warning{
+			background-color:$theme_yellow;
+		}
+		
 		&.alert{
 			background-color:rgba(198, 15, 19, 1);
 			color:white;
