@@ -11,7 +11,7 @@ div.vertical-tabs{
 		@include fallback(border-bottom, $admin_border_color, $admin_border_color); 
 
 		.vertical-tab-button{
-			border:1px solid black;	
+			@extend %admin_border_style;
 			border-top:none;
 			@include disable_user_select();
 			
