@@ -11,24 +11,9 @@
 		text-align:center;
 		position:relative;
 		@include rem(margin, 0, 5);
-		//@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), #ccc);
-		//@include fallback(background-color, rgba($theme_yellow, 0.7), yellow);
-		
-		//@include transition(background-color 0.3s ease-out);
-		
-		
+
 		&:first-of-type{
 			margin-left:0;
-		}
-		
-		&:hover{
-			//@include transition(background-color 0.15s ease-out);
-			//@include fallback(background-color, rgba($theme_yellow, 0.8), yellow);
-		}
-		
-		&:active{
-			//@include transition(background-color 0.1s ease-out);
-			//@include fallback(background-color, rgba($theme_yellow, 0.9), yellow);
 		}
 	}
 	
@@ -43,6 +28,7 @@
 		@include border-radius(15px);
 		color:white;		
 		text-decoration:none;
+		display:block;
 	}
 	
 }
