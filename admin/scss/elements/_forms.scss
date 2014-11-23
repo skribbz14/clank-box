@@ -102,9 +102,13 @@ input.form-file{
 		background-clip:padding-box;
 		box-shadow:none;		
 				
-		&#edit-submit{}
+		&#edit-submit{
+			@include fallback(background-color, $theme_green, #bada55);						
+		}
 		
-		&#edit-delete{}
+		&#edit-delete{
+			@include fallback(background-color, $theme_red, #f00);
+		}
 		
 	}
 }
