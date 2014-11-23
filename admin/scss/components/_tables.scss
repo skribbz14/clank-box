@@ -101,6 +101,7 @@
 		&.ok{
 			td {
 			    background-color: $theme_green;
+			    color:white;
 			}	
 			
 			tr td{
@@ -111,18 +112,21 @@
 		&.warning{
 			td{
 				background-color: $theme_yellow;
+				color:white;
 			}
 		}
 							  	 
 		&.error{
 			td{
-				background-color: $theme_red;		
+				background-color: $theme_red;	
+				color:white;	
 			}
 		}
 		
 		&.info{
 			td{
 				background-color:$theme_blue;
+				color:white;
 			}
 			
 			a{
@@ -133,6 +137,7 @@
     &.selected{
 	    td{
 				background-color: $theme_green;
+				color:white;
 	    }
     }        									  	    
 	}//tr
@@ -145,7 +150,6 @@
 		@include fallback(border-top, $admin_border_color, $admin_border_color);
 		@include fallback(border-bottom, $admin_border_color, $admin_border_color);
 		@include font_style($open_sans, 16, 400, 17);
-		color:white;
 		background-clip:padding-box;
 	
 		&.active{
