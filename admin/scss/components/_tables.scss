@@ -21,44 +21,14 @@
 			border-top:none;
 		}
 		
-		th{			
-			a{
-				color:black;
-			}
+		a{
+			color:black;
 		}
 	}	
 	
 	tbody{
 	    width:100%;
 	}	
-	
-	tr{
-			@extend %admin_border_style;
-    	background:transparent;	
-    	border-bottom:none;			  
-			display:table-row;
-			width:100%;
-		
-		&:first-of-type{
-			td{
-				border-top:none;
-			}
-		}
-		
-		&.region-title{												
-	    td{
-	    	padding-top:5em;   	
-	    	
-	    	&:first-of-type{
-		    	padding-top:1em;
-	    	}	    
-	    }    
-		}
-		
-		tr{
-			border:none !important;;						
-		}						  	    
-	}
 	
 	th{
 		padding-top:10px;
@@ -74,7 +44,68 @@
 		&:last-of-type{
 			padding-right:10px;
 		}
-	}
+	}	
+	
+	tr{
+			@extend %admin_border_style;
+    	background:transparent;	
+    	border-bottom:none;			  
+			display:table-row;
+			width:100%;
+		
+		&:first-of-type{
+			td{
+				border-top:none;
+			}
+		}
+		
+		tr{
+			border:none !important;;						
+		}		
+		
+		&.region-title{												
+	    td{
+	    	padding-top:5em;   	
+	    	
+	    	&:first-of-type{
+		    	padding-top:1em;
+	    	}	    
+	    }    
+		}
+		
+		&.ok{
+			td {
+			    background-color: $theme_green;
+			}	
+			
+			tr td{
+				background-color: transparent;
+			}			
+		}	
+		
+		&.warning{
+			td{
+				background-color: $theme_yellow;
+			}
+		}
+							  	 
+		&.error{
+			td{
+				background-color: $theme_red;		
+			}
+		}
+		
+		&.info{
+			td{
+				background-color:$theme_blue;
+			}
+			
+			a{
+				color:white;
+			}
+		}
+							  	    
+	}//tr
 	
 	td{
 		font-weight:400;
@@ -154,34 +185,6 @@
 	.form-select{
 		margin-left:1px;
 	}
-}
-
-tr.ok {
-
-	td {
-	    background-color: rgba(148, 204, 148, 0.55);
-	}	
-	
-	tr td{
-		background-color: transparent;
-	}
-}
-
-
-tr.warning td {
-    background-color: rgba(235, 235, 150, 0.55);
-}
-
-tr.error td {
-    background-color: rgba(250, 146, 146, 0.55);
-}
-
-tr.info td {
-    background-color: rgba(137, 177, 230, 0.55);
-}
-
-tr.info a {
-    color: white;
 }
 
 fieldset {
