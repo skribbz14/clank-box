@@ -7,6 +7,7 @@
     float: left;
 }
 
+// Wrapper for the entire field
 .text-format-wrapper{
 	.form-type-select{
 		padding:0;
@@ -15,6 +16,10 @@
 	
 	.tips{
 		font-size:.7em;
+	}
+	
+	.filter-help{
+		display:none;
 	}
 	
 	.filter-list{
@@ -26,8 +31,9 @@
 	}
 	
 	span.cke_skin_kama{
-		border:1px solid black;
-		padding:4px;
+		@include fallback(border, rgba(51, 51, 51, 0.5), #333333);
+		background-clip:padding-box;
+		padding:0;
 		
 		&:focus{
 			outline:none;
