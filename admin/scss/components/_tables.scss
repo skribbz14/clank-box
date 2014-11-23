@@ -113,6 +113,8 @@
 		@include rem(padding-bottom, 10);
 		@include fallback(border-top, $admin_border_color, $admin_border_color);
 		@include fallback(border-bottom, $admin_border_color, $admin_border_color);
+		@include font_style($open_sans, 16, 400, 17);
+		color:white;
 	
 		&.active{
 			background-color:transparent;
@@ -130,14 +132,7 @@
 	}	
 
 	a{
-		color:black;						
-	    font-size:15px;
-	    line-height:15px;
-	    font-weight:normal;
-	    
-	    &:hover{
-		    border-bottom:1px solid white;
-	    }
+		text-decoration:underline;
 	}	
 	
 	.region-empty{
