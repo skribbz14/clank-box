@@ -21,7 +21,8 @@
 	padding:0;
 	margin:0;
 	
-	.button{		
+	/*.button*/
+	a{		
 		@include font_style($open_sans, 16, 600, 39);
 		box-shadow:0 0 0 0 transparent inset;
 		@include disable_user_select();		
@@ -45,8 +46,8 @@
 		position:relative;
 		
 		&.active{
-			.button:active,
-			.button{
+			a:active,
+			a{
 				background-color:#c2c2be;;
 				color: #947777;
 				box-shadow:none !important;
@@ -78,14 +79,14 @@
 		width:20%;		
 		
 		&.active{
-			.button{
+			a{
 				background-color: #C1C1C1;
 				color:#947777;			
 			}
 		}
 	}
 
-	.button{				
+	a{				
 		background-color: $theme_yellow;		
 		@include rem(line-height, 21);
 		@include rem(font-size, 13);
