@@ -36,11 +36,15 @@ div.vertical-tabs{
 		
 			a{
 				color: rgb(118, 178, 255);
-				@include font_style($open_sans, 16, 400, 20);
+				@include font_style($open_sans, 14, 400, 18);
 				@include rem(padding, 12, 10);
+				@include transition(background-color 0.3s ease-out);
 				
 				&:hover{
 					outline:none;
+					text-decoration:none;
+					background-color:white;
+					@include transition(background-color 0.15s ease-out);
 				}
 			}
 		}		
