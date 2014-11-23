@@ -4,7 +4,7 @@
 	@include rem(margin, 0, auto, 0);
 	width:100%;	
 	padding:0;
-	border-bottom:1px solid $theme_black;
+	border-bottom:1px solid rgba(51, 51, 51, 0.5);
 	
 	.close{
 		text-decoration:none !important;
@@ -13,12 +13,12 @@
 	}
 	
 	.messages{
-		text-shadow: 1px 1px 1px rgba(116, 114, 114, 0.23);
+		@include text-shadow(1px 1px 1px rgba(116, 114, 114, 0.23));
 		@include font_style($open_sans, 13, 600, 19);		
 		@include rem(margin-top, 10);
 		@include rem(padding, 10);		
 		text-align:center;
-		color:$theme_black;
+		color:white;
 		border:none;
 		margin:0;						
 		
@@ -27,7 +27,7 @@
 		}
 		
 		&.status{
-			@include fallback(background-color, rgba(119, 227, 138, 0.7), #bada55);
+			@include fallback(background-color, $theme_green, #bada55);
 		}
 		
 		&.success{			

@@ -46,7 +46,7 @@
 			
 			&.active{
 				cursor:default;
-				@include fallback(background-color, rgba(119, 227, 138, 0.7) !important, #828282 !important);
+				@include fallback(background-color, $theme_green !important, #828282 !important);
 			}
 		}
 	}
