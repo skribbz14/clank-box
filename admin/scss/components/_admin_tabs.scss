@@ -8,8 +8,7 @@
 		padding:0;
 		list-style:none;
 		background-clip:padding-box;
-		@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), #ccc);
-	
+		@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), #ccc);	
 		@include border-radius(1px);
 		
 		li{
@@ -38,6 +37,18 @@
 				@include transition(background-color 0.1s ease-out);
 				@include fallback(background-color, 1px solid rgba(51, 51, 51, 0.7), #828282);
 			}
+		}
+	}
+	
+	.secondary{
+		clear:both;
+		
+		li{
+			float:left;
+		}
+		
+		a{
+			background-color:#ace;
 		}
 	}
 }
