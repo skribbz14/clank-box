@@ -35,19 +35,17 @@
 	}
 	
 	.filter-wrapper{
-		@include rem(padding-left, 5);
+		@include rem(padding-right, 7);
 		@include rem(padding-top, 5);
 		@include rem(padding-bottom, 1);
 		margin-bottom:0;
 		clear:both;
-		//@include fallback(background-color, rgba(205, 206, 207, 0.6), #ccc);
 		background-color:transparent;
-		@include rem(margin-top, -32);
-		//@extend %admin_border_style;
-		//border-top:none;
-		//border-bottom:none;
-		//@include backface-visibility(hidden);
-		//@include enable_3d();
+		@include rem(margin-top, -37);
+		float:right;
+		border:none;
+		z-index:9;
+		@include transform(translateZ(1px));
 	}
 	
 	.filter-guidelines{
