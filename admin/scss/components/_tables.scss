@@ -3,7 +3,6 @@
 /// Table Styling */
 
 .admin-screen table{
-	border-top:1px solid black;
 	background:transparent;
 	width:100%;
 	
@@ -61,6 +60,18 @@
 			td{
 				border-top:none;
 			}
+		}
+		
+		&:last-of-type{
+			td{
+				&:first-of-type{
+					@include border-radius-bottomleft(10px);		
+				}
+				&:last-of-type{
+					@include border-radius-bottomright(10px);
+				}
+			}			
+			
 		}
 		
 		tr{

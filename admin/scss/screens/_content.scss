@@ -23,6 +23,7 @@
 		.form-submit{
 			@extend %button_colors;
 			@extend %button_colors.orange;
+			@include rem(padding, 1, 10);
 			margin:0;			
 			color:white;
 		}
