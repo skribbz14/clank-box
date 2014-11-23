@@ -53,11 +53,6 @@
 	input[type="checkbox"]{
 		margin:0;
 	}
-		
-	.text-format-wrapper .filter-wrapper{
-		padding-left:20px;
-		clear:both;
-	}
 	
 	.field-group-fieldset{
 		@include rem(margin-bottom, 40);

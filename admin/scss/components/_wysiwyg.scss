@@ -11,6 +11,10 @@
 .text-format-wrapper{
 	@include rem(margin-top, 5);
 	
+	.form-type-textarea > label{
+		@include rem(margin-bottom, 5);
+	}
+	
 	.form-type-select{
 		padding:0;
 		margin:0;
@@ -30,6 +34,14 @@
 	
 	.filter-wrapper{
 		border:none;
+		@include rem(padding-left, 5);
+		@include rem(padding-top, 5);
+		clear:both;
+		@include fallback(background-color, rgba(205, 206, 207, 0.6), #ccc);
+	}
+	
+	.filter-guidelines{
+		display:none;
 	}
 	
 	span.cke_skin_kama{
