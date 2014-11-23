@@ -45,6 +45,7 @@
 		border-top:none;
 		border-bottom:none;
 		@include backface-visibility(hidden);
+		@include enable_3d();
 	}
 	
 	.filter-guidelines{
@@ -63,6 +64,7 @@
 		border-bottom-right-radius:2px;
 		
 		@include backface-visibility(hidden);
+		@include enable_3d();
 	}
 }
 
@@ -91,6 +93,7 @@
 		background-image:none;
 		@include rem(padding, 0, 3);
 		@include backface-visibility(hidden);
+		@include enable_3d();
 	}
 	
 	.cke_top{
