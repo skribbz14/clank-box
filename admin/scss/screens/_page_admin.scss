@@ -15,7 +15,8 @@
 	
 	.l-main{
 		@extend %admin_container;
-		clear:both;	
+		@include rem(padding-bottom, 45);
+		clear:both;			
 	}
 	
 	.l-action_links{

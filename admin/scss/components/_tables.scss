@@ -109,20 +109,23 @@
 	td{
 		font-weight:400;
 		display:table-cell;
-		padding-top:10px;
-		padding-bottom:10px;
-		
+		@include rem(padding-top, 10);
+		@include rem(padding-bottom, 10);
+		@include fallback(border-top, $admin_border_color, $admin_border_color);
+		@include fallback(border-bottom, $admin_border_color, $admin_border_color);
 	
 		&.active{
 			background-color:transparent;
 		}
 		
 		&:first-of-type{
-			padding-left:10px;			
+			padding-left:10px;		
+			@include fallback(border-left, $admin_border_color, $admin_border_color);	
 		}
 		
 		&:last-of-type{
 			padding-right:10px;
+			@include fallback(border-right, $admin_border_color, $admin_border_color);
 		}
 	}	
 
