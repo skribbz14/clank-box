@@ -4,13 +4,13 @@
 
 #node-admin-content{
 	
-	a{
+	/*a{
 		border:none;
 		
 		&:hover{
 			border:none;
 		}
-	}
+	}*/
 	
 	#edit-options{
 		#edit-submit--2.form-submit{
@@ -28,5 +28,20 @@
 		}
 	}
 	
+	.filters{
+		display:block;
+		
+		.form-item{
+			float:left;
+		}
+		
+		label{
+			@include font_style($open_sans, 16, 400, 18);
+		}
+		
+		select{
+			@include font_style($open_sans, 16, 400, 18);
+		}
+	}
 	
 }
