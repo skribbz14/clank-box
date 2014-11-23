@@ -57,14 +57,6 @@
 		@include rem(margin-bottom, 40);
 	}
 
-	.vertical-tabs.clearfix{
-		@include rem(margin-top, 100);
-		background-color: white;
-		border:1px solid black;
-		border-bottom-width: 2px;
-    border-right-width: 2px;	    
-	}
-
 	.text-format-wrapper .description{
 		font-style:italic;
 		font-size:.85em;
