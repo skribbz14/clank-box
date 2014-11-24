@@ -49,5 +49,6 @@
 	jQuery(document).ready(function(e){
 		Close_Alert_Boxes();	
 		Create_Ajax_Throbber_Window_Height_Class();		
+		Test_For_Admin_Page();
 	});	
 })(window, document, jQuery);
