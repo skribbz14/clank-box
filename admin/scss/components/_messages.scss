@@ -45,6 +45,10 @@
 			background-color:$theme_yellow;
 		}
 		
+		&.error{
+			background-color:$theme_red;
+		}
+		
 		&.alert{
 			background-color:rgba(198, 15, 19, 1);
 			color:white;
