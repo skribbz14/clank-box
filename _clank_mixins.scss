@@ -1,6 +1,6 @@
 // Custom SASS Mixins
 // By Kyle Lamble
-// Version 9.6
+// Version 9.7
 
 
 /*
@@ -165,9 +165,25 @@
 	-webkit-flex-direction:$value;
 }
 
-@mixin justify-content($value){
-	justify-content:$value;
+@mixin justify-content($value){	
+	@if($value == space-around){
+		-ms-flex-pack:distribute;	
+	}
+	@else if($value == center){
+		-ms-flex-pack:center;
+	}
+	@else if($value == flex-start){
+		-ms-flex-pack:start;
+	}
+	@else if($value == flex-end){
+		-ms-flex-pack:end;
+	}
+	@else if($value == space-between){
+		-ms-flex-pack:justify;
+	}
+	
 	-webkit-justify-content:$value;
+	justify-content:$value;		
 }
 
 @mixin align-self($value){

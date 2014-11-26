@@ -98,10 +98,8 @@
 	}		
 	
 	tbody{
-		//experiment
 		display:block;
 		border:none;
-		border-top:1px solid black;
 	}
 	
 	tr{
@@ -127,7 +125,6 @@
 	
 		&.region-title{			
 			background-color:transparent;
-			border-top:1px solid black;
 			border-right:none;
 			border-left:none;
 			font-size:1.2em;
