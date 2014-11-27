@@ -32,9 +32,7 @@ div.contextual-links-active a.contextual-links-trigger{
 	@include rem(margin-left, 10);
 	
 	&.contextual-links-trigger-active{
-		@include rem(padding, 9, 15);
 		background-color:white;
-		border-radius:10px;	
 	}
 }
 
