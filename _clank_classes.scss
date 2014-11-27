@@ -23,3 +23,25 @@
 	height:auto;
 }
 
+
+
+/*
+//
+/// An elemenet that is usually used for layout purposes and to act as a wrapper */
+
+%relative_container{
+	float:left;
+	width:100%;
+	position:relative;
+}
+
+
+
+/*
+//
+/// A common method to vertically center an element */
+
+%vertically_centered_tc{
+	display:table-cell;
+	vertical-align:middle;
+}
