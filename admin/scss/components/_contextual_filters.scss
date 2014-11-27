@@ -3,6 +3,12 @@
 /// Contextual Links */
 
 div.contextual-links-wrapper{
+	position:absolute;
+	right:0;
+	bottom:0;
+	top:0;
+	@include transform(translateX(100%));
+	
 	ul.contextual-links {
 		padding:0;
 		
@@ -17,8 +23,13 @@ div.contextual-links-wrapper{
 }
 
 .contextual-links-region-active{
-	outline: #61440A double 2px;
+	outline: #828282 dashed 2px;
 	background-color: rgba(245, 187, 74, 0.53);
+}
+
+a.contextual-links-trigger{
+	padding:0;
+	@include rem(margin-left, 10);
 }
 
 a.contextual-links-trigger-active{
