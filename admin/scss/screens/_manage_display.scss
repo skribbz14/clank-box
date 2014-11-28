@@ -330,8 +330,12 @@
 	
 	.form-text,
 	div.form-item{
-		width:100%;
+		width:91%;
 	}
+}
+
+.ajax-new-content{
+	@include rem(width, 320);
 }
 
 
