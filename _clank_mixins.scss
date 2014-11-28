@@ -1,6 +1,6 @@
 // Custom SASS Mixins
 // By Kyle Lamble
-// Version 9.7
+// Version 9.8
 
 
 /*
@@ -23,6 +23,11 @@
 /*
 //
 /// Mixin definitions */
+
+// adjust-font($font_size, $line_height)
+//		- Allows you to quickly adjust the font-size and line-height in a single line.
+//		- The values should be without their unit values, but written in pixels. 
+//		- The values will output rems with a pixel fallback.
 
 // fallback($property, $value, $fallback_value)
 // 		- Allows you to write a property, that requires a fall back, in a single-line.
@@ -107,7 +112,19 @@
 
 /*
 //
+/// Allows you to quickly adjust the font-size and line-height in a single line. */
+
+@mixin adjust-font($font_size, $line_height){
+	@include rem(font-size, $font_size);
+	@include rem(line-height, $line_height);
+}
+
+
+
+/*
+//
 /// Allows you to use a single line for a property that needs a fallback */
+
 @mixin fallback($property, $value, $fallback_value){
 	#{$property}:$fallback_value;
 	#{$property}:$value;
