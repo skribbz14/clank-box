@@ -354,8 +354,12 @@
 // This was the original mixin, but I didn't want to use the underscore anymore out of a new standard.
 // This is just calling the other mixin, it will be phased out after a couple of version updates.
 @mixin font_style($font_family, $font_size, $font_weight, $line_height, $font_color : false){
-	if($font_color == false) @include font-style($font_family, $font_size, $font_weight, $line_height);
-	@else @include font-style($font_family, $font_size, $font_weight, $line_height, $font_color);	
+	if($font_color == false) {
+		@include font-style($font_family, $font_size, $font_weight, $line_height);	
+	}		
+	@else{
+		@include font-style($font_family, $font_size, $font_weight, $line_height, $font_color);	
+	} 
 }
 
 
