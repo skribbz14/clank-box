@@ -80,9 +80,10 @@
 // font_smoothing()
 //    - enables font smoothing for web fonts
 
-// font_style($font_family, $font_size, $font_weight, $line_height)
+// font_style($font_family, $font_size, $font_weight, $line_height, $color !optional)
 // 	  - shorthand to output font styles in a single line. font-size() and line-height() mixins are used to output rems with pixel fallbacks
 //    - font_smoothing() is also used to improve the output of web fonts
+//		- added the ability to optionally include the color property.
 
 // respond-to($media)   											 
 //    - creates a media query for said device. currently supports mobile (cell phones) and tablet.
@@ -340,7 +341,7 @@
 //
 /// Quickly output basic font styling properties */
 
-@mixin font-style($font_family, $font_size, $font_weight, $line_height, $font_color : false){
+@mixin font_style($font_family, $font_size, $font_weight, $line_height, $font_color : false){
 	font-family:$font_family;	
 	font-weight:$font_weight;
 	@include rem(font-size, $font_size);
@@ -350,18 +351,6 @@
 		color:$font_color;
 	}
 }
-
-// This was the original mixin, but I didn't want to use the underscore anymore out of a new standard.
-// This is just calling the other mixin, it will be phased out after a couple of version updates.
-@mixin font_style($font_family, $font_size, $font_weight, $line_height, $font_color : false){
-	@if($font_color == false) {
-		@include font-style($font_family, $font_size, $font_weight, $line_height);	
-	}		
-	@else{
-		@include font-style($font_family, $font_size, $font_weight, $line_height, $font_color);	
-	} 
-}
-
 
 
 /*
