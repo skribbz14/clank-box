@@ -6,7 +6,7 @@
   border-bottom-width:2px;
   
   .fieldset-legend{
-	  background-image:none;
+	  background-image:none !important;
 	  @include rem(padding, 0, 5);
 	  @include rem(font-size, 30);
 	  
