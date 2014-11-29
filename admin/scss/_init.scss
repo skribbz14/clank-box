@@ -59,7 +59,7 @@ $admin_border_color_fallback:#ccc;
 			
 	&:hover{
 		@include transition(background-color 0.15s ease-out);
-		background-color:rgba(245, 187, 74, 0.45);
+		background-color:rgba($theme_yellow, 0.45);
 		text-decoration:none;
 		color:white;
 	}

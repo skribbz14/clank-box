@@ -114,12 +114,7 @@ input.form-file{
 			@extend %button_colors;
 			@extend %button_colors.orange;
 			@include rem(font-size, 16);
-			font-weight:600;
-			
-			&:active,
-			&:hover{
-				@include fallback(background-color, $theme_green, green);
-			}				
+			font-weight:600;		
 		}
 		
 		&#edit-preview{
