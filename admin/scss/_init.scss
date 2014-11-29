@@ -53,9 +53,10 @@ $admin_border_color_fallback:#ccc;
 	@include fallback(background-color, rgba($theme_yellow, 0.05), #ccc);
 	@include border-radius(15px);
 	@include rem(padding, 0, 10);
+	@include text-shadow(1px 1px 0px #BBBBBB);
 	border:1px solid $theme_yellow;
 	text-decoration:none;	
-	color:#c2c2c2;
+	color:white;
 			
 	&:hover{
 		@include transition(background-color 0.15s ease-out);
@@ -72,26 +73,26 @@ $admin_border_color_fallback:#ccc;
 	}
 	
 	&.orange{
-		@include fallback(background-color, rgba($theme_yellow, 0.05), orange);
+		@include fallback(background-color, rgba($theme_yellow, 0.45), orange);
 		
 		&:hover{
-			@include fallback(background-color, rgba($theme_yellow, 0.45), red);	
+			@include fallback(background-color, rgba($theme_yellow, 0.6), red);	
 		}
 		
 		&:active{
-			@include fallback(background-color, rgba($theme_yellow, 0.9), red);
+			@include fallback(background-color, rgba($theme_yellow, 0.95), red);
 		}
 	}
 	
 	&.red{
-		@include fallback(background-color, rgba($theme_red, 0.05), orange);
+		@include fallback(background-color, rgba($theme_red, 0.45), orange);
 		
 		&:hover{
-			@include fallback(background-color, rgba($theme_red, 0.45), red);	
+			@include fallback(background-color, rgba($theme_red, 0.6), red);	
 		}
 		
 		&:active{
-			@include fallback(background-color, rgba($theme_red, 0.9), red);
+			@include fallback(background-color, rgba($theme_red, 0.95), red);
 		}
 	}	
 }
