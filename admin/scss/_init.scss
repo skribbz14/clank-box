@@ -49,18 +49,17 @@ $admin_border_color_fallback:#ccc;
 
 %button_colors{
 	@include font_style($open_sans, 12, 700, 26);
-	@include transition(background-color 0.3s ease-out);
-	@include fallback(background-color, rgba(53, 53, 53, 0.23), #ccc);
-	@include text-shadow(1px 1px 1px rgba(51, 51, 51, 0.3));
+	@include transition(background-color 0.3s ease-out, color 0.3s ease-out);
+	@include fallback(background-color, rgba($theme_yellow, 0.05), #ccc);
 	@include border-radius(15px);
 	@include rem(padding, 0, 10);
-	@extend %admin_border_style;
+	border:1px solid $theme_yellow;
 	text-decoration:none;	
-	color:white;
+	color:#c2c2c2;
 			
 	&:hover{
 		@include transition(background-color 0.15s ease-out);
-		background-color:rgba(59, 59, 59, 0.73);
+		background-color:rgba(245, 187, 74, 0.45);
 		text-decoration:none;
 		color:white;
 	}
