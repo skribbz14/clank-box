@@ -63,7 +63,11 @@ input.form-text{
 	display:none;
 }
 
-.form-item {
+.form-item {	
+	clear:both;
+	margin-top:0;
+	@include rem(margin-bottom, 80);
+		
 	.description{
 		max-width:$form_max_width;
 		padding:$form_description_padding;
