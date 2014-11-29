@@ -18,8 +18,6 @@
 	}
 	
 	function Test_For_Admin_Page(){
-		console.log('test for admin page');
-		
 		var body = jQuery('body'),
 				admin_class_set = false;
 				
@@ -49,7 +47,6 @@
 	/// Run */
 	
 	jQuery(document).ready(function(e){
-		console.log('running');
 		Close_Alert_Boxes();	
 		Create_Ajax_Throbber_Window_Height_Class();		
 		Test_For_Admin_Page();
