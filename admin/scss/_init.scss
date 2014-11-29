@@ -82,6 +82,18 @@ $admin_border_color_fallback:#ccc;
 			@include fallback(background-color, rgba($theme_yellow, 0.9), red);
 		}
 	}
+	
+	&.red{
+		@include fallback(background-color, rgba($theme_red, 0.05), orange);
+		
+		&:hover{
+			@include fallback(background-color, rgba($theme_red, 0.45), red);	
+		}
+		
+		&:active{
+			@include fallback(background-color, rgba($theme_red, 0.9), red);
+		}
+	}	
 }
 
 %admin_container{
