@@ -7,6 +7,10 @@
     float: left;
 }
 
+.cke_show_borders{
+	font-size:130%;
+}
+
 // Wrapper for the entire field
 .text-format-wrapper{
 	@include rem(margin-top, 5);
