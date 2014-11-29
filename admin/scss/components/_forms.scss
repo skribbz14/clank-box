@@ -125,6 +125,7 @@ input.form-file{
 			@extend %button_colors;
 			@extend %button_colors.red;
 			@include rem(font-size, 16);
+			font-weight:600;
 		}
 	}
 }
