@@ -1,0 +1,25 @@
+.form-type-managed-file{
+	label{
+		@include rem(margin-bottom, 5);
+	}
+	
+	.form-managed-file{
+		float:left;
+		width:100%;
+	}
+	
+	.form-submit{
+		@extend %button;
+		@extend %button.orange;
+	}
+	
+	.file{
+		float:left;
+	}
+	
+	.file-size{
+		float:left;
+		clear:both;
+		@include rem(margin-top, 5);
+	}
+}
