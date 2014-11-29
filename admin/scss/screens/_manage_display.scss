@@ -104,11 +104,10 @@
 	
 	tr{
 		border:1px solid black;		
-		border-right-width:2px;
 		border-top:none;
 		float:left;
 		clear:both;
-		width:100%;
+		width:calc(100% + -2px);
 		padding:0;		
 		
 		&:first-of-type{
