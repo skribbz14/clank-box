@@ -66,8 +66,17 @@ input.form-text{
 .form-item {	
 	clear:both;
 	margin-top:0;
-	@include rem(margin-bottom, 80);
+	@include rem(margin-bottom, 40);
+	
+	label{
+		@include rem(font-size, 20);
+		@include rem(margin-bottom, 5);
 		
+		.form-required{
+			display:none;
+		}
+	}
+	
 	.description{
 		max-width:$form_max_width;
 		padding:$form_description_padding;
