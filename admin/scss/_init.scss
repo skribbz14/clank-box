@@ -72,14 +72,14 @@ $admin_border_color_fallback:#ccc;
 	}
 	
 	&.orange{
-		@include fallback(background-color, $theme_orange, orange);
+		@include fallback(background-color, rgba($theme_yellow, 0.05), orange);
 		
 		&:hover{
-			@include fallback(background-color, $theme_red, red);	
+			@include fallback(background-color, rgba($theme_yellow, 0.45), red);	
 		}
 		
 		&:active{
-			@include fallback(background-color, $theme_red, red);
+			@include fallback(background-color, rgba($$theme_yellow, 0.9), red);
 		}
 	}
 }
