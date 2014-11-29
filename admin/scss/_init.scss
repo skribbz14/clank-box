@@ -86,6 +86,7 @@ $admin_border_color_fallback:#ccc;
 	
 	&.red{
 		@include fallback(background-color, rgba($theme_red, 0.45), orange);
+		border-color:$theme_red;
 		
 		&:hover{
 			@include fallback(background-color, rgba($theme_red, 0.6), red);	
