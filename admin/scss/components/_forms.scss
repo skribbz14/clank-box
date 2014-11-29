@@ -122,20 +122,9 @@ input.form-file{
 		}
 		
 		&#edit-delete{	
-			//color:white;
 			@extend %button_colors;
 			@extend %button_colors.red;
-			
-			&:hover{
-				//@include fallback(background-color, $theme_red, #f00);
-				//color:white;
-			}
-			
-			&:active{
-				//@include fallback(background-color, lighten($theme_red, 20%), #f00);
-				//color:white;
-			}			
+			@include rem(font-size, 16);
 		}
-		
 	}
 }
