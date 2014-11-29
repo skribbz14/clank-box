@@ -79,7 +79,7 @@ $admin_border_color_fallback:#ccc;
 		}
 		
 		&:active{
-			@include fallback(background-color, rgba($$theme_yellow, 0.9), red);
+			@include fallback(background-color, rgba($theme_yellow, 0.9), red);
 		}
 	}
 }
