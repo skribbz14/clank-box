@@ -69,4 +69,16 @@
 	.additional-filters{
 		display:none;
 	}	
+	
+	.current-filters{
+		list-style:none;
+		
+		li{
+			margin-left:0;
+						
+			&::first-letter{
+				text-transform:capitalize;	
+			}
+		}
+	}
 }
