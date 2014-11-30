@@ -12,7 +12,11 @@
 		@extend %page_wrapper;
 		
 		> section{
-			@include rem(margin-top, 25);		
+			@include rem(margin-top, 25);
+			
+			&.l-messages{
+				margin-top:0;
+			}		
 		}
 	}
 	
