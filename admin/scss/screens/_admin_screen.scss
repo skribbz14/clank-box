@@ -4,22 +4,22 @@
 /// General styles for the admin screens. For best practice these styles should
 /// be moved out of this group, if possible. Body calls are poor on performance. */
 
+.l-admin{
+	@extend %page_wrapper;
+	
+	> section{
+		@include rem(margin-top, 25);
+		
+		&.l-messages{
+			margin-top:0;
+		}		
+	}
+}
+
 .admin-screen{
 	font-size:120%;	
 	font-family:$open_sans;
-	
-	.l-admin{
-		@extend %page_wrapper;
-		
-		> section{
-			@include rem(margin-top, 25);
-			
-			&.l-messages{
-				margin-top:0;
-			}		
-		}
-	}
-	
+
 	.l-app,
 	.l-page{
 		@extend %page_wrapper;
