@@ -12,11 +12,7 @@
 		@extend %page_wrapper;
 		
 		> section{
-			@include rem(margin-top, 40);
-			
-			&:first-child{
-				margin-top:0;	
-			}			
+			@include rem(margin-top, 40);		
 		}
 	}
 	

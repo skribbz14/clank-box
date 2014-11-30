@@ -2,11 +2,7 @@
 	padding:0;
 	display:table;
 	width:auto;
-	@include rem(margin, 5, 0, 30);
-
-	&:first-child{
-		@include rem(margin-top, 40);
-	}
+	@include rem(margin, 5, 0, 0);
 	
 	li{
 		list-style:none outside none;		
