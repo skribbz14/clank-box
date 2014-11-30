@@ -18,6 +18,6 @@
 	
 	.form-checkbox{
 		float:left;
-		@include rem(margin, 10, 5 10, 0);
+		@include rem(margin, 10, 5, 10, 0);
 	}
 }
