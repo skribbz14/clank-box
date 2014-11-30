@@ -121,7 +121,9 @@ input.form-file{
 		@extend %button_colors;
 		@extend %button_colors.orange;
 		@include rem(font-size, 16);
+		@include rem(margin-right, 15);
 		font-weight:600;	
+		
 		
 		&:hover{
 			//@include transition(background-color 0.15s ease-out);
