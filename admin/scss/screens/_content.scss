@@ -28,6 +28,10 @@
 				@include rem(margin-left, 10);
 			}	
 		}
+		
+		#edit-status{
+			margin-bottom:0;
+		}
 	}
 	
 	.filters{

@@ -12,7 +12,7 @@
 		@extend %page_wrapper;
 		
 		> section{
-			@include rem(margin-top, 40);		
+			@include rem(margin-top, 25);		
 		}
 	}
 	
@@ -24,7 +24,7 @@
 	.l-main{
 		@extend %admin_container;
 		@include rem(padding-bottom, 45);
-		@include rem(padding-top, 20);
+		@include rem(padding-top, 30);
 		clear:both;			
 	}
 	
