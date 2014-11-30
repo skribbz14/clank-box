@@ -19,7 +19,7 @@
 
 #node-admin-content{
 	
-	> fieldset{
+	> div > fieldset{
 		@include rem(margin-bottom, 20);
 	}
 	
