@@ -63,6 +63,10 @@ input.form-text{
 	display:none;
 }
 
+.form-wrapper{
+	@include rem(margin-bottom, 40);
+}
+
 .form-item {	
 	clear:both;
 	margin-top:0;
