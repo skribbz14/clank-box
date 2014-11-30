@@ -110,28 +110,29 @@ input.form-file{
 
 .admin-screen #edit-actions{
 	.form-submit{
-		@include font_style($open_sans, 14, 500, 14);
-		@include border-radius(30px);
-		@include rem(margin, 30, 15, 40, 0);
-		@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), 1px solid #333);
-		@include rem(padding, 7, 13);
-		@include transition(background-color 0.3s ease-out);
-		background-clip:padding-box;
-		box-shadow:none;		
+		//@include font_style($open_sans, 14, 500, 14);
+		//@include border-radius(30px);
+		//@include rem(margin, 30, 15, 40, 0);
+		//@include fallback(border, 1px solid rgba(51, 51, 51, 0.5), 1px solid #333);
+		//@include rem(padding, 7, 13);
+		//@include transition(background-color 0.3s ease-out);
+		//background-clip:padding-box;
+		//box-shadow:none;		
+		@extend %button_colors;
+		@extend %button_colors.orange;
+		@include rem(font-size, 16);
+		font-weight:600;	
 		
 		&:hover{
-			@include transition(background-color 0.15s ease-out);
+			//@include transition(background-color 0.15s ease-out);
 		}
 		
 		&:active{
-			@include transition(background-color 0.1s ease-out);
+			//@include transition(background-color 0.1s ease-out);
 		}
 	
 		&#edit-submit{						
-			@extend %button_colors;
-			@extend %button_colors.orange;
-			@include rem(font-size, 16);
-			font-weight:600;		
+			//@extend %button_colors.orange;							
 		}
 		
 		&#edit-preview{
@@ -139,10 +140,8 @@ input.form-file{
 		}
 		
 		&#edit-delete{	
-			@extend %button_colors;
 			@extend %button_colors.red;
-			@include rem(font-size, 16);
-			font-weight:600;
+
 		}
 	}
 }
