@@ -2,6 +2,10 @@
 	@extend %admin_container;
 	overflow:hidden;
 	
+	&:first-child{
+		@include rem(margin-top, 40);
+	}
+	
 	.tabs{
 		float:left;
 		clear:both;
@@ -12,7 +16,6 @@
 		@include border-radius(1px);
 		
 		&.primary{
-			@include rem(margin-top, 25);
 			@include rem(margin-bottom, 15);
 		}
 		
