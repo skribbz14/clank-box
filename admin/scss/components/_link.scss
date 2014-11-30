@@ -6,7 +6,12 @@
 		}
 	}
 	
-	.link-field-subrow,
+	.link-field-subrow{
+		label{
+			@include adjust-font(15,15);			
+		}
+	}
+	
 	.form-type-checkbox{
 		label{
 			@include adjust-font(12,12);
@@ -16,7 +21,7 @@
 		}
 	}
 	
-	.form-checkbox{
+	input[type="checkbox"].form-checkbox{
 		float:left;
 		@include rem(margin, 10, 5, 10, 0);
 	}
