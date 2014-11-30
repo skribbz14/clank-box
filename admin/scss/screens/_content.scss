@@ -18,7 +18,12 @@
 /// Filters */
 
 #node-admin-content{
-	#edit-filters{
+	
+	> fieldset{
+		@include rem(margin-bottom, 20);
+	}
+	
+	#edit-filters{				
 		input[type="submit"].form-submit{
 			@extend %button_colors;
 			@extend %button_colors.orange;			
