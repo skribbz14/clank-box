@@ -56,7 +56,8 @@ $admin_border_color_fallback:#ccc;
 	@include text-shadow(1px 1px 0px #BBBBBB);
 	border:1px solid $theme_yellow;
 	text-decoration:none;	
-	color:white;
+	text-transform:lowercase;
+	color:white;	
 			
 	&:hover{
 		@include transition(background-color 0.15s ease-out);
