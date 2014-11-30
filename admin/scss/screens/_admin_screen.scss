@@ -24,6 +24,7 @@
 	.l-main{
 		@extend %admin_container;
 		@include rem(padding-bottom, 45);
+		@include rem(padding-top, 20);
 		clear:both;			
 	}
 	
