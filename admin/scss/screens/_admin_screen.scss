@@ -11,7 +11,7 @@
 	.l-admin{
 		@extend %page_wrapper;
 		
-		>{
+		> section{
 			@include rem(margin-top, 40);
 			
 			&:first-child{
