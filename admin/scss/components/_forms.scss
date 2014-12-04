@@ -64,7 +64,7 @@ input.form-text{
 }
 
 .form-wrapper{
-	@include rem(margin-bottom, 40);
+	@include rem(margin-bottom, 20);
 	
 	&.field-widget-options-onoff{
 		margin-bottom:0;

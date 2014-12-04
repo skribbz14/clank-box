@@ -34,6 +34,10 @@
 		@include rem(margin-bottom, 10);
 	}
 	
+	.ief-entity-submit{
+		@include rem(margin-top, 15);
+	}
+	
 	td{
 		padding:10px 0 !important;
 		border:none !important;
