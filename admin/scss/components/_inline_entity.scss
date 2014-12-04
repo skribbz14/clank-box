@@ -15,7 +15,7 @@
 	}
 	
 	.container-inline{
-		@include rem(margin, 20, 0, 10);
+		@include rem(margin, 10, 0);
 	}
 	
 	.ief-entity-operations{
@@ -23,7 +23,7 @@
 	}
 	
 	.ief-entity-table{
-		@include rem(margin-bottom, 30);
+		@include rem(margin-bottom, 15);
 	}
 	
 	td{
