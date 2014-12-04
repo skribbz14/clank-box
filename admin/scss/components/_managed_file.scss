@@ -24,6 +24,6 @@
 	.file-size{
 		float:left;
 		clear:both;
-		@include rem(margin-top, 5);
+		@include rem(margin, 5, 10, 0);
 	}
 }
