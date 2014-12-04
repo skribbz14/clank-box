@@ -89,7 +89,7 @@
 	}
 	
 	.cke_wrapper{
-		background-color:transparent;
+		background-color:transparent !important;
 		@extend %admin_border_style;
 		border:none;
 		background-image:none;
