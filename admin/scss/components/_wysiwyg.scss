@@ -89,12 +89,9 @@
 	}
 	
 	.cke_wrapper{
-		@include border-radius(0);
-		border-top-left-radius:2px;
-		border-top-right-radius:2px;
-		@include fallback(background-color, rgba(205, 206, 207, 0.6), #ccc);
+		background-color:transparent;
 		@extend %admin_border_style;
-		border-bottom:none;
+		border:none;
 		background-image:none;
 		@include rem(padding, 0, 3);
 		@include backface-visibility(hidden);
