@@ -47,10 +47,14 @@ $admin_border_color_fallback:#ccc;
 	background-clip:padding-box;
 }
 
+$button_colors--default_opacity:0.7;
+$button_colors--hover_opacity:0.85;
+$button_colors--active_opacity:0.95;
+
 %button_colors{
 	@include font_style($open_sans, 12, 700, 26);
 	@include transition(background-color 0.3s ease-out, color 0.3s ease-out);
-	@include fallback(background-color, rgba($theme_yellow, 0.05), #ccc);
+	@include fallback(background-color, rgba($theme_yellow, $button_colors--default_opacity), #ccc);
 	@include border-radius(15px);
 	@include rem(padding, 0, 10);
 	@include text-shadow(1px 1px 0px #BBBBBB);
@@ -61,7 +65,7 @@ $admin_border_color_fallback:#ccc;
 			
 	&:hover{
 		@include transition(background-color 0.15s ease-out);
-		background-color:rgba($theme_yellow, 0.45);
+		background-color:rgba($theme_yellow, $button_colors--hover_opacity);
 		text-decoration:none;
 		color:white;
 	}
@@ -74,27 +78,27 @@ $admin_border_color_fallback:#ccc;
 	}
 	
 	&.orange{
-		@include fallback(background-color, rgba($theme_yellow, 0.45), orange);
+		@include fallback(background-color, rgba($theme_yellow,$button_colors--default_opacity), orange);
 		
 		&:hover{
-			@include fallback(background-color, rgba($theme_yellow, 0.6), red);	
+			@include fallback(background-color, rgba($theme_yellow, $button_colors--hover_opacity), red);	
 		}
 		
 		&:active{
-			@include fallback(background-color, rgba($theme_yellow, 0.95), red);
+			@include fallback(background-color, rgba($theme_yellow, $button_colors--active_opacity), red);
 		}
 	}
 	
 	&.red{
-		@include fallback(background-color, rgba($theme_red, 0.45), orange);
+		@include fallback(background-color, rgba($theme_red, $button_colors--default_opacity), orange);
 		border-color:$theme_red;
 		
 		&:hover{
-			@include fallback(background-color, rgba($theme_red, 0.6), red);	
+			@include fallback(background-color, rgba($theme_red, $button_colors--hover_opacity), red);	
 		}
 		
 		&:active{
-			@include fallback(background-color, rgba($theme_red, 0.95), red);
+			@include fallback(background-color, rgba($theme_red, $button_colors--active_opacity), red);
 		}
 	}	
 }
