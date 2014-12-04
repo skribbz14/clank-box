@@ -9,4 +9,12 @@
 		@include rem(margin-right, 15);
 	}
 	
+	.container-inline{
+		@include rem(margin, 20, 0, 10);
+	}
+	
+	td{
+		padding:0;
+	}
+	
 }
