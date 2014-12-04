@@ -13,8 +13,20 @@
 		@include rem(margin, 20, 0, 10);
 	}
 	
+	.ief-entity-operations{
+		margin:0;
+	}
+	
 	td{
-		padding:0;
+		padding:10px 0 !important;
+		
+		&:first-child{
+			padding-left:10px !important;
+		}
+		
+		&:last-child{
+			padding-right:10px !important;
+		}
 	}
 	
 }
