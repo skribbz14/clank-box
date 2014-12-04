@@ -20,6 +20,7 @@
 	
 	.form-type-textarea > label{
 		@include rem(margin-bottom, 5);
+		@include rem(text-indent, 5);
 	}
 	
 	.form-type-select{
