@@ -1,0 +1,12 @@
+.field-widget-inline-entity-form{
+	
+	.fieldset-legend{
+		@include rem(font-size, 20);
+	}
+	
+	.form-submit{
+		@extend %button_colors;
+		@include rem(margin-right, 15);
+	}
+	
+}
