@@ -28,3 +28,9 @@
 	  }
   }
 }
+
+.fieldset-wrapper{
+	*:last-child{
+		margin-bottom:0;
+	}
+}
