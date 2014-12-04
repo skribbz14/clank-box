@@ -1,5 +1,9 @@
 .field-widget-inline-entity-form{
 	
+	thead{
+		display:none;
+	}
+	
 	.fieldset-legend{
 		@include rem(font-size, 20);
 	}
