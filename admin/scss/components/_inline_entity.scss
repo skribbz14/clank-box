@@ -21,6 +21,10 @@
 		margin:0;
 	}
 	
+	.ief-entity-table{
+		@include rem(margin-bottom, 30);
+	}
+	
 	td{
 		padding:10px 0 !important;
 		
@@ -31,6 +35,9 @@
 		&:last-child{
 			padding-right:10px !important;
 		}
-	}
+	}			
 	
+	.form-type-radios:last-child{
+		display:none;
+	}
 }
