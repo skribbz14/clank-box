@@ -100,13 +100,15 @@
 	
 	.cke_top{
 		@include rem(padding, 5, 3, 0);
+		border-bottom:1px solid rgba(51, 51, 51, 0.1) !important;
+		display:table;
+		width:100%;
 	}
 	
 	.cke_toolgroup{
 		background-image:none;
 		@include rem(padding-bottom, 6);
-		background-color: rgb(238, 240, 243);
-		@include border-radius(3px);
+		@include border-radius(4px);
 	}
 	
 	.cke_toolbox_collapser{
@@ -136,6 +138,12 @@
 				@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1));
 				float: left;
 				@include rem(max-width, 685px);
+				
+				tbody{
+					float:left;
+					display:table;
+					width:100%;
+				}
 		}
 	}
 }
