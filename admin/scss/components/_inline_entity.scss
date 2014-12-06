@@ -33,9 +33,15 @@
 		padding:0;
 		@include rem(margin-bottom, 10);
 	}
-	
+			
 	.ief-entity-submit{
 		@include rem(margin-top, 15);
+	}
+	
+	.ief-form{
+		.form-type-radios:nth-last-child(2){ // hides the published field
+			display:none;
+		}
 	}
 	
 	td{
