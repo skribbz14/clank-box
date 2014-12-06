@@ -62,10 +62,36 @@
 
 
 
+
+
 /*
 //
 /// Manage Display screen */
 
+.field-ui-overview{
+	
+	.ft-group{
+		width:100%;
+		float:left;
+		clear:both;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 #field-display-overview-wrapper{
 	position:relative;
 	overflow:hidden;	
@@ -225,7 +251,7 @@
 
 /*
 //
-/// Vertical Tabs for Manage Display */
+/// Vertical Tabs for Manage Display *
 
 #field-ui-display-overview-form{
 	.vertical-tabs{		
@@ -240,7 +266,7 @@
 
 /*
 //
-/// Field Template Settings */
+/// Field Template Settings *
 
 .field-formatter-settings-edit-form{
 	@include rem(text-indent, 10);
@@ -332,7 +358,7 @@
 
 /*
 //
-/// Vertical Tabs on Manage Display */
+/// Vertical Tabs on Manage Display *
 
 // Custom Fields
 #edit-additional-settings-add-custom-fields{
@@ -346,7 +372,7 @@
 	}
 }
 
-
+*/
 
 
 

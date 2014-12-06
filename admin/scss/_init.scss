@@ -144,7 +144,7 @@ $button_colors--active_opacity:0.95;
 /// Screens
 @import "screens/admin_screen";
 @import "screens/module_filter";
-//@import "screens/manage_display";
+@import "screens/manage_display";
 @import "screens/views";
 @import "screens/content";
 @import "screens/image_styles";
