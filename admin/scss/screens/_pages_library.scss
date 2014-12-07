@@ -27,9 +27,19 @@ $pages_library--left_padding:5;
 		}	
 		
 		a{
-			color:$theme_yellow;
-			@include adjust-font(16,20);
+			color:$theme_blue;
+			@include adjust-font(18,33);
 			font-weight:300;
 		}	
+	}
+	
+	.views-field-edit-node{
+		@extend %button_colors;
+		@extend %button_colors.yellow;
+	}
+	
+	.views-field-delete-node{
+		@extend %button_colors;
+		@extend %button_colors.red;
 	}			
 }
