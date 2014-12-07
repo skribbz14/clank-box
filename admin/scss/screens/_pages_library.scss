@@ -5,8 +5,11 @@
 	
 	th{
 		@include rem(padding, 5, 0);
-		@include rem(font-size, 18);
-		font-weight:400;
-		color:#333;
+		
+		&,a{
+			@include rem(font-size, 18);
+			font-weight:400;
+			color:#333;			
+		}
 	}		
 }
