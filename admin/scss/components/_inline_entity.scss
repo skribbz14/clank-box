@@ -44,6 +44,11 @@
 		.form-type-radios:nth-last-child(2){ // hides the published field
 			display:none;
 		}
+		
+		> .form-wrapper:last-child{
+			clear:both;
+			float:left;
+		}
 	}
 	
 	td{
