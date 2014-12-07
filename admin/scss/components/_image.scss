@@ -16,6 +16,7 @@
 				clear:both;
 				@include rem(margin, 10, 0, 15);
 				@extend %button_colors.red;
+				text-shadow:none;
 			}
 		}
 	}
