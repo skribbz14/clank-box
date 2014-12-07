@@ -4,6 +4,9 @@
 	@include rem(margin, 80, auto);
 	
 	th{
-		padding:10px 0;
+		@include rem(padding, 5, 0);
+		@include rem(font-size, 18);
+		font-weight:400;
+		color:#333;
 	}		
 }
