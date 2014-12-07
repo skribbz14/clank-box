@@ -33,12 +33,12 @@ $pages_library--left_padding:5;
 		}	
 	}
 	
-	.views-field-edit-node{
+	.views-field-edit-node a{
 		@extend %button_colors;
 		@extend %button_colors.orange;
 	}
 	
-	.views-field-delete-node{
+	.views-field-delete-node a{
 		@extend %button_colors;
 		@extend %button_colors.red;
 	}			
