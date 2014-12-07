@@ -36,14 +36,16 @@ $pages_library--left_padding:5;
 	.views-field-edit-node a{
 		@extend %button_colors;
 		@extend %button_colors.orange;
+		@include rem(padding, 3, 10);
 		text-shadow:none;
-		font-weight:400;
+		font-weight:600;
 	}
 	
 	.views-field-delete-node a{
 		@extend %button_colors;
 		@extend %button_colors.red;
+		@include rem(padding, 3, 10);
 		text-shadow:none;
-		font-weight:400;
+		font-weight:600;
 	}			
 }
