@@ -65,7 +65,7 @@
 		}		
 	}
 	
-	.dropdown .dropdown{
+	.dropdown .dropdown .dropdown{
 		@include rem(margin-top, -24);
 		
 		li:first-child a{
