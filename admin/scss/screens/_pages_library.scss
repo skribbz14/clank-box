@@ -1,0 +1,9 @@
+.page-pages-library .views-table{
+	width:90%;
+	@include rem(max-width, 1024);
+	@include rem(margin, 80, auto);
+	
+	th{
+		padding:10px 0;
+	}		
+}
