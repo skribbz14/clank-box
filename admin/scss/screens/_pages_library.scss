@@ -24,6 +24,12 @@ $pages_library--left_padding:5;
 		
 		&:first-child{
 			@include rem(padding-left, $pages_library--left_padding);
-		}		
+		}	
+		
+		a{
+			color:$theme_yellow;
+			@include adjust-font(16,20);
+			font-weight:300;
+		}	
 	}			
 }
