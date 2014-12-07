@@ -40,6 +40,10 @@
 		@include rem(margin-top, 15);
 	}
 	
+	.ief-row-form .ief-form-row{
+		border-bottom:none;
+	}
+	
 	.ief-form{
 		.form-type-radios:nth-last-child(2){ // hides the published field
 			display:none;
