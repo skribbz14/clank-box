@@ -14,8 +14,8 @@
 	
 	.nolink{
 		cursor:default;
+		@include adjust-font(12,16);
 		
-		@extend #admin-menu .dropdown a;
 	}
 	
 	.dropdown{
