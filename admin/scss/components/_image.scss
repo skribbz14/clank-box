@@ -11,7 +11,32 @@
 		.form-submit{
 			clear:none;
 			@include rem(margin, -2, 0, 0);
+			
+			&[value="Remove"]{
+				clear:both;
+				@include rem(margin, 10, 0, 15);
+				@extend %button_colors.red;
+			}
 		}
 	}
+}
+
+.image-widget-data{
+	
+	.file{
+		float:left;
+		display:table;
+	}
+	
+	.file-icon{
+		float:left;
+	}
+	
+	.file-size{
+		clear:none;
+		@include rem(margin, 0, 0, 0, 5);
+		@include rem(line-height, 24);
+	}
+	
 }
 
