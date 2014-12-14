@@ -26,6 +26,10 @@
 	
 	.ief-entity-table{
 		@include rem(margin-bottom, 15);
+		
+		&:last-child{
+			margin-bottom:0;
+		}
 	}
 	
 	.ief-row-entity{
