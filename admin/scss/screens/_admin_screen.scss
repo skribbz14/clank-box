@@ -20,6 +20,18 @@
 	font-size:120%;
 	font-family:$open_sans;
 	
+	.l-messages{
+		@include rem(margin-bottom, 25);
+	}
+	
+	.l-action_links,
+	.l-admin_tabs{
+		@include rem(margin-bottom, 20);
+	}
+	
+	.l-help{
+		@include rem(margin-top, 25);
+	}
 
 	.l-app,
 	.l-page{
@@ -42,13 +54,8 @@
 	.l-help{
 		@extend %admin_container;
 		background-color: #ebebeb;
-		//@include rem(margin-bottom, 30);
 		@include rem(line-height, 18);				
 		@extend %admin_border_style;
-		
-		&:first-child{
-			//@include rem(margin-top, 40);
-		}
 		
 		p{
 			margin:0;
@@ -58,7 +65,7 @@
 	
 	th,table,tbody{
 		border:none;
-		-webkit-backface-visibility: hidden;
+		@include backface-visibility(hidden);
 	}
 	
 	label{
