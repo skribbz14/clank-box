@@ -1,6 +1,6 @@
 // Detect.js
 // @author Kyle Lamble of Loosey Goosey Art
-// Version 7.6.1
+// Version 7.6.3
 
 
 
@@ -12,7 +12,7 @@
 // Safari
 // Opera
 // Firefox
-// Internet Explorer 6-10
+// Internet Explorer 6-11
 // Maxthon
 // Sea Monkey
 // Ipad 
@@ -170,13 +170,14 @@ var detect = {
 		      rv = parseFloat( RegExp.$1 );
 		    }
 			}
-			return rv;
+			else if(navigator.appName == "Netscape" && '-ms-scroll-limit' in document.documentElement.style) rv = 11;
+			return rv;			
 		}
 		
 		var ie = -1;
 		ie = Check_Version();
 		
-		if(ie === -1 && !!window.ActiveXObject){
+		if(ie === -1 && !!window.ActiveXObject || ie === 11){
 			html.addClass('ie11 ie');
 			detect.onIE = true;
 			detect.version = "11";

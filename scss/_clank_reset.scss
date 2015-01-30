@@ -1,3 +1,8 @@
+// Clank Elements Reset
+// By Kyle Lamble @ Loosey Goosey Art
+// Version 1.0
+
+
 /*
 //
 /// Elements */
@@ -8,8 +13,8 @@ html{
 
 body{
 	float:left;
-	@include fallback(width, 100vw, 100%);
-	@include fallback(max-width, 100vw, 100%);
+	width:100%;
+	max-width:100%;
 	position:relative;
 	height:auto;	
 }
