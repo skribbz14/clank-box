@@ -1,20 +1,21 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 10.1
+// Version 10.2
 
 
 /*
 //
 /// Notable updates */
 
-// V9.0 - Respond-to() and all Breakat() mixins now use the rem_calc() to output rems instead of pixels.
-// V9.0 - Removed vendor(). Look at the compass library for replacement mixins.
-// V9.0 - Removed the zurb emCalc() in favor of rem().
-// V9.0 - Removed transparency() in favor of compass' opacity().
-// V9.0 - Updated rem() to support the 'auto' value.
+// V10.2 - Fixed the Keyframes mixin to support more browsers and actually work.
+// V9.0  - Respond-to() and all Breakat() mixins now use the rem_calc() to output rems instead of pixels.
+// V9.0  - Removed vendor(). Look at the compass library for replacement mixins.
+// V9.0  - Removed the zurb emCalc() in favor of rem().
+// V9.0  - Removed transparency() in favor of compass' opacity().
+// V9.0  - Updated rem() to support the 'auto' value.
 
-// V8.1 - Updated font_style() to use rem().
-// V8.1 - Removed the font_size() and line_height() functions. Use rem() instead.
+// V8.1  - Updated font_style() to use rem().
+// V8.1  - Removed the font_size() and line_height() functions. Use rem() instead.
 
 
 
@@ -533,14 +534,19 @@ $default_orientation: 0;
 //
 /// Allows for quick use of keyframes */
 
-@mixin keyframes($name){
-	@keyframes $name{
-		@content;
-	}
-	
-	@-webkit-keyframes $name{
-		@content;
-	}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
 }
 
 
