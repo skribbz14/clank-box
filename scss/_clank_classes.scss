@@ -95,7 +95,7 @@
 //
 /// Shorthand for default inline list styling */
 
-%inline_list{
+%inline_list_item{
 	float:left;
 	display:inline-block;
 	list-style:none;
@@ -107,7 +107,7 @@
 //
 /// Shorthand for default list container styling */
 
-%list_container{
+%inline_list_container{
 	padding:0;
 	margin:0;
 	display:table;
