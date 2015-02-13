@@ -1,6 +1,6 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 10.2
+// Version 11.0
 
 
 /*
@@ -24,6 +24,9 @@
 /*
 //
 /// Mixin definitions */
+
+// position($top, $right, $bottom, $left)
+//		- Shorthand to quickly output position values with rem units in mind
 
 // disable-tap-highlight()
 //		- Disables the tap highlight on phones using vendor prefixes.
@@ -65,6 +68,9 @@
 
 // flex-order($value)
 //	  - Sets the position of the flexbox child element
+
+// flex-basis($value)
+//	  - Set the initial length of the flex item
 
 // image_render($rendering_type)
 // 	  - Accepts values 'speed', 'quality' or 'sharpen'
@@ -118,6 +124,60 @@
 
 // animate($keyframe_name, $duration, $timing_function, $delay, $iteration_count, $direction)
 //    - quickly outputs both animate and -webkit-animate styles
+
+
+
+/*
+//
+/// Shorthand to quickly output position values with rem units in mind */
+
+@mixin position($top, $right, $bottom, $left){	
+	
+	@if $top == 0{
+		top:0;
+	}
+	@else if $top == auto{
+		top:auto;
+	}
+	@else{
+		@include rem(top, $top);
+	}
+	
+	
+	@if $right == 0{		
+		right:0;
+	}
+	@else if $right == auto{
+		right:auto;
+	}
+	@else{
+		@include rem(right, $right);
+	}
+		
+	
+	@if $bottom == 0{
+		
+		bottom:0;
+	}
+	@else if $bottom == auto{
+		bottom:auto;
+	}
+	@else{
+		@include rem(bottom, $bottom);
+	}
+	
+	
+	@if $left == 0{
+		left:0;
+	}
+	@else if $left == auto{
+		left:auto;
+	}
+	@else{
+		@include rem(left, $left);
+	}								
+}
+
 
 
 /*
@@ -239,6 +299,11 @@
 	-moz-order:$value;
 	-ms-order:$value;
 	-o-order:$value;
+}
+
+@mixin flex-basis($value){
+	-webkit-flex-basis:$value;
+	flex-basis:$value;
 }
 
 
