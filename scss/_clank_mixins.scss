@@ -248,6 +248,13 @@
 @mixin flex-grow($value){
 	flex-grow:$value;
 	-webkit-flex-grow:$value;
+	-ms-flex-positive:$value;
+}
+
+@mixin flex-shrink($value){
+	flex-shrink:$value;
+	-webkit-flex-shrink:$value;
+	-ms-flex-negative:$value;
 }
 
 @mixin flex-wrap($value){
@@ -304,6 +311,7 @@
 @mixin flex-basis($value){
 	-webkit-flex-basis:$value;
 	flex-basis:$value;
+	-ms-flex-preferred-size:$value;
 }
 
 
