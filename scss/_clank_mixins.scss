@@ -1,21 +1,22 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 11.0
+// Version 12.0
 
 
 /*
 //
 /// Notable updates */
 
-// V10.2 - Fixed the Keyframes mixin to support more browsers and actually work.
-// V9.0  - Respond-to() and all Breakat() mixins now use the rem_calc() to output rems instead of pixels.
-// V9.0  - Removed vendor(). Look at the compass library for replacement mixins.
-// V9.0  - Removed the zurb emCalc() in favor of rem().
-// V9.0  - Removed transparency() in favor of compass' opacity().
-// V9.0  - Updated rem() to support the 'auto' value.
-
-// V8.1  - Updated font_style() to use rem().
-// V8.1  - Removed the font_size() and line_height() functions. Use rem() instead.
+// v12.0 - Removed rem_calc(), due to incompatibility with Zurb Foundation.
+// v12.0 - Removed respond-to(), use variables and breakat() instead.
+// v10.2 - Fixed the Keyframes mixin to support more browsers and actually work.
+// v9.0  - Respond-to() and all Breakat() mixins now use the rem_calc() to output rems instead of pixels.
+// v9.0  - Removed vendor(). Look at the compass library for replacement mixins.
+// v9.0  - Removed the zurb emCalc() in favor of rem().
+// v9.0  - Removed transparency() in favor of compass' opacity().
+// v9.0  - Updated rem() to support the 'auto' value.
+// v8.1  - Updated font_style() to use rem().
+// v8.1  - Removed the font_size() and line_height() functions. Use rem() instead.
 
 
 
@@ -83,9 +84,6 @@
 //		- you may also use the 'auto' variable
 //	  - !! This assumes the root is set to 62.5% font size
 
-// rem_calc($value)
-//		- this is a function that returns a value in rems
-
 // enable_3d()
 //    - enables 3d acceleration for browsers that support it
 //    - sets transform: translate3d(0,0,0); -webkit-transform-style:preserve-3d;
@@ -100,12 +98,6 @@
 // 	  - shorthand to output font styles in a single line. font-size() and line-height() mixins are used to output rems with pixel fallbacks
 //    - font_smoothing() is also used to improve the output of web fonts
 //		- added the ability to optionally include the color property.
-
-// respond-to($media)   											 
-//    - creates a media query for said device. currently supports mobile (cell phones) and tablet.
-//    - also includes a response to orientation ( portrait or landscape )
-//    - also includes a response to touch devices and mouse device ( coarse or fine )
-//		- added support for ipad-portrait & ipad-landscape
 
 // breakat($value)
 //	  - allows you to quickly write a media query that breaks at the given value
@@ -389,16 +381,6 @@
 
 /*
 //
-/// Used to get the rem value of a single number */
-
-/*@function rem_calc($value){
-	@return ($value * .1) + rem;
-}*/
-
-
-
-/*
-//
 /// Enables 3d rendering for browsers that support it */
 
 @mixin enable_3d(){
@@ -454,91 +436,17 @@
 }
 
 
-/*
-//
-/// Allows to quickly call media queries for mobile, tablet, small desktop, portrait orientation & landscape orientation */
-
-@mixin respond-to($media) {
-
-  @if $media == mobile {
-      @media only screen and (max-width : "568px") { 
-          @content; 
-      }
-  }
-	
-	@else if $media == iphone5 {
-		@include breakat(321, 'portrait'){
-			@content;
-		}
-	} 
-	
-	@else if $media == ipad-portrait {
-		@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
-			@content;
-		}
-	} 
-	
-	@else if $media == ipad-landscape{
-		@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-			@content;
-		}
-	}
-
-  @else if $media == tablet {
-      @media only screen and (max-width : "768px") { 
-          @content; 
-      } 
-   }
-
-	@else if $media == ltdesktop {
-	    @media only screen and (max-width: "959px") { 
-	        @content; 
-	    }
-	 }
-
-	@else if $media == ltmax {
-	    @media only screen and (max-width: "1100px") { 
-	        @content; 
-	    }
-	 }
- 
-	@else if $media == portrait{
-		@media screen and (orientation:portrait) {
-			@content;
-		}
-	}  
-	
-	@else if $media == landscape{
-		@media screen and (orientation:landscape) {
-			@content;
-		}
-	}
-	
-	@else if $media == coarse{
-		@media (pointer:coarse){
-			@content;
-		}
-	}
-	
-	@else if $media == fine{
-		@media (pointer:fine){
-			@content;
-		}
-	}
-}
-
-
-
 
 /*
 //
-/// Allows you to quickly write a custom media querys */
+/// Allows you to quickly write a custom media querys 
+///
+/// @todo: They should produce em values for the breakpoints */
 
 $default_orientation: 0;
 
 @mixin breakat($value, $orientation : $default_orientation){
 	
-	//$new_value: rem_calc($value);
 	$new_value:$value + "px";
 	
 	@if( $orientation != $default_orientation ){	
@@ -556,7 +464,6 @@ $default_orientation: 0;
 
 @mixin greater_than($value, $orientation : $default_orientation){
 
-	//$new_value: rem_calc($value);
 	$new_value:$value + "px";
 
 	@if( $orientation != $default_orientation ){	
@@ -574,7 +481,6 @@ $default_orientation: 0;
 
 @mixin breakat_height($value, $orientation : $default_orientation){
 
-	//$new_value: rem_calc($value);
 	$new_value:$value + "px";
 
 	@if( $orientation != $default_orientation ){		
