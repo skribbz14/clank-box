@@ -430,13 +430,13 @@
 	font-weight:$font_weight;
 	@include rem(font-size, $font_size);
 	@include rem(line-height, $line_height);
-	@if($font_color != false) color:$font_color;
-	@if($transformation != false) text-transform:$transformation;		
-	@if($spacing != false) @include rem(letter-spacing, $spacing);			
+	@if($font_color != false){ color:$font_color; }
+	@if($transformation != false){ text-transform:$transformation; }
+	@if($spacing != false){ @include rem(letter-spacing, $spacing); }			
 }
 
 @mixin font_style($font_family, $font_size, $font_weight, $line_height, $font_color : false){
-
+	@include font-style($font_family, $font_size, $line_height, $font_weight, $font_color, false, false)
 }
 
 
