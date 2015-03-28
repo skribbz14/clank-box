@@ -435,8 +435,8 @@
 	@if($spacing != false){ @include rem(letter-spacing, $spacing); }			
 }
 
-@mixin font_style($font_family, $font_size, $font_weight, $line_height, $font_color : false){
-	@include font-style($font_family, $font_size, $line_height, $font_weight, $font_color, false, false)
+@mixin font_style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2 : false){
+	@include font-style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2, false, false)
 }
 
 
