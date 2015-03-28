@@ -425,7 +425,7 @@
 //
 /// Quickly output basic font styling properties */
 
-@mixin font-style($font_family, $font_size, $line_height, $font_weight, $font_color : false, $transformation : false, $spacing : false){
+@mixin fontstyle($font_family, $font_size, $line_height, $font_weight, $font_color : false, $transformation : false, $spacing : false){
 	font-family:$font_family;	
 	font-weight:$font_weight;
 	@include rem(font-size, $font_size);
@@ -436,7 +436,7 @@
 }
 
 @mixin font_style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2 : false){
-	@include font-style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2, false, false);
+	@include fontstyle($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2, false, false);
 }
 
 
