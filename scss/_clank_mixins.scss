@@ -436,7 +436,7 @@
 }
 
 @mixin font_style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2 : false){
-	@include font-style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2, false, false)
+	@include font-style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2, false, false);
 }
 
 
