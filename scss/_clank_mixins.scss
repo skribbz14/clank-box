@@ -5,27 +5,37 @@
 
 /*
 //
-/// Notable updates */
+/// Notable updates
 
-// v13.0 - Removed Font_Smoothing() from Font_style() because it is now added to the html in clank_reset
-// v12.0 - Removed rem_calc(), due to incompatibility with Zurb Foundation.
-// v12.0 - Removed respond-to(), use variables and breakat() instead.
-// v10.2 - Fixed the Keyframes mixin to support more browsers and actually work.
-// v9.0  - Respond-to() and all Breakat() mixins now use the rem_calc() to output rems instead of pixels.
-// v9.0  - Removed vendor(). Look at the compass library for replacement mixins.
-// v9.0  - Removed the zurb emCalc() in favor of rem().
-// v9.0  - Removed transparency() in favor of compass' opacity().
-// v9.0  - Updated rem() to support the 'auto' value.
-// v8.1  - Updated font_style() to use rem().
-// v8.1  - Removed the font_size() and line_height() functions. Use rem() instead.
-
-
+// v13.0 
+	- Removed Font_Smoothing() from Font_style() because it is now added to the html in clank_reset
+	- Converted Font_style to fontStyle, with added properties and variation on order
+// v12.0
+	 - Removed rem_calc(), due to incompatibility with Zurb Foundation.
+	 - Removed respond-to(), use variables and breakat() instead.
+// v10.2 
+	- Fixed the Keyframes mixin to support more browsers and actually work.
+// v9.0  
+	- Respond-to() and all Breakat() mixins now use the rem_calc() to output rems instead of pixels.
+	- Removed vendor(). Look at the compass library for replacement mixins.
+	- Removed the zurb emCalc() in favor of rem().
+	- Removed transparency() in favor of compass' opacity().
+	- Updated rem() to support the 'auto' value.
+	- Updated font_style() to use rem().
+// v8.1  
+	- Removed the font_size() and line_height() functions. Use rem() instead.
 
 
 
 /*
 //
 /// Mixin definitions */
+
+// fontStyle($font_family, $font_size, $line_height, $font_weight, $font_color : false, $transformation : false, $spacing : false)
+// 	  - shorthand to output font styles in a single line. font-size() and line-height() mixins are used to output rems with pixel fallbacks
+//    - font_smoothing() is also used to improve the output of web fonts
+//		- added the ability to optionally include the color property.
+//		- added the ability to optionally include text transformation and letter spacing
 
 // position($top, $right, $bottom, $left)
 //		- Shorthand to quickly output position values with rem units in mind
@@ -95,11 +105,6 @@
 // font_smoothing()
 //    - enables font smoothing for web fonts
 
-// font_style($font_family, $font_size, $font_weight, $line_height, $color !optional)
-// 	  - shorthand to output font styles in a single line. font-size() and line-height() mixins are used to output rems with pixel fallbacks
-//    - font_smoothing() is also used to improve the output of web fonts
-//		- added the ability to optionally include the color property.
-
 // breakat($value)
 //	  - allows you to quickly write a media query that breaks at the given value
 
@@ -124,7 +129,11 @@
 //
 /// Shorthand to quickly output position values with rem units in mind */
 
-@mixin position($top, $right, $bottom, $left){	
+@mixin position($top, $right, $bottom, $left, $position_style : false){	
+	
+	@if($position_style != false){
+		position:$position_style;
+	}
 	
 	@if $top == 0{
 		top:0;
@@ -168,7 +177,7 @@
 	}
 	@else{
 		@include rem(left, $left);
-	}								
+	}							
 }
 
 
@@ -425,7 +434,7 @@
 //
 /// Quickly output basic font styling properties */
 
-@mixin fontstyle($font_family, $font_size, $line_height, $font_weight, $font_color : false, $transformation : false, $spacing : false){
+@mixin fontStyle($font_family, $font_size, $line_height, $font_weight, $font_color : false, $transformation : false, $spacing : false){
 	font-family:$font_family;	
 	font-weight:$font_weight;
 	@include rem(font-size, $font_size);
@@ -435,8 +444,9 @@
 	@if($spacing != false){ @include rem(letter-spacing, $spacing); }			
 }
 
+/// Depreciated underscore version of the mixin
 @mixin font_style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2 : false){
-	@include fontstyle($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2, false, false);
+	@include fontStyle($font_family2, $font_size2, $line_height2, $font_weight2, $font_color2, false, false);
 }
 
 
