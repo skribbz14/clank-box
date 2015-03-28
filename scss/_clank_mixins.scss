@@ -10,6 +10,7 @@
 // v13.0 
 	- Removed Font_Smoothing() from Font_style() because it is now added to the html in clank_reset
 	- Converted Font_style to fontStyle, with added properties and variation on order
+	- Added box mixin
 // v12.0
 	 - Removed rem_calc(), due to incompatibility with Zurb Foundation.
 	 - Removed respond-to(), use variables and breakat() instead.
@@ -30,6 +31,15 @@
 /*
 //
 /// Mixin definitions */
+
+
+// box($width, $height, $border : false, $border_radius : false, $box_shadow : false)
+//	  - Shorthand to create a box
+//		- Height and width take no units and spit out in rems with pixel fallback
+//		- Border only produces one value
+//		- @todo detect rgba in border and produce fallbacks
+//		- Border radius must be in pixels or percentage
+//		- Box shadow must be given full value
 
 // fontStyle($font_family, $font_size, $line_height, $font_weight, $font_color : false, $transformation : false, $spacing : false)
 // 	  - shorthand to output font styles in a single line. font-size() and line-height() mixins are used to output rems with pixel fallbacks
@@ -123,6 +133,19 @@
 // animate($keyframe_name, $duration, $timing_function, $delay, $iteration_count, $direction)
 //    - quickly outputs both animate and -webkit-animate styles
 
+
+
+/*
+//
+/// Shorthand to create a box in rem values */
+
+@mixin box($width, $height, $border : false, $border_radius : false, $box_shadow : false){
+	@include rem(width, $width);
+	@include rem(height, $height);
+	@if($border != false){ border:$border; }
+	@if($border_radius != false){ @include border-radius($border_radius); }
+	@if($box_shadow != false){ @include box-shadow($box_shadow); }	
+}
 
 
 /*
