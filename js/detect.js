@@ -1,6 +1,6 @@
 // Detect.js
 // @author Kyle Lamble of Loosey Goosey Art
-// Version 7.6.4
+// Version 7.6.5
 
 
 
@@ -70,9 +70,10 @@ var detect = {
 	
 	function Detect_IOS_Version(){
     var agent = window.navigator.userAgent,
-    		start = agent.indexOf( 'OS ' ),
+    		start = agent.indexOf( 'Version/' ),
+    		length_of_start = 8, // number of characters in 'Version/'
     		version = null; 
-		version = window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );		
+		version = window.Number( agent.substr( (start+length_of_start), 1 ) );	
     detect.version = version;    
     var class_safe_string = version.toString().split(".")[0];
     html.addClass('ios'+class_safe_string);

@@ -112,3 +112,15 @@
 	margin:0;
 	display:table;
 }
+
+
+
+/*
+//
+/// Disable the default focus on click */
+
+%disable_focus{
+	&:focus{
+		outline:none;
+	}
+}
