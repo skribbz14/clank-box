@@ -1,12 +1,13 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 12.0
+// Version 13.0
 
 
 /*
 //
 /// Notable updates */
 
+// v13.0 - Removed Font_Smoothing() from Font_style() because it is now added to the html in clank_reset
 // v12.0 - Removed rem_calc(), due to incompatibility with Zurb Foundation.
 // v12.0 - Removed respond-to(), use variables and breakat() instead.
 // v10.2 - Fixed the Keyframes mixin to support more browsers and actually work.
@@ -424,15 +425,18 @@
 //
 /// Quickly output basic font styling properties */
 
-@mixin font_style($font_family, $font_size, $font_weight, $line_height, $font_color : false){
+@mixin font-style($font_family, $font_size, $line_height, $font_weight, $font_color : false, $transformation : false, $spacing : false){
 	font-family:$font_family;	
 	font-weight:$font_weight;
 	@include rem(font-size, $font_size);
 	@include rem(line-height, $line_height);
-	@include font_smoothing();
-	@if($font_color != false){
-		color:$font_color;
-	}
+	@if($font_color != false) color:$font_color;
+	@if($transformation != false) text-transform:$transformation;		
+	@if($spacing != false) @include rem(letter-spacing, $spacing);			
+}
+
+@mixin font_style($font_family, $font_size, $font_weight, $line_height, $font_color : false){
+
 }
 
 
