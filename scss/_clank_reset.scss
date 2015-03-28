@@ -1,6 +1,18 @@
 // Clank Elements Reset
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 1.0
+// Version 2.0
+
+/*
+//
+/// Recent Updates 
+
+v2.0 
+	- Removed font-size:62.5% on html. This is not goot for every site
+	- Added font smoothing to html as default
+	- Conveted .menu to ul
+	- Added object to the video and image style
+
+
 
 
 /*
@@ -8,7 +20,7 @@
 /// Elements */
 
 html{
-	font-size:62.5%;	
+	@include font_smoothing();
 }
 
 body{
@@ -19,10 +31,6 @@ body{
 	height:auto;	
 	margin:0;
 	padding:0;
-}
-
-h3{
-	margin:30px auto 10px;
 }
 
 p{
@@ -37,18 +45,12 @@ a{
 	text-decoration:none;
 }
 
-video,img{
+video, img, object{
 	max-width:100%;
 	height:auto;
 }
 
-
-
-/*
-//
-/// Classes */
-
-.menu{
+ul{
 	margin:0;
 	padding:0;
 	overflow:hidden;
