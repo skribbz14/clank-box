@@ -53,6 +53,6 @@ video, img, object{
 ul{
 	margin:0;
 	padding:0;
-	overflow:hidden;
+	display:table;
 	list-style:none outside none;
 }
