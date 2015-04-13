@@ -42,6 +42,19 @@
 }
 
 
+/*
+//
+/// An element that behaves like a full width row */
+
+%relative_row{
+	float:left;
+	clear:both;
+	width:100%;
+	display:table;
+	position:relative;
+}
+
+
 
 /*
 //
