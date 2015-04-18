@@ -137,3 +137,14 @@
 		outline:none;
 	}
 }
+
+
+
+/*
+//
+/// This can sometimes be a quick fix for rendering issues */
+
+%enable_3d{
+	@include backface-visibility(hidden);
+	@include transform-style(preserve-3d);	
+} 
