@@ -1,11 +1,13 @@
 // Clank Elements Reset
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 2.0
+// Version 3.0
 
 /*
 //
 /// Recent Updates 
 
+v3.0
+	- Added a box-sizing:border-box; rule.
 v2.0 
 	- Removed font-size:62.5% on html. This is not goot for every site
 	- Added font smoothing to html as default
@@ -55,4 +57,8 @@ ul{
 	padding:0;
 	display:table;
 	list-style:none outside none;
+}
+
+div, article, section, table, header, footer, main{
+	box-sizing:border-box;
 }
