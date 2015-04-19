@@ -163,7 +163,8 @@
 	}
 	
 	
-	$top_percentage_check:str-index($top, "%");
+	$top_percentage_check:str-index(#{$top}, "%");
+		
 	
 	@if $top == 0{
 		top:0;
