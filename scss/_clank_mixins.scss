@@ -162,13 +162,16 @@
 		position:$position_style;
 	}
 	
+	
+	$top_percentage_check:str-index($top, "%");
+	
 	@if $top == 0{
 		top:0;
 	}
 	@else if $top == auto{
 		top:auto;
 	}
-	@else if (str-index($top, "%") > 0){
+	@else if ($top_percentage_check > 0){
 		top:$top;
 	}
 	@else{
