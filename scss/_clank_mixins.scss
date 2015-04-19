@@ -1,12 +1,14 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 13.0
+// Version 14.0
 
 
 /*
 //
 /// Notable updates
 
+// v14.0
+	- Added the ability to use %'s within the position() mixin
 // v13.0 
 	- Removed Font_Smoothing() from Font_style() because it is now added to the html in clank_reset
 	- Converted Font_style to fontStyle, with added properties and variation on order
@@ -49,6 +51,7 @@
 
 // position($top, $right, $bottom, $left)
 //		- Shorthand to quickly output position values with rem units in mind
+//		- Accepts integers, percentages and auto
 
 // disable-tap-highlight()
 //		- Disables the tap highlight on phones using vendor prefixes.
@@ -188,7 +191,7 @@
 		right:auto;
 	}
 	@else if ($right_percentage_check != null){
-		top:$right;
+		right:$right;
 	}	
 	@else{
 		@include rem(right, $right);
@@ -203,7 +206,7 @@
 		bottom:auto;
 	}
 	@else if ($bottom_percentage_check != null){
-		top:$bottom;
+		bottom:$bottom;
 	}		
 	@else{
 		@include rem(bottom, $bottom);
@@ -218,7 +221,7 @@
 		left:auto;
 	}
 	@else if ($left_percentage_check != null){
-		top:$left;
+		left:$left;
 	}			
 	@else{
 		@include rem(left, $left);
