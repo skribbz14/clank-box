@@ -154,7 +154,9 @@
 
 @mixin position($top, $right, $bottom, $left, $position_style : false){	
 	
-	@debug str-index("10%", "%");
+	//$index:str-index("10%", "%");
+	
+	
 	
 	@if($position_style != false){
 		position:$position_style;
@@ -165,6 +167,9 @@
 	}
 	@else if $top == auto{
 		top:auto;
+	}
+	@else if (str-index($top, "%") > 0){
+		top:$top;
 	}
 	@else{
 		@include rem(top, $top);
@@ -177,6 +182,9 @@
 	@else if $right == auto{
 		right:auto;
 	}
+	@else if (str-index($right, "%") > 0){
+		top:$right;
+	}	
 	@else{
 		@include rem(right, $right);
 	}
@@ -189,6 +197,9 @@
 	@else if $bottom == auto{
 		bottom:auto;
 	}
+	@else if (str-index($bottom, "%") > 0){
+		top:$bottom;
+	}		
 	@else{
 		@include rem(bottom, $bottom);
 	}
@@ -200,6 +211,9 @@
 	@else if $left == auto{
 		left:auto;
 	}
+	@else if (str-index($left, "%") > 0){
+		top:$left;
+	}			
 	@else{
 		@include rem(left, $left);
 	}							
