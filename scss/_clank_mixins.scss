@@ -179,6 +179,7 @@
 		@include rem(top, $top);
 	}
 	
+	$right_percentage_check:str-index(#{$right}, "%");
 	
 	@if $right == 0{		
 		right:0;
@@ -186,28 +187,29 @@
 	@else if $right == auto{
 		right:auto;
 	}
-	@else if (str-index($right, "%") > 0){
+	@else if ($right_percentage_check != null){
 		top:$right;
 	}	
 	@else{
 		@include rem(right, $right);
 	}
 		
+	$bottom_percentage_check:str-index(#{$bottom}, "%");
 	
-	@if $bottom == 0{
-		
+	@if $bottom == 0{		
 		bottom:0;
 	}
 	@else if $bottom == auto{
 		bottom:auto;
 	}
-	@else if (str-index($bottom, "%") > 0){
+	@else if ($bottom_percentage_check != null){
 		top:$bottom;
 	}		
 	@else{
 		@include rem(bottom, $bottom);
 	}
 	
+	$left_percentage_check:str-index(#{$left}, "%");
 	
 	@if $left == 0{
 		left:0;
@@ -215,7 +217,7 @@
 	@else if $left == auto{
 		left:auto;
 	}
-	@else if (str-index($left, "%") > 0){
+	@else if ($left_percentage_check != null){
 		top:$left;
 	}			
 	@else{
