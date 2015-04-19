@@ -154,6 +154,8 @@
 
 @mixin position($top, $right, $bottom, $left, $position_style : false){	
 	
+	@debug str-index("kyle", "%");
+	
 	@if($position_style != false){
 		position:$position_style;
 	}
