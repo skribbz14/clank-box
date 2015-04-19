@@ -172,7 +172,7 @@
 	@else if $top == auto{
 		top:auto;
 	}
-	@else if ($top_percentage_check > 0){
+	@else if ($top_percentage_check != null){
 		top:$top;
 	}
 	@else{
