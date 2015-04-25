@@ -1,6 +1,6 @@
 // Clank Silent Class Library
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 2.0
+// Version 3.0
 
 
 /*
@@ -52,6 +52,18 @@
 	width:100%;
 	display:table;
 	position:relative;
+}
+
+
+
+/*
+//
+/// A container element with the most basic of properties for a column */
+
+%relative_column{
+	float:left;
+	display:table;
+	box-sizing:border-box;
 }
 
 
