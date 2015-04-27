@@ -1,12 +1,15 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 14.0
+// Version 15.0
 
 
 /*
 //
 /// Notable updates
 
+// v15.0
+	- Created a list of new classes that made a few mixins depreciated:
+		- display-flex(), enabled_3d, disable_user_select, font_smoothing, disable-tap-highlihgt
 // v14.0
 	- Added the ability to use %'s within the position() mixin
 // v13.0 
@@ -151,6 +154,7 @@
 }
 
 
+
 /*
 //
 /// Shorthand to quickly output position values with rem units in mind */
@@ -227,16 +231,6 @@
 
 /*
 //
-/// Disables the tap highlight on phones using vendor prefixes */
-
-@mixin disable-tap-highlight(){
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent; /* For some Androids */
-}
-
-
-/*
-//
 /// Allows you to quickly adjust the font-size and line-height in a single line. */
 
 @mixin adjust-font($font_size, $line_height){
@@ -281,14 +275,6 @@
 /*
 //
 /// Outputs all prefixes for the flex properties */
-
-@mixin display-flex(){
-	display: -webkit-box;      
-	display: -moz-box;         
-	display: -ms-flexbox;      
-	display: -webkit-flex;     
-	display: flex;          
-}
 
 @mixin flex-grow($value){
 	flex-grow:$value;
@@ -428,47 +414,6 @@
 		#{$property}: $pixel_array;
 		#{$property}: $rem_array;				
 	}
-}
-
-
-
-/*
-//
-/// Enables 3d rendering for browsers that support it */
-
-@mixin enable_3d(){
-	@include transform(translate3d(0,0,0));
-	@include transform-style(preserve-3d);
-}
-
-
-
-/*
-//
-/// Turns off the ability for highlighting items */
-
-@mixin disable_user_select(){
-	user-select:none;
-	-moz-user-select:none;
-	-webkit-user-select:none;
-	-o-user-select:none;
-	-ms-user-select:none;	
-	-webkit-tap-highlight-color:transparent;
-	
-	&:focus{
-		outline:none;
-	}
-}
-
-
-
-/*
-//
-/// Enables font smoothing for web fonts */
-
-@mixin font_smoothing(){
-	-webkit-font-smoothing:antialiased;
-	-moz-osx-font-smoothing:grayscale;
 }
 
 
@@ -632,4 +577,37 @@ $default_orientation: 0;
 		-webkit-animation: $keyframe_name $duration $timing_function $delay $iteration_count $direction;
 		@include animation-fill-mode($fill_mode);
 	}
+}
+
+
+
+/*
+//
+/// Depreciated functions */
+
+@mixin display-flex(){
+	@extend %display_flex;        
+}
+
+/// Enables 3d rendering for browsers that support it */
+@mixin enable_3d(){
+	@extend %enable_3d;
+}
+
+
+/// Turns off the ability for highlighting items */
+@mixin disable_user_select(){
+	@extend %disable_user_select;
+}
+
+
+/// Enables font smoothing for web fonts */
+@mixin font_smoothing(){
+	@extend %font_smoothing;
+}
+
+
+/// Disables the tap highlight on phones using vendor prefixes */
+@mixin disable-tap-highlight(){
+	@extend %disable_tap_highlight;
 }
