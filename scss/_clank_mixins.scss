@@ -1,12 +1,14 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 15.0
+// Version 15.1
 
 
 /*
 //
 /// Notable updates
 
+// v15.1
+	- Added the ability to include font-weight in adjust-font($size, $line-height, $weight : false)
 // v15.0
 	- Created a list of new classes that made a few mixins depreciated:
 		- display-flex(), enabled_3d, disable_user_select, font_smoothing, disable-tap-highlihgt
@@ -59,10 +61,11 @@
 // disable-tap-highlight()
 //		- Disables the tap highlight on phones using vendor prefixes.
 
-// adjust-font($font_size, $line_height)
+// adjust-font($font_size, $line_height, $font_weight : false)
 //		- Allows you to quickly adjust the font-size and line-height in a single line.
 //		- The values should be without their unit values, but written in pixels. 
 //		- The values will output rems with a pixel fallback.
+//		- The font weight property is now included, but not required
 
 // fallback($property, $value, $fallback_value)
 // 		- Allows you to write a property, that requires a fall back, in a single-line.
@@ -155,6 +158,7 @@
 
 
 
+
 /*
 //
 /// Shorthand to quickly output position values with rem units in mind */
@@ -233,9 +237,10 @@
 //
 /// Allows you to quickly adjust the font-size and line-height in a single line. */
 
-@mixin adjust-font($font_size, $line_height){
+@mixin adjust-font($font_size, $line_height, $font_weight : false){
 	@include rem(font-size, $font_size);
 	@include rem(line-height, $line_height);
+	@if($font_weight != false) font-weight:$font_weight;
 }
 
 
@@ -432,11 +437,6 @@
 	@if($spacing != false){ @include rem(letter-spacing, $spacing); }			
 }
 
-/// Depreciated underscore version of the mixin
-@mixin font_style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2 : false){
-	@include fontStyle($font_family2, $font_size2, $line_height2, $font_weight2, $font_color2, false, false);
-}
-
 
 
 /*
@@ -610,4 +610,8 @@ $default_orientation: 0;
 /// Disables the tap highlight on phones using vendor prefixes */
 @mixin disable-tap-highlight(){
 	@extend %disable_tap_highlight;
+}
+
+@mixin font_style($font_family2, $font_size2, $font_weight2, $line_height2, $font_color2 : false){
+	@include fontStyle($font_family2, $font_size2, $line_height2, $font_weight2, $font_color2, false, false);
 }
