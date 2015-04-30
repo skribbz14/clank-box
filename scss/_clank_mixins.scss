@@ -240,7 +240,7 @@
 @mixin adjust-font($font_size, $line_height, $font_weight : false){
 	@include rem(font-size, $font_size);
 	@include rem(line-height, $line_height);
-	@if($font_weight != false) font-weight:$font_weight;
+	@if($font_weight != false){ font-weight:$font_weight; }
 }
 
 
