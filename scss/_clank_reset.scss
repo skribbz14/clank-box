@@ -1,11 +1,13 @@
 // Clank Elements Reset
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 3.0
+// Version 3.1
 
 /*
 //
 /// Recent Updates 
 
+v3.1
+  - Adding <aside> to box-sizing:border-box; rule.
 v3.0
 	- Added a box-sizing:border-box; rule.
 v2.0 
@@ -59,6 +61,6 @@ ul{
 	list-style:none outside none;
 }
 
-div, article, section, table, header, footer, main{
+div, article, section, table, header, footer, main, aside{
 	box-sizing:border-box;
 }
