@@ -216,3 +216,21 @@
 	display: -webkit-flex;     
 	display: flex;     
 }
+
+
+
+/*
+//
+/// Classes to control the background/object position of an image */
+
+%img_pos--center{
+  object-fit:cover;
+  object-position:center center;
+}
+
+%bg_pos--center{
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
