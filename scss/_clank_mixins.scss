@@ -1,12 +1,14 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 15.1
+// Version 15.2
 
 
 /*
 //
 /// Notable updates
 
+// v15.2
+  - Added the ability to override the silent class in the display-flex() mixin.
 // v15.1
 	- Added the ability to include font-weight in adjust-font($size, $line-height, $weight : false)
 // v15.0
@@ -76,8 +78,9 @@
 // strip-units($number)
 //		- Removes units from any value
 
-// display_flex()
+// display_flex($override)
 //	  - Outputs the correct syntax for Display:flex; across all browsers.
+//    - Added override functionality that will allow you to print within the selector rather use the silent class
 
 // flex-grow($value)
 //	  - Outputs the correct syntax for the property flex-grow
@@ -585,8 +588,18 @@ $default_orientation: 0;
 //
 /// Depreciated functions */
 
-@mixin display-flex(){
-	@extend %display_flex;        
+@mixin display-flex($override : false){		
+	@if ($override == true){
+  	display: -webkit-box;      
+  	display: -moz-box;         
+  	display: -ms-flexbox;      
+  	display: -webkit-flex;     
+  	display: flex;           	
+	}
+	
+	@else{
+  	@extend %display_flex; 
+	}
 }
 
 /// Enables 3d rendering for browsers that support it */
