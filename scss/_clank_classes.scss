@@ -64,9 +64,10 @@
 /// A container element with the most basic of properties for a column */
 
 %relative_column{
-	float:left;
-	display:table;
 	box-sizing:border-box;
+	position:relative;
+	display:table;
+	float:left;
 }
 
 
