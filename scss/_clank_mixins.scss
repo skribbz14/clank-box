@@ -390,13 +390,21 @@
 /// This mixin assumes that root is set to 62.5% */
 
 
-@mixin rem($property, $pixel_values...){
+@mixin rem($property, $pixel_values..., $important : false){
+	
 	$max: length($pixel_values);
+  
+  $important_string = '';
+  @if ($important == true) {
+    $important_string = ' !important';  
+  }
+  
+
 
 	// If only one value was passed
-	@if $max == 1 { 		
-		#{$property}: nth($pixel_values, 1) + px;
-		#{$property}: (nth($pixel_values, 1) * .1) + rem;
+	@if $max == 1 {   			
+		#{$property}: nth($pixel_values, 1) + px + $important_string;
+		#{$property}: (nth($pixel_values, 1) * .1) + rem + $important_string;
 	}
 
 	// If multiple values were passed
@@ -419,8 +427,8 @@
 			}						
 		}
 		
-		#{$property}: $pixel_array;
-		#{$property}: $rem_array;				
+		#{$property}: $pixel_array + $important_string;
+		#{$property}: $rem_array + $important_string;				
 	}
 }
 
