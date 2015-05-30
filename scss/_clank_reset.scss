@@ -1,11 +1,13 @@
 // Clank Elements Reset
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 3.1
+// Version 4
 
 /*
 //
 /// Recent Updates 
 
+v4.0
+  - Added textarea selector with max-width:100%;
 v3.1
   - Adding <aside> to box-sizing:border-box; rule.
 v3.0
@@ -63,4 +65,8 @@ ul{
 
 div, article, section, table, header, footer, main, aside{
 	box-sizing:border-box;
+}
+
+textarea{
+  max-width:100%;
 }
