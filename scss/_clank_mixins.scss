@@ -390,15 +390,9 @@
 /// This mixin assumes that root is set to 62.5% */
 
 
-@mixin rem($property, $pixel_values... , $important : false){
+@mixin rem($property, $pixel_values...){
 	
 	$max: length($pixel_values);
-  
-  $important_string = '';
-  @if ($important == true) {
-    $important_string = ' !important';  
-  }
-  
 
 
 	// If only one value was passed
