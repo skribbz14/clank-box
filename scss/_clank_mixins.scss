@@ -397,8 +397,8 @@
 
 	// If only one value was passed
 	@if $max == 1 {   			
-		#{$property}: nth($pixel_values, 1) + px + $important_string;
-		#{$property}: (nth($pixel_values, 1) * .1) + rem + $important_string;
+		#{$property}: nth($pixel_values, 1) + px;
+		#{$property}: (nth($pixel_values, 1) * .1) + rem;
 	}
 
 	// If multiple values were passed
@@ -421,8 +421,8 @@
 			}						
 		}
 		
-		#{$property}: $pixel_array + $important_string;
-		#{$property}: $rem_array + $important_string;				
+		#{$property}: $pixel_array;
+		#{$property}: $rem_array;				
 	}
 }
 
