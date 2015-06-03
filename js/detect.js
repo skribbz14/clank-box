@@ -144,7 +144,9 @@ var detect = {
 	}
 	
 	function Detect_Firefox(){
+  	console.log('testing');
 		if(!('MozAppearance' in document.documentElement.style)) return false;
+		console.log('pass');
 		html.addClass('firefox');
 		detect.onFirefox = true;
 	}
