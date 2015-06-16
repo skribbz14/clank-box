@@ -486,6 +486,24 @@ $default_orientation: 0;
 	}
 }
 
+@mixin greater_than_dim($width, $height, $orientation : $default_orientation){
+
+	$new_width:$width + "px";
+	$new_height:$height + "px";
+
+	@if( $orientation != $default_orientation ){	
+		@media only screen and (min-width : ($new_width)) and (min-height : ($new_height)) and (orientation:$orientation){
+			@content;
+		}				
+	}
+
+	@else{		
+		@media only screen and (min-width : ($new_width) and (min-height : ($new_height))){
+			@content;
+		}				
+	}
+}
+
 @mixin breakat_height($value, $orientation : $default_orientation){
 
 	$new_value:$value + "px";
