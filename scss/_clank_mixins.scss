@@ -1,12 +1,15 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 15.2
+// Version 16
 
 
 /*
 //
 /// Notable updates
 
+// v16
+  - Updated the position() mixin to accept the value of 'none', which will ignore printing that property.
+  - Updated the position() mixin to optionally accept the z-index as it's sixth argument.
 // v15.2
   - Added the ability to override the silent class in the display-flex() mixin.
 // v15.1
@@ -56,9 +59,12 @@
 //		- added the ability to optionally include the color property.
 //		- added the ability to optionally include text transformation and letter spacing
 
-// position($top, $right, $bottom, $left)
-//		- Shorthand to quickly output position values with rem units in mind
-//		- Accepts integers, percentages and auto
+// position($top, $right, $bottom, $left, $position_type : false, $z_index : false)
+//		- Shorthand to quickly output position values with rem units in mind.
+//		- Accepts integers, percentages and auto.
+//    - Also accepts 'none', which will tell the mixin not to print that value.
+//    - Position type can optionally be set to 'fixed', 'absolute', or 'relative'.
+//    - Z-index can optionally be set.
 
 // disable-tap-highlight()
 //		- Disables the tap highlight on phones using vendor prefixes.
@@ -166,16 +172,17 @@
 //
 /// Shorthand to quickly output position values with rem units in mind */
 
-@mixin position($top, $right, $bottom, $left, $position_style : false){	
+@mixin position($top, $right, $bottom, $left, $position_type : false, $z_index : false){	
 
-	@if($position_style != false){
-		position:$position_style;
+	@if($position_type != false){
+		position:$position_type;
 	}
 	
 	
 	$top_percentage_check:str-index(#{$top}, "%");
-		
-	@if $top == 0{
+  
+  @if $top == none{}
+	@else if $top == 0{
 		top:0;
 	}
 	@else if $top == auto{
@@ -190,7 +197,8 @@
 	
 	$right_percentage_check:str-index(#{$right}, "%");
 	
-	@if $right == 0{		
+	@if $right == none{}
+	@else if $right == 0{		
 		right:0;
 	}
 	@else if $right == auto{
@@ -205,7 +213,8 @@
 		
 	$bottom_percentage_check:str-index(#{$bottom}, "%");
 	
-	@if $bottom == 0{		
+	@if $bottom == none{}
+	@else if $bottom == 0{		
 		bottom:0;
 	}
 	@else if $bottom == auto{
@@ -220,7 +229,8 @@
 	
 	$left_percentage_check:str-index(#{$left}, "%");
 	
-	@if $left == 0{
+	@if $left == none{}
+	@else if $left == 0{
 		left:0;
 	}
 	@else if $left == auto{
@@ -232,6 +242,10 @@
 	@else{
 		@include rem(left, $left);
 	}							
+	
+	@if $z_index != false{
+  	z-index:$z_index;
+	}
 }
 
 
