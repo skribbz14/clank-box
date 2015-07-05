@@ -1,6 +1,6 @@
 // Clank Silent Class Library
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 4.1
+// Version 5.0
 
 
 /*
@@ -238,3 +238,27 @@
   background-position:center center;
 }
 
+
+
+/*
+//
+/// Applying this to a <figure> that contains a <picture> using object-fit
+/// will kick in the background image on non-supporting browsers.
+/// This relies on modernizr applying the .object-fit class on supporting browsers. */
+
+%object-fit-fallback{
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  
+  picture{
+    display:none;
+  }    
+}
+.object-fit %object-fit-fallback{
+  background-image:none !important;
+  
+  picture{
+    display:block;
+  }
+}
