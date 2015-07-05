@@ -5,6 +5,18 @@
 
 /*
 //
+/// Notable changes log 
+
+// v5
+  - %relative_container was removed. %relative_row is it's successor.
+  - created %clank_row & %clank_column, to replace %relative_row and %relative_column.    
+    %relative_row and %relative_column still work and simply call %clank_row and %clank_column.
+
+
+
+
+/*
+//
 /// Stretches the element to fit it's parent exactly */	
 
 %window{
@@ -35,26 +47,23 @@
 
 /*
 //
-/// An elemenet that is usually used for layout purposes and to act as a wrapper */
-
-%relative_container{
-	float:left;
-	width:100%;
-	position:relative;
-}
-
-
-/*
-//
 /// An element that behaves like a full width row */
 
-%relative_row{
+%clank_row{
 	float:left;
 	clear:both;
 	width:100%;
-	display:table;
-	position:relative;
+	display:table;	
 	box-sizing:border-box;
+
+  &.relative{
+    position:relative;  
+  }  
+}
+
+%relative_row{
+  @extend %clank_row;
+  @extend %clank_row.relative;
 }
 
 
@@ -63,11 +72,19 @@
 //
 /// A container element with the most basic of properties for a column */
 
-%relative_column{
-	box-sizing:border-box;
-	position:relative;
+%clank_column{
+	box-sizing:border-box;	
 	display:table;
 	float:left;
+	
+	&.relative{
+    position:relative;	
+	}  
+}
+
+%relative_column{
+  @extend %clank_column;
+  @extend %clank_column.relative;
 }
 
 
