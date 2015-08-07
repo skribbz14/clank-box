@@ -125,7 +125,7 @@ var detect = {
       return match ? match[1] : false;
     };
 
-    var version_string = 'androidV' + parseInt(getAndroidVersion());
+    var version_string = 'androidV' + parseFloat(getAndroidVersion()).toString().replace('.','-');
       				
 		html.addClass('android mobile touch-device ' + version_string); 
 		detect.onMobile = true;
