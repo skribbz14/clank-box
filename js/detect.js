@@ -1,6 +1,6 @@
 // Detect.js
 // @author Kyle Lamble of Loosey Goosey Art
-// Version 7.6.5
+// Version 7.7
 
 
 
@@ -117,10 +117,21 @@ var detect = {
 	
 	function Detect_Android(){
 		if(navigator.userAgent.toLowerCase().indexOf("android") == -1) return;
-		html.addClass('android mobile touch-device'); 
+		
+		/// http://stackoverflow.com/questions/7184573/pick-up-the-android-version-in-the-browser-by-javascript
+		function getAndroidVersion(ua) {
+      ua = (ua || navigator.userAgent).toLowerCase(); 
+      var match = ua.match(/android\s([0-9\.]*)/);
+      return match ? match[1] : false;
+    };
+
+    var version_string = 'androidV' + parseInt(getAndroidVersion());
+      				
+		html.addClass('android mobile touch-device ' + version_string); 
 		detect.onMobile = true;
     detect.onAndroid = true;  
-    detect.onTouch = true;              
+    detect.onTouch = true;                          
+    detect.version = parseFloat(getAndroidVersion());
     return true;
 	}
 	
