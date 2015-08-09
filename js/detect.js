@@ -148,10 +148,11 @@ var detect = {
 	}
 	
 	function Detect_Safari(){
-		if(!(/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor))) return false;
-		html.addClass('safari');
+		if(!(/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor))) return false;		
 		detect.onSafari = true;		
 		detect.version = navigator.userAgent.substr(navigator.userAgent.lastIndexOf('Version/') + 8, 3);
+		var version_string = ' safariV' + detect.version;
+		html.addClass('safari' + version_string);
 	}
 	
 	function Detect_Firefox(){
