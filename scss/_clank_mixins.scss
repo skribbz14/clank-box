@@ -582,7 +582,7 @@ $default_orientation: 0;
 	-webkit-animation-fill-mode:$value;
 }
 
-@mixin animate($keyframe_name, $duration, $timing_function, $delay, $iteration_count, $direction, $fill_mode){
+@mixin animate($keyframe_name, $duration, $timing_function : ease, $delay : 0s, $iteration_count : 1, $direction : normal, $fill_mode : forwards){
 	
 	// fill mode values: 								forwards, backwards, both, none
 	
