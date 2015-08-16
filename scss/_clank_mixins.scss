@@ -1,6 +1,6 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 16
+// Version 16.1
 
 
 /*
@@ -594,21 +594,7 @@ $default_orientation: 0;
 	
 	
 	@if( $keyframe_name != null ){	
-		@if( $duration == null) {
-			$duration:0s;
-		}
-		@if( $timing_function == null ){
-			$timing_function:ease;
-		}
-		@if( $delay == null ){
-			$delay:0s;
-		}
-		@if( $iteration_count == null ){
-			$iteration_count:1;
-		}
-		@if( $direction == null ){
-			$direction:normal;
-		}
+
 			
 		animation: $keyframe_name $duration $timing_function $delay $iteration_count $direction;
 		-webkit-animation: $keyframe_name $duration $timing_function $delay $iteration_count $direction;
