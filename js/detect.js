@@ -174,6 +174,7 @@ var detect = {
 	}
 	
 	function Detect_IE(){
+		
 		function Check_Version(){
 			var rv = -1; // Return value assumes failure.
 			if (navigator.appName == 'Microsoft Internet Explorer'){
@@ -189,6 +190,8 @@ var detect = {
 		
 		var ie = -1;
 		ie = Check_Version();
+		
+		console.log(ie);
 		
 		if(ie === -1 && !!window.ActiveXObject || ie === 11){
 			html.addClass('ie11 ie');
