@@ -1,6 +1,6 @@
 // Detect.js
 // @author Kyle Lamble of Loosey Goosey Art
-// Version 7.8
+// Version 8.0
 
 
 
@@ -13,6 +13,7 @@
 // Opera
 // Firefox
 // Internet Explorer 6-11
+// Microsoft Edge
 // Maxthon
 // Sea Monkey
 // Ipad 
@@ -21,20 +22,6 @@
 // Retina Displays
 // Kindle Fire
 // Touch device
-
-
-
-/*
-//
-/// New this version */
-
-// Complete overhaul of the detect.js design.
-// I am now using an immediately invoked function to contain the detect script.
-// I am creating a global detect object that I am applying variables to that will be accessible for other javascript classes. 
-// Also I removed the classes v6 & ltv6 from the safari detection,
-// but I added a version value to the detect object that should allow you to test for this, if needed.
-// I also removed the IEAlert(), since it was only added for specific sites and required the user to edit this script to enable.
-// Lastly, I dropped support for IE 5 due to my lack of ability to test if my scripts were working.
 
 
 var detect = {
@@ -184,51 +171,57 @@ var detect = {
 		      rv = parseFloat( RegExp.$1 );
 		    }
 			}
-			else if(navigator.appName == "Netscape" && '-ms-scroll-limit' in document.documentElement.style) rv = 11;
+			else if(navigator.appName == "Netscape"){  			  			
+  			/// in IE 11 the navigator.appVersion says 'trident'
+  			/// in Edge the navigator.appVersion does not say trident
+  			if(navigator.appVersion.indexOf('Trident')) === -1) rv = 12;
+  			else rv = 11;
+			}  			
 			return rv;			
 		}
 		
 		var ie = -1;
 		ie = Check_Version();
-		
-		console.log(ie);
-		
-		if(ie === -1 && !!window.ActiveXObject || ie === 11){
-			html.addClass('ie11 ie');
-			detect.onIE = true;
-			detect.version = "11";
-			ie = 11;			
-		}
-		else{				 				
-			switch(ie){
-				case 10:
-					html.addClass('ie10 ie');
-					detect.onIE = true;
-					detect.version = "10";					
-					break;
-				case 9:
-					html.addClass('ie9 ie');
-					detect.onIE = true;
-					detect.version = "9";
-					break;
-				case 8:
-					html.addClass('ie8 ie');
-					detect.onIE = true;
-					detect.version = "8";
-					break;
-				case 7:
-					html.addClass('ie7 ie');
-					detect.onIE = true;
-					detect.version = "7";
-					break;
-				case 6:
-					html.addClass('ie6 ie');
-					detect.onIE = true;
-					detect.version = "6";
-					break;
-				default:break;			
-			}						
-		}
+						 				
+		switch(ie){
+			case 12:
+   			html.addClass('ie12 microsoft-edge');
+  			detect.onIE = true;
+  			detect.version = "12";			
+			  break;
+			case 11:
+   			html.addClass('ie11 ie');
+  			detect.onIE = true;
+  			detect.version = "11";	
+			  break;
+			case 10:
+				html.addClass('ie10 ie');
+				detect.onIE = true;
+				detect.version = "10";					
+				break;
+			case 9:
+				html.addClass('ie9 ie');
+				detect.onIE = true;
+				detect.version = "9";
+				break;
+			case 8:
+				html.addClass('ie8 ie');
+				detect.onIE = true;
+				detect.version = "8";
+				break;
+			case 7:
+				html.addClass('ie7 ie');
+				detect.onIE = true;
+				detect.version = "7";
+				break;
+			case 6:
+				html.addClass('ie6 ie');
+				detect.onIE = true;
+				detect.version = "6";
+				break;
+			default:break;			
+		}						
+	
 		
 		if(ie === -1) {
 			html.addClass('not-ie');
