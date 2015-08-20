@@ -174,7 +174,7 @@ var detect = {
 			else if(navigator.appName == "Netscape"){  			  			
   			/// in IE 11 the navigator.appVersion says 'trident'
   			/// in Edge the navigator.appVersion does not say trident
-  			if(navigator.appVersion.indexOf('Trident')) === -1) rv = 12;
+  			if(navigator.appVersion.indexOf('Trident') === -1) rv = 12;
   			else rv = 11;
 			}  			
 			return rv;			
@@ -182,6 +182,7 @@ var detect = {
 		
 		var ie = -1;
 		ie = Check_Version();
+			
 						 				
 		switch(ie){
 			case 12:
