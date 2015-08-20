@@ -1,6 +1,6 @@
 // Detect.js
 // @author Kyle Lamble of Loosey Goosey Art
-// Version 8.0
+// Version 8.1
 
 
 
@@ -33,6 +33,7 @@ var detect = {
 	onOpera:false,
 	onFirefox:false,
 	onIE:false,
+	onEdge:false,
 	onMaxthon:false,
 	onSeaMonkey:false,
 	onIpad:false,
@@ -187,7 +188,7 @@ var detect = {
 		switch(ie){
 			case 12:
    			html.addClass('ie12 microsoft-edge');
-  			detect.onIE = true;
+  			detect.onEdge = true;
   			detect.version = "12";			
 			  break;
 			case 11:
