@@ -187,7 +187,7 @@ var detect = {
 						 				
 		switch(ie){
 			case 12:
-   			html.addClass('ie12 microsoft-edge');
+   			html.addClass('ie12 microsoft-edge not-ie');
   			detect.onEdge = true;
   			detect.version = "12";			
 			  break;
