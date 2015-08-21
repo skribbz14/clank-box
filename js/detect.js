@@ -1,6 +1,6 @@
 // Detect.js
 // @author Kyle Lamble of Loosey Goosey Art
-// Version 8.1
+// Version 8.2
 
 
 
@@ -175,7 +175,7 @@ var detect = {
 			else if(navigator.appName == "Netscape"){  			  			
   			/// in IE 11 the navigator.appVersion says 'trident'
   			/// in Edge the navigator.appVersion does not say trident
-  			if(navigator.appVersion.indexOf('Trident') === -1) rv = 12;
+  			if(navigator.appVersion.indexOf('Trident') === -1 && navigator.appVersion.indexOf('Chrome') === -1) rv = 12;
   			else rv = 11;
 			}  			
 			return rv;			
