@@ -172,10 +172,10 @@ var detect = {
 		      rv = parseFloat( RegExp.$1 );
 		    }
 			}
-			else if(navigator.appName == "Netscape"){  			  			
+			else if(navigator.appName == "Netscape" && navigator.appVersion.indexOf('Chrome') === -1){ /// Chrome was being labeled as Microsoft Edge 			  			
   			/// in IE 11 the navigator.appVersion says 'trident'
   			/// in Edge the navigator.appVersion does not say trident
-  			if(navigator.appVersion.indexOf('Trident') === -1 && navigator.appVersion.indexOf('Chrome') === -1) rv = 12;
+  			if(navigator.appVersion.indexOf('Trident') === -1) rv = 12;
   			else rv = 11;
 			}  			
 			return rv;			
