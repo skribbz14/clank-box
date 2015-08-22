@@ -1,6 +1,6 @@
 // Detect.js
 // @author Kyle Lamble of Loosey Goosey Art
-// Version 8.3.1
+// Version 8.3.2
 
 
 
@@ -172,7 +172,7 @@ var detect = {
 		      rv = parseFloat( RegExp.$1 );
 		    }
 			}
-			else if(navigator.appName == "Netscape" && navigator.appVersion.indexOf('Chrome') === -1 && navigator.appVersion.indexOf('Safari') === -1){ /// Chrome & Safari was being labeled as Microsoft Edge 			  			
+			else if(navigator.appName == "Netscape" && navigator.appVersion.indexOf('Chrome') === -1 && navigator.appVersion.indexOf('Safari') === -1 && navigator.userAgent.indexOf('Firefox') === -1){ /// Chrome, Safari, & Firefox was being labeled as Microsoft Edge 			  			
   			/// in IE 11 the navigator.appVersion says 'trident'
   			/// in Edge the navigator.appVersion does not say trident
   			if(navigator.appVersion.indexOf('Trident') === -1) rv = 12;
