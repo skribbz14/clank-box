@@ -1,6 +1,6 @@
 // Detect.js
 // @author Kyle Lamble of Loosey Goosey Art
-// Version 8.3
+// Version 8.3.1
 
 
 
@@ -111,7 +111,7 @@ var detect = {
       ua = (ua || navigator.userAgent).toLowerCase(); 
       var match = ua.match(/android\s([0-9\.]*)/);
       return match ? match[1] : false;
-    };
+    }
 
     var version_string = 'androidV' + parseFloat(getAndroidVersion()).toString().replace('.','-');
       				
