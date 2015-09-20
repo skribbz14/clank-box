@@ -1,6 +1,6 @@
 // Clank Elements Reset
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 4
+// Version 4.1
 
 /*
 //
@@ -26,7 +26,7 @@ v2.0
 /// Elements */
 
 html{
-	@include font_smoothing();
+	@extend %font_smoothing;
 }
 
 body{

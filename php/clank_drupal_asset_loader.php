@@ -1,5 +1,9 @@
 <?php
-
+  
+  /*
+  //
+  //// THIS IS JUST A TEMPLATE STARTER, COPY THIS FUNCTION TO EACH THEME */
+      
   function clank_drupal_asset_load(&$variables){
     
     /*
@@ -56,7 +60,14 @@
           break;
         default:break;
       }
-    }   
+    }
+    
+    
+  	/// Only add the default files if no special page type has been loaded
+  	if(!$theme_js_set){
+    	drupal_add_css($app_css);
+    	drupal_add_js($app_js);
+  	}            
   }  
   
 ?> 
