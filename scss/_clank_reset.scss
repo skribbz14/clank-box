@@ -1,11 +1,14 @@
 // Clank Elements Reset
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 4.1
+// Version 5
 
 /*
 //
 /// Recent Updates 
 
+v5.0
+  - Updated html element to use silent class for font smoothing
+  - Added the 62.5% font size to the html element
 v4.0
   - Added textarea selector with max-width:100%;
 v3.1
@@ -27,6 +30,7 @@ v2.0
 
 html{
 	@extend %font_smoothing;
+	font-size:62.5%;
 }
 
 body{
