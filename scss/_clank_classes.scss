@@ -1,12 +1,15 @@
 // Clank Silent Class Library
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 5.0
+// Version 5.1
 
 
 /*
 //
 /// Notable changes log 
 
+// v5.1
+  - created %clank_page_wrapper replacement for %page_wrapper
+  - created %clank_window replacement for %window
 // v5
   - %relative_container was removed. %relative_row is it's successor.
   - created %clank_row & %clank_column, to replace %relative_row and %relative_column.    
@@ -19,14 +22,18 @@
 //
 /// Stretches the element to fit it's parent exactly */	
 
-%window{
+%clank_window{
 	position:absolute;
 	top:0;
 	right:0;
 	bottom:0;
 	left:0;
 	height:100%;
-	width:100%;
+	width:100%;  
+}
+
+%window{
+  @extend %clank_window;
 }
 
 
@@ -35,12 +42,16 @@
 //
 /// An element that is usually used as a top-level layout container */
 
-%page_wrapper{	
+%clank_page_wrapper{
 	float:left;
 	width:100%;
 	max-width:100%;
 	position:relative;
-	height:auto;
+	height:auto;  
+}
+
+%page_wrapper{	
+  @extend %clank_page_wrapper;
 }
 
 

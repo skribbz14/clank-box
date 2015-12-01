@@ -118,7 +118,7 @@ function clank_load_node_form($form_id){
 //
 /// Returns a webform */
 
-function clank_render_webform_block($block_id, $webform_node_id){
+function clank_render_webform_block($block_id){
   $form = module_invoke('webform', 'block_view', $block_id);						  
 	print render($form['content']); 
 }

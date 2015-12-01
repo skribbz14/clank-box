@@ -1,12 +1,15 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 16.1
+// Version 17.0
+
 
 
 /*
 //
 /// Notable updates
 
+// v17
+  - Added @mixin perfect_container
 // v16
   - Updated the position() mixin to accept the value of 'none', which will ignore printing that property.
   - Updated the position() mixin to optionally accept the z-index as it's sixth argument.
@@ -44,6 +47,10 @@
 //
 /// Mixin definitions */
 
+// perfect_container($desktop_max_width, $mobile_percentage_width)
+//    - Creates a centered container that will not have a "jump" in its width when going from desktop to mobile mode
+//    - $desktop_max_width is a unitless (pixel) value that will output rems with a pixel fallback
+//    - $mobile_percentage_width is a percentage width of the screen for mobile
 
 // box($width, $height, $border : false, $border_radius : false, $box_shadow : false)
 //	  - Shorthand to create a box
@@ -153,7 +160,6 @@
 
 
 
-
 /*
 //
 /// Shorthand to create a box in rem values */
@@ -165,7 +171,6 @@
 	@if($border_radius != false){ @include border-radius($border_radius); }
 	@if($box_shadow != false){ @include box-shadow($box_shadow); }	
 }
-
 
 
 
@@ -549,6 +554,33 @@ $default_orientation: 0;
 			@content;
 		}		
 	}
+}
+
+
+
+/*
+//
+/// Creates a centered container that will not have a "jump" in its width when going from desktop to mobile mode */
+
+@mixin perfect_container($desktop_max_width, $mobile_percentage_width){
+  @include rem(max-width, $desktop_max_width);
+  display:table;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  clear:both;
+  
+  /// Androids don't respect max-width when set to display:table;
+  .androidV4-3 &, 
+  .androidV4-2 &,
+  .androidV4-1 &{
+    display:block;
+  } 
+  
+  /// This crazy breakpoint transitions from a static max-width to a percentage without any jump
+  @include breakat((round($desktop_max_width * 100) / $mobile_percentage_width)){
+    max-width: #{$mobile_percentage_width * 1%}; /// We have to use interpolation in order to call the mobile percentage width
+  }   
 }
 
 
