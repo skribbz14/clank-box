@@ -1,6 +1,6 @@
 // Custom SASS Mixins
 // By Kyle Lamble @ Loosey Goosey Art
-// Version 17.0
+// Version 18.0
 
 
 
@@ -8,6 +8,8 @@
 //
 /// Notable updates
 
+// v18
+  - Updated flex-align() to print IE10 properties
 // v17
   - Added @mixin perfect_container
 // v16
@@ -350,8 +352,18 @@
 }
 
 @mixin align-items($value){
-	align-items:$value;
+  @if($value == flex-start){
+    -ms-flex-align:start;  
+  }
+  @else if($value == flex-end){
+    -ms-flex-align:end;  
+  }
+  @else{
+    -ms-flex-align:$value;  
+  }
+	
 	-webkit-align-items:$value;	
+	align-items:$value;
 }
 
 @mixin align-self($value){
