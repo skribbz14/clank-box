@@ -172,12 +172,16 @@ var detect = {
 		      rv = parseFloat( RegExp.$1 );
 		    }
 			}
-			else if(navigator.appName == "Netscape" && navigator.appVersion.indexOf('Chrome') === -1 && navigator.appVersion.indexOf('Safari') === -1 && navigator.userAgent.indexOf('Firefox') === -1){ /// Chrome, Safari, & Firefox was being labeled as Microsoft Edge 			  			
+			/// Chrome, Safari, & Firefox was being labeled as Microsoft Edge 			  			
+			else if(navigator.appName == "Netscape" && navigator.appVersion.indexOf('Chrome') === -1 && navigator.appVersion.indexOf('Safari') === -1 && navigator.userAgent.indexOf('Firefox') === -1){ 
   			/// in IE 11 the navigator.appVersion says 'trident'
   			/// in Edge the navigator.appVersion does not say trident
   			if(navigator.appVersion.indexOf('Trident') === -1) rv = 12;
   			else rv = 11;
-			}  			
+			}
+			else if(navigator.appName == "Netscape" && navigator.appVersion.indexOf('Edge') ){
+  			rv = 12;
+			}
 			return rv;			
 		}
 		
