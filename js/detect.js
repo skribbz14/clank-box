@@ -1,6 +1,6 @@
 // Detect.js
 // @author Kyle Lamble of Loosey Goosey Art
-// Version 8.3.2
+// Version 8.4.0
 
 
 
@@ -179,7 +179,7 @@ var detect = {
   			if(navigator.appVersion.indexOf('Trident') === -1) rv = 12;
   			else rv = 11;
 			}
-			else if(navigator.appName == "Netscape" && navigator.appVersion.indexOf('Edge') ){
+			else if(navigator.appName == "Netscape" && navigator.appVersion.indexOf('Edge') > -1 ){
   			rv = 12;
 			}
 			return rv;			
