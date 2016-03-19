@@ -187,7 +187,7 @@
 	}
 	
 	
-	$top_percentage_check:str-index(#{$top}, "%");
+	$top_percentage_check:str-index(unquote("#{$top}"), "%");
   
   @if $top == none{}
 	@else if $top == 0{
@@ -203,7 +203,7 @@
 		@include rem(top, $top);
 	}
 	
-	$right_percentage_check:str-index(#{$right}, "%");
+	$right_percentage_check:str-index(unquote("#{$right}"), "%");
 	
 	@if $right == none{}
 	@else if $right == 0{		
@@ -219,7 +219,7 @@
 		@include rem(right, $right);
 	}
 		
-	$bottom_percentage_check:str-index(#{$bottom}, "%");
+	$bottom_percentage_check:str-index(unquote("#{$bottom}"), "%");
 	
 	@if $bottom == none{}
 	@else if $bottom == 0{		
@@ -235,7 +235,7 @@
 		@include rem(bottom, $bottom);
 	}
 	
-	$left_percentage_check:str-index(#{$left}, "%");
+	$left_percentage_check:str-index(unquote("#{$left}"), "%");
 	
 	@if $left == none{}
 	@else if $left == 0{
